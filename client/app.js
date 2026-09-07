@@ -14,20 +14,38 @@
 
 const EDGE_WS = (location.hostname ? `ws://${location.hostname}:4002` : 'ws://localhost:4002') + '/stream';
 const RGS = `http://${location.hostname || 'localhost'}:4001`;
-const PAYLOAD_MB = Number(new URLSearchParams(location.search).get('payload') ?? 8);
-const INIT_DELAY = Number(new URLSearchParams(location.search).get('initDelay') ?? 1200);
 /**
- * Simulated mobile link speed, in kbps. Applied identically to the baseline
- * and to the on-device copy, because in reality both cross the same phone
- * link. The edge is exempt: it warms over the datacentre link.
+ * Demo parameters come from the server (/config) so the baseline, the
+ * on-device copy and the warm edge context are guaranteed to be loading the
+ * SAME payload. URL params still override, for one-off experiments.
  *
- * 15000 kbps is a decent-4G figure and is chosen to reproduce the problem PSK
- * actually has rather than to flatter us: 12 MB at 15 Mbps is ~6.5 s of
- * download, plus ~1.2 s of engine init, which lands on the 6-8 s that the
- * challenge brief describes. Open question 3 in the PRD asks FEG for their
- * real breakdown so we can replace this estimate with their number.
+ * linkKbps is the simulated mobile link. It is applied to the baseline and to
+ * the on-device copy, because in reality both cross the phone's connection.
+ * The edge is exempt on purpose: a PoP sits beside the origin on a datacentre
+ * link. 12 MB at 15 Mbps is ~6.6s, which is what reproduces the 6-8s that the
+ * challenge brief describes rather than a number that flatters us.
  */
-const LINK_KBPS = Number(new URLSearchParams(location.search).get('kbps') ?? 15000);
+const qs = new URLSearchParams(location.search);
+const CFG = { payloadMb: 8, initDelayMs: 1200, linkKbps: 15000 };
+
+let configReady = false;
+
+async function loadConfig() {
+  // Tapping before config arrives would launch with stale defaults, i.e. the
+  // exact unequal comparison this indirection exists to prevent.
+  for (const b of document.querySelectorAll('button.tap, #tap-both')) b.disabled = true;
+  try {
+    Object.assign(CFG, await fetch('/config').then((r) => r.json()));
+  } catch {}
+  for (const [k, p] of [['payloadMb', 'payload'], ['initDelayMs', 'initDelay'], ['linkKbps', 'kbps']]) {
+    if (qs.has(p)) CFG[k] = Number(qs.get(p));
+  }
+  el('payload-note').textContent =
+    `ballast ${CFG.payloadMb} MB · init ${CFG.initDelayMs} ms · simulated link ${CFG.linkKbps} kbps ` +
+    `— identical for baseline and for the on-device copy; the edge warms over the datacentre link`;
+  configReady = true;
+  for (const b of document.querySelectorAll('button.tap, #tap-both')) b.disabled = false;
+}
 
 function el(id) { return document.getElementById(id); }
 function now() { return performance.now(); }
@@ -61,7 +79,8 @@ class BaselineRunner {
 
     const frame = document.createElement('iframe');
     frame.className = 'gameframe';
-    frame.src = `/game/?payload=${PAYLOAD_MB}&initDelay=${INIT_DELAY}&kbps=${LINK_KBPS}&rgs=${encodeURIComponent(RGS)}&cachebust=${Date.now()}`;
+    frame.src = `/game/?payload=${CFG.payloadMb}&initDelay=${CFG.initDelayMs}&kbps=${CFG.linkKbps}`
+      + `&rgs=${encodeURIComponent(RGS)}&cachebust=${Date.now()}`;
     stage.appendChild(frame);
 
     const onMsg = (e) => {
@@ -180,7 +199,8 @@ class EmberRunner {
     this.localFrame = document.createElement('iframe');
     this.localFrame.className = 'gameframe hidden';
     this.localFrame.src =
-      `/game/?warm=1&recover=${sessionId}&payload=${PAYLOAD_MB}&initDelay=${INIT_DELAY}&kbps=${LINK_KBPS}&rgs=${encodeURIComponent(RGS)}`;
+      `/game/?warm=1&recover=${sessionId}&payload=${CFG.payloadMb}&initDelay=${CFG.initDelayMs}`
+      + `&kbps=${CFG.linkKbps}&rgs=${encodeURIComponent(RGS)}`;
     this.root.querySelector('.stage').appendChild(this.localFrame);
   }
 
@@ -315,6 +335,4 @@ async function pollStats() {
 }
 setInterval(pollStats, 1000);
 pollStats();
-el('payload-note').textContent =
-  `ballast ${PAYLOAD_MB} MB · init ${INIT_DELAY} ms · simulated link ${LINK_KBPS} kbps ` +
-  `— identical for baseline and for the on-device copy; the edge warms over the datacentre link`;
+loadConfig();

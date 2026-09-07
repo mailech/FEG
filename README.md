@@ -23,15 +23,15 @@ Five consecutive runs on this rig. `node scripts/bench.js 5`.
 
 | Metric | PRD target | Measured |
 |---|---|---|
-| Time to first interactive frame, p50 / p95 | < 500 ms | **120 / 190 ms** |
-| Baseline for the same bundle, p50 / p95 | — | 7180 / 7210 ms |
-| Time to local takeover | < 8 s p95 | **7.4 s** |
+| Time to first interactive frame, p50 / p95 | < 500 ms | **120 / 170 ms** |
+| Baseline for the same bundle, p50 / p95 | — | 7820 / 7850 ms |
+| Time to local takeover | < 8 s p95 | **7.9 s — marginal, see below** |
 | Handoff success rate | > 95 % | **100 % (5/5)** |
 | Quiescence-gate violations | 0 | **0** |
-| Warm context claim, p50 / p95 | < 300 ms | **37 / 42 ms** |
-| Edge instance seconds per launch | < 8 s | **7.33 s** |
+| Warm context claim, p50 / p95 | < 300 ms | **36 / 40 ms** |
+| Edge instance seconds per launch | < 8 s | **7.85 s — marginal** |
 
-Speedup on time-to-interactive: **~54x**. Integration suite: 15/15 passing
+Speedup on time-to-interactive: **~61x**. Integration suite: 15/15 passing
 (`node scripts/test-handoff.js`).
 
 ### What those numbers are measured against
@@ -39,8 +39,10 @@ Speedup on time-to-interactive: **~54x**. Integration suite: 15/15 passing
 The stand-in game is a few KB of canvas JS, so quoting a speedup against it
 would be meaningless. Every path — baseline, edge, and on-device — loads an
 identical **12 MB incompressible ballast payload** plus a **1200 ms simulated
-engine init**, and the origin paces that download to a stated **15 Mbps**
-link. 12 MB at 15 Mbps is ~6.6 s, which is why the baseline lands at 7.2 s and
+engine init**, and the origin paces that download to a stated **15 Mbps** link.
+Those parameters are served from `/config` so the three paths cannot drift
+apart. Measured: 12 MB at 15 Mbps takes 6.72 s against a theoretical 6.55 s,
+so the pacer is accurate to ~2.6 %. Baseline therefore lands at 7.8 s, which
 reproduces the 6–8 s the challenge brief describes.
 
 The edge warms itself with throttling disabled. That is deliberate and stated
@@ -55,18 +57,35 @@ asserting it:
 
 | Scenario | Occupancy | Concurrent instances for 10,000 players |
 |---|---|---|
-| Measured on this rig | 7.3 s | 1,222 |
+| Measured on this rig | 7.9 s | 1,309 |
 | If working-set loading lands | 3.0 s | 500 |
 | Cloud gaming | whole session | 10,000 |
 
 **Note a correction to the PRD.** Section 7 claims ~800 concurrent instances
-from ~5 s occupancy. We measure 7.33 s, which gives ~1,222. Quote the measured
-number. The ratio against cloud gaming is 8.2x, not 12x.
+from ~5 s occupancy. We measure 7.85 s, which gives ~1,309. Quote the measured
+number. The ratio against cloud gaming is 7.6x, not 12x.
 
-Occupancy is dominated by how long the *device* takes to pull its own copy, not
-by anything the edge does — claiming a warm context costs 37 ms. So the lever
-that lowers cost further is working-set loading on the device (Workstream B in
-the PRD), not more edge capacity.
+### The finding that matters most
+
+**Time to local takeover is bounded below by the device's own download time.**
+We measure 7.9 s, and that is almost exactly 6.7 s of download plus 1.2 s of
+init. The arbiter adds ~200 ms on top. Nothing in the edge path is the
+constraint — claiming a warm context costs 36 ms.
+
+Two consequences, and both belong on stage:
+
+1. **Entry speed is independent of bundle size. Handoff time is not.** The
+   120 ms figure holds no matter how big the title is, because the player is
+   watching a context that was warmed in advance. But a real 30 MB title would
+   push time-to-local to roughly 16 s at 15 Mbps, and edge occupancy with it.
+2. **So working-set loading is not an optional extra, it is the thing that
+   makes the cost model work at real bundle sizes.** Workstream B in the PRD is
+   what turns 7.9 s of occupancy into ~3 s. Cutting it would leave the demo
+   intact and the economics weak — the opposite of how the fallback ladder
+   currently ranks it.
+
+This is also why the 8 s targets are met only marginally at 12 MB and would be
+missed at 30 MB. Say that before a judge finds it.
 
 ## Running it
 

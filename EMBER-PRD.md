@@ -42,7 +42,7 @@ Consequence for the build: working set loading and chunk dedup only apply to ass
 
 | Metric | Target | How measured |
 |---|---|---|
-| Time to first interactive frame | < 500 ms p50 and p95 | Client timestamp at tap to first input-accepting frame |
+| Time to first interactive frame | < 500 ms p50 and p95 | Client timestamp at tap to first input-accepting frame — **measured 120 / 170 ms** |
 | Time to local takeover | < 8 s p95 | Controller log |
 | Handoff success rate | > 95 % | Controller log, per attempt |
 | Visible handoff artifacts | 0 in 20 consecutive runs | Manual, recorded on video |
@@ -140,7 +140,7 @@ If a workstream slips, degrade in this order and say so honestly on stage:
 
 1. WebRTC fails → MJPEG over WebSocket
 2. Handoff arbiter incomplete → manual button labelled "Hand off now", still real, still proves the mechanism
-3. Working set recording incomplete → drop it, edge path alone still hits the number
+3. Working set recording incomplete → drop it, edge path alone still hits the entry number. **But say out loud that this is the cut that hurts:** measurement shows time-to-local, and therefore edge occupancy, is bounded below by the device's own download. Without working-set loading a real 30 MB title pushes occupancy to ~16 s and the cost ratio degrades with it. The demo survives this cut; the economics do not.
 4. Presence layer incomplete → cut to Live Activity plus one haptic pattern, keep the watch-to-game deep link because that is the fusion point
 5. Everything slips → demo the edge stream and the manual handoff on a laptop. That alone is the novel claim
 
@@ -209,7 +209,9 @@ Raise the first three yourself before anyone asks. Volunteering your weaknesses 
 
 **"Is running a certified bundle at the edge allowed?"** The package is byte identical and hash verified. The RGS remains the sole authority for RNG and outcomes. The edge instance is a rendering host with no outcome authority. This still needs an auditor sign off, and we are not claiming we have one. For a pilot we would start with PSK's own commissioned titles, where the provider conversation is simplest.
 
-**"Is this just cloud gaming?"** Cloud gaming is permanent and priced per hour per user. This is roughly five seconds per launch, then the compute is returned. At 10,000 concurrent players launching about once a minute, that is roughly 800 concurrent instances rather than 10,000. That ratio is the whole difference.
+**"Is this just cloud gaming?"** Cloud gaming is permanent and priced per hour per user. This is seconds per launch, then the compute is returned. **Measured on our rig: 7.85 s of edge occupancy per launch.** At 10,000 concurrent players launching about once a minute that is roughly 1,300 concurrent instances rather than 10,000 — a 7.6x reduction. That ratio is the whole difference.
+
+Quote the measured 1,300, not the 800 this document originally estimated from a 5 s assumption. `node scripts/capacity.js` recomputes it from whatever the rig actually did, so the number on stage is always the number we measured that morning.
 
 **"What about bad networks?"** Above roughly 50 ms edge RTT the instant entry degrades. That is why the local path exists and why we report both. Our p95 claim comes from the measured system, not the best case.
 

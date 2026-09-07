@@ -88,18 +88,51 @@ app.get('/bundle/ballast', (req, res) => {
     return pump();
   }
 
-  const intervalMs = Math.max(10, (chunk / bytesPerSec) * 1000);
+  /**
+   * Self-correcting pacer.
+   *
+   * Sending one chunk per tick lets setInterval drift accumulate, so the
+   * effective rate comes out well below the advertised one -- we measured
+   * ~11.5 Mbps while claiming 15. That would make the baseline look worse than
+   * the stated link justifies, which is precisely the kind of thumb on the
+   * scale that would sink the demo under questioning.
+   *
+   * So each tick sends however many bytes SHOULD have gone out by now given
+   * elapsed wall-clock time, and drift cannot accumulate.
+   */
+  const startedAt = Date.now();
+  const TICK_MS = 20;
   const timer = setInterval(() => {
-    if (sent >= total || res.writableEnded) {
-      clearInterval(timer);
-      if (!res.writableEnded) res.end();
-      return;
+    if (res.writableEnded) return clearInterval(timer);
+    const due = Math.min(total, Math.floor(((Date.now() - startedAt) / 1000) * bytesPerSec));
+    while (sent < due) {
+      const n = Math.min(chunk, due - sent, total - sent);
+      res.write(n === chunk ? buf : buf.subarray(0, n));
+      sent += n;
     }
-    const n = Math.min(chunk, total - sent);
-    res.write(nextChunk());
-    sent += n;
-  }, intervalMs);
+    if (sent >= total) {
+      clearInterval(timer);
+      res.end();
+    }
+  }, TICK_MS);
   res.on('close', () => clearInterval(timer));
+});
+
+/**
+ * Canonical demo parameters.
+ *
+ * The client used to carry its own defaults, which silently drifted from the
+ * ones the edge pool warmed with -- baseline loading 8 MB while the edge had
+ * warmed on 12 MB. That is exactly the kind of unequal comparison this whole
+ * rig exists to avoid, so the numbers now come from one place and every
+ * consumer reads them from here.
+ */
+app.get('/config', (_req, res) => {
+  res.json({
+    payloadMb: Number(process.env.PAYLOAD_MB || 8),
+    initDelayMs: Number(process.env.INIT_DELAY_MS || 1200),
+    linkKbps: Number(process.env.LINK_KBPS || 15000),
+  });
 });
 
 app.post('/telemetry/tti', (req, res) => {
