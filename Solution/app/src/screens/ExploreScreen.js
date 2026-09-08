@@ -27,6 +27,23 @@ const ICON = {
   MMA: 'fitness',
 };
 
+/** Log scale from 60s to 6h — the span the catalogue actually covers. */
+const freqPct = (sec) => {
+  const lo = Math.log(60);
+  const hi = Math.log(21600);
+  return Math.max(2, Math.min(98, ((Math.log(Math.max(60, sec)) - lo) / (hi - lo)) * 100));
+};
+
+const freqLabel = (sec) =>
+  sec >= 3600 ? `${Math.round(sec / 3600)}h` : sec >= 60 ? `${Math.round(sec / 60)}m` : `${sec}s`;
+
+/** Closest verticals by event frequency — the safe-neighbour question. */
+const neighboursOf = (v) =>
+  VERTICALS
+    .filter((x) => x.key !== v.key)
+    .sort((a, b) => Math.abs(Math.log(a.freq) - Math.log(v.freq)) - Math.abs(Math.log(b.freq) - Math.log(v.freq)))
+    .slice(0, 3);
+
 export default function ExploreScreen({ onOpenMatch }) {
   const { emit } = useLantern();
   const [sport, setSport] = useState(sportsbook.sports[0]?.name);
@@ -35,6 +52,7 @@ export default function ExploreScreen({ onOpenMatch }) {
   const active = sportsbook.sports.find((s) => s.name === sport) || sportsbook.sports[0];
   // Only the five EPS verticals have measured competitions and matches.
   const measuredActive = sportsbook.sports.some((s) => s.name === sport);
+  const activeVertical = VERTICALS.find((v) => v.key === sport);
 
   const matches = useMemo(
     () =>
@@ -109,6 +127,50 @@ export default function ExploreScreen({ onOpenMatch }) {
           </Text>
         </Card>
       </View>
+      )}
+
+      {/* ---------- catalogue vertical: where it sits on the axis ---------- */}
+      {!measuredActive && sport !== 'Horse Racing' && activeVertical && (
+        <View style={s.pad}>
+          <Card>
+            <Row>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: sp(2.5), flex: 1 }}>
+                <Ionicons name={activeVertical.icon} size={22} color={c.relevance} />
+                <View>
+                  <Text style={type.h2}>{activeVertical.hr}</Text>
+                  <Text style={type.tiny}>{activeVertical.key}</Text>
+                </View>
+              </View>
+              <View style={{ alignItems: 'flex-end' }}>
+                <Text style={s.bigNum}>{freqLabel(activeVertical.freq)}</Text>
+                <Text style={type.tiny}>between results</Text>
+              </View>
+            </Row>
+
+            <Text style={[type.soft, { marginTop: sp(3) }]}>
+              Not in the sampled price feed, so there are no live prices to show. What it does
+              carry is its position on the event-frequency axis — the dimension the recommender
+              holds constant, and the reason this vertical is or is not a safe neighbour for
+              any other.
+            </Text>
+
+            <View style={s.axis}>
+              <View style={s.axisTrack}>
+                <View style={[s.axisFill, { width: `${freqPct(activeVertical.freq)}%` }]} />
+                <View style={[s.axisPin, { left: `${freqPct(activeVertical.freq)}%` }]} />
+              </View>
+              <Row style={{ marginTop: sp(1.5) }}>
+                <Text style={type.tiny}>seconds · slots</Text>
+                <Text style={type.tiny}>hours · outrights</Text>
+              </Row>
+            </View>
+
+            <Text style={[type.tiny, { marginTop: sp(2.5) }]}>
+              Nearest by frequency:{' '}
+              {neighboursOf(activeVertical).map((n) => n.hr).join(' · ') || '—'}
+            </Text>
+          </Card>
+        </View>
       )}
 
       {/* ---------- horse racing ---------- */}
@@ -371,4 +433,16 @@ const s = StyleSheet.create({
   },
   hoddsText: { color: c.ink, fontWeight: '800', fontSize: 12, fontVariant: ['tabular-nums'] },
   drift: { fontSize: 9, fontWeight: '800', marginTop: 2 },
+
+  axis: { marginTop: sp(3) },
+  axisTrack: {
+    height: 6, backgroundColor: c.inset, borderRadius: 3,
+    justifyContent: 'center', position: 'relative',
+  },
+  axisFill: { height: 6, backgroundColor: c.relevance, opacity: 0.35, borderRadius: 3 },
+  axisPin: {
+    position: 'absolute', width: 12, height: 12, borderRadius: 6,
+    backgroundColor: c.relevance, marginLeft: -6,
+    borderWidth: 2, borderColor: c.surface,
+  },
 });
