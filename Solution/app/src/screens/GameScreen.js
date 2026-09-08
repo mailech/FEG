@@ -13,6 +13,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, ScrollView, StyleSheet, Pressable } from 'react-native';
 import { useLantern } from '../lantern/useLantern';
 import { Btn, Card, Label, Row, StateChip, Note } from '../components/ui';
+import GameArt from '../components/GameArt';
 import { c, sp, type } from '../theme';
 
 const STAKES = [50, 100, 200, 500, 1000, 2000];
@@ -77,15 +78,22 @@ export default function GameScreen({ game, onBack }) {
       <View style={s.header}>
         <Row>
           <Pressable onPress={onBack} hitSlop={12}>
-            <Text style={s.back}>‹ Lobby</Text>
+            <Text style={s.back}>‹ Feed</Text>
           </Pressable>
           <Text style={s.balance}>€{(balanceCents / 100).toFixed(2)}</Text>
         </Row>
-        <Text style={[type.h2, { marginTop: sp(2) }]}>{game.name}</Text>
-        <Text style={type.tiny}>
-          {game.provider} · {game.mechanic} · volatility band {game.volatility}
-          {game.jackpot ? ' · jackpot' : ''}
-        </Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: sp(3), marginTop: sp(3) }}>
+          <View style={{ width: 52 }}>
+            <GameArt game={game} size="tile" />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={type.h2} numberOfLines={1}>{game.name}</Text>
+            <Text style={type.tiny}>
+              {game.provider} · {game.mechanic.replace('-', ' ')} · band {game.volatility}
+              {game.jackpot ? ' · jackpot' : ''}
+            </Text>
+          </View>
+        </View>
       </View>
 
       <View style={s.pad}>

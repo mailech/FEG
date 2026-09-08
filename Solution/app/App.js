@@ -12,21 +12,22 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { Ionicons } from '@expo/vector-icons';
 import { LanternProvider, useLantern } from './src/lantern/useLantern';
-import LobbyScreen from './src/screens/LobbyScreen';
+import FeedScreen from './src/screens/FeedScreen';
 import GameScreen from './src/screens/GameScreen';
 import SlipScreen from './src/screens/SlipScreen';
 import MonitorScreen from './src/screens/MonitorScreen';
 import { c, sp, stateColor } from './src/theme';
 
 const TABS = [
-  { key: 'lobby', label: 'Casino' },
-  { key: 'sport', label: 'Sport' },
-  { key: 'monitor', label: 'Monitor' },
+  { key: 'feed', label: 'Feed', icon: 'home', iconOff: 'home-outline' },
+  { key: 'sport', label: 'Sport', icon: 'football', iconOff: 'football-outline' },
+  { key: 'monitor', label: 'Monitor', icon: 'pulse', iconOff: 'pulse-outline' },
 ];
 
 function Shell() {
-  const [tab, setTab] = useState('lobby');
+  const [tab, setTab] = useState('feed');
   const [game, setGame] = useState(null);
   const { risk, slip } = useLantern();
 
@@ -35,8 +36,8 @@ function Shell() {
       <View style={s.body}>
         {game ? (
           <GameScreen game={game} onBack={() => setGame(null)} />
-        ) : tab === 'lobby' ? (
-          <LobbyScreen onOpenGame={setGame} />
+        ) : tab === 'feed' ? (
+          <FeedScreen onOpenGame={setGame} />
         ) : tab === 'sport' ? (
           <SlipScreen />
         ) : (
@@ -53,14 +54,25 @@ function Shell() {
               key={t.key}
               onPress={() => { setGame(null); setTab(t.key); }}
               style={s.tab}
+              accessibilityRole="button"
+              accessibilityLabel={t.label}
             >
-              <View style={[s.tabDot, on && { backgroundColor: c.relevance }]} />
-              <Text style={[s.tabText, on && s.tabTextOn]}>
-                {t.label}{badge ? ` · ${badge}` : ''}
-              </Text>
-              {t.key === 'monitor' && (
-                <View style={[s.riskPip, { backgroundColor: stateColor(risk.state) }]} />
-              )}
+              <View>
+                <Ionicons
+                  name={on ? t.icon : t.iconOff}
+                  size={21}
+                  color={on ? c.relevance : c.inkFaint}
+                />
+                {badge != null && (
+                  <View style={s.badge}>
+                    <Text style={s.badgeText}>{badge}</Text>
+                  </View>
+                )}
+                {t.key === 'monitor' && (
+                  <View style={[s.pip, { backgroundColor: stateColor(risk.state) }]} />
+                )}
+              </View>
+              <Text style={[s.tabText, on && s.tabTextOn]}>{t.label}</Text>
             </Pressable>
           );
         })}
@@ -95,14 +107,22 @@ const s = StyleSheet.create({
   tab: {
     flex: 1,
     alignItems: 'center',
-    paddingVertical: sp(3),
+    paddingTop: sp(2.5),
+    paddingBottom: sp(3),
     gap: sp(1),
   },
-  tabDot: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'transparent' },
-  tabText: { fontSize: 12, color: c.inkFaint, fontWeight: '600' },
+  tabText: { fontSize: 11, color: c.inkFaint, fontWeight: '600' },
   tabTextOn: { color: c.ink },
-  riskPip: {
-    position: 'absolute', top: sp(2.5), right: '28%',
-    width: 6, height: 6, borderRadius: 3,
+  badge: {
+    position: 'absolute', top: -4, right: -10,
+    minWidth: 15, height: 15, borderRadius: 8,
+    backgroundColor: c.relevance,
+    alignItems: 'center', justifyContent: 'center', paddingHorizontal: 3,
+  },
+  badgeText: { fontSize: 9, fontWeight: '800', color: c.bg },
+  pip: {
+    position: 'absolute', top: -2, right: -6,
+    width: 7, height: 7, borderRadius: 4,
+    borderWidth: 1.5, borderColor: c.surface,
   },
 });

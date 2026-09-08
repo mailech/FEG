@@ -215,4 +215,37 @@ export function baseline(n = 12) {
   return { items: POPULAR.slice(0, n), kl: null, calibrated: false };
 }
 
+/**
+ * Why this title is in front of the player, in their own language.
+ *
+ * Every card in the feed carries one of these. A recommendation the player can
+ * interrogate is relevance; one they cannot is just a push. This reads the same
+ * `why` object the ranker already emits, so the sentence cannot drift from the
+ * scoring.
+ */
+export function explain(game, sco) {
+  const w = game.why;
+  if (!w) return `Popular right now · ${game.launches} launches in the logs`;
+
+  const lastId = [...sco.seq].reverse()[0];
+  const last = lastId ? BY_ID.get(lastId) : null;
+
+  if (w.affinity > 0.72 && last) {
+    if (last.provider === game.provider) {
+      return `Close to ${last.name}, and also ${game.provider}`;
+    }
+    return `Plays like ${last.name}`;
+  }
+  if (w.providerFit > 0.25) {
+    return `${game.provider} — you come back to them`;
+  }
+  if (w.affinity > 0.5 && last) {
+    return `Same ${game.mechanic.replace('-', ' ')} feel as ${last.name}`;
+  }
+  if (w.bandFit > 0.85) {
+    return `Volatility band ${game.volatility} — where you usually play`;
+  }
+  return `Popular this week · ${game.launches} launches in the logs`;
+}
+
 export { catalog, PROVIDERS, MECHANICS };
