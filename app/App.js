@@ -3,10 +3,10 @@
  * FEG Innovation Hackathon 2026 · Challenge 01 · Lorven AI
  *
  * Architecture: ../../LANTERN-ARCHITECTURE.md
- * Data:         Solution/scripts/extract-data.mjs → src/data/*.json
+ * Data:         Solution/scripts/extract-data.mjs + extract-sports.mjs
  *
- * Tab state is deliberately local rather than a navigation library — one fewer
- * dependency between a judge and a running demo.
+ * Tab state is local rather than a navigation library — one fewer dependency
+ * between a judge and a running demo.
  */
 
 import React, { useState } from 'react';
@@ -14,32 +14,47 @@ import { View, Text, Pressable, StyleSheet, SafeAreaView, Platform, StatusBar } 
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import { LanternProvider, useLantern } from './src/lantern/useLantern';
-import FeedScreen from './src/screens/FeedScreen';
-import GameScreen from './src/screens/GameScreen';
-import SlipScreen from './src/screens/SlipScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import ExploreScreen from './src/screens/ExploreScreen';
+import SportScreen from './src/screens/SportScreen';
 import MonitorScreen from './src/screens/MonitorScreen';
+import GameScreen from './src/screens/GameScreen';
+import RealGameScreen from './src/screens/RealGameScreen';
 import { c, sp, stateColor } from './src/theme';
 
 const TABS = [
-  { key: 'feed', label: 'Feed', icon: 'home', iconOff: 'home-outline' },
-  { key: 'sport', label: 'Sport', icon: 'football', iconOff: 'football-outline' },
-  { key: 'monitor', label: 'Monitor', icon: 'pulse', iconOff: 'pulse-outline' },
+  { key: 'home', label: 'Home', on: 'home', off: 'home-outline' },
+  { key: 'explore', label: 'Explore', on: 'compass', off: 'compass-outline' },
+  { key: 'sport', label: 'Sport', on: 'football', off: 'football-outline' },
+  { key: 'monitor', label: 'Monitor', on: 'pulse', off: 'pulse-outline' },
 ];
 
 function Shell() {
-  const [tab, setTab] = useState('feed');
-  const [game, setGame] = useState(null);
+  const [tab, setTab] = useState('home');
+  const [game, setGame] = useState(null);   // stand-in slot
+  const [real, setReal] = useState(false);  // Empire of Gold
   const { risk, slip } = useLantern();
+
+  const goTab = (k) => { setGame(null); setReal(false); setTab(k); };
+  const overlay = real || game;
 
   return (
     <SafeAreaView style={s.safe}>
       <View style={s.body}>
-        {game ? (
+        {real ? (
+          <RealGameScreen onBack={() => setReal(false)} />
+        ) : game ? (
           <GameScreen game={game} onBack={() => setGame(null)} />
-        ) : tab === 'feed' ? (
-          <FeedScreen onOpenGame={setGame} />
+        ) : tab === 'home' ? (
+          <HomeScreen
+            onOpenGame={setGame}
+            onOpenReal={() => setReal(true)}
+            onExplore={() => setTab('explore')}
+          />
+        ) : tab === 'explore' ? (
+          <ExploreScreen onOpenMatch={() => setTab('sport')} />
         ) : tab === 'sport' ? (
-          <SlipScreen />
+          <SportScreen />
         ) : (
           <MonitorScreen />
         )}
@@ -47,32 +62,26 @@ function Shell() {
 
       <View style={s.tabs}>
         {TABS.map((t) => {
-          const on = !game && tab === t.key;
+          const active = !overlay && tab === t.key;
           const badge = t.key === 'sport' && slip.length ? slip.length : null;
           return (
             <Pressable
               key={t.key}
-              onPress={() => { setGame(null); setTab(t.key); }}
+              onPress={() => goTab(t.key)}
               style={s.tab}
               accessibilityRole="button"
               accessibilityLabel={t.label}
             >
               <View>
-                <Ionicons
-                  name={on ? t.icon : t.iconOff}
-                  size={21}
-                  color={on ? c.relevance : c.inkFaint}
-                />
+                <Ionicons name={active ? t.on : t.off} size={20} color={active ? c.relevance : c.inkFaint} />
                 {badge != null && (
-                  <View style={s.badge}>
-                    <Text style={s.badgeText}>{badge}</Text>
-                  </View>
+                  <View style={s.badge}><Text style={s.badgeText}>{badge}</Text></View>
                 )}
                 {t.key === 'monitor' && (
                   <View style={[s.pip, { backgroundColor: stateColor(risk.state) }]} />
                 )}
               </View>
-              <Text style={[s.tabText, on && s.tabTextOn]}>{t.label}</Text>
+              <Text style={[s.tabText, active && s.tabTextOn]}>{t.label}</Text>
             </Pressable>
           );
         })}
@@ -104,25 +113,17 @@ const s = StyleSheet.create({
     borderTopColor: c.rule,
     backgroundColor: c.surface,
   },
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    paddingTop: sp(2.5),
-    paddingBottom: sp(3),
-    gap: sp(1),
-  },
-  tabText: { fontSize: 11, color: c.inkFaint, fontWeight: '600' },
+  tab: { flex: 1, alignItems: 'center', paddingTop: sp(2.5), paddingBottom: sp(3), gap: sp(1) },
+  tabText: { fontSize: 10.5, color: c.inkFaint, fontWeight: '700' },
   tabTextOn: { color: c.ink },
   badge: {
     position: 'absolute', top: -4, right: -10,
-    minWidth: 15, height: 15, borderRadius: 8,
-    backgroundColor: c.relevance,
+    minWidth: 15, height: 15, borderRadius: 8, backgroundColor: c.relevance,
     alignItems: 'center', justifyContent: 'center', paddingHorizontal: 3,
   },
-  badgeText: { fontSize: 9, fontWeight: '800', color: c.bg },
+  badgeText: { fontSize: 9, fontWeight: '900', color: c.bg },
   pip: {
     position: 'absolute', top: -2, right: -6,
-    width: 7, height: 7, borderRadius: 4,
-    borderWidth: 1.5, borderColor: c.surface,
+    width: 7, height: 7, borderRadius: 4, borderWidth: 1.5, borderColor: c.surface,
   },
 });

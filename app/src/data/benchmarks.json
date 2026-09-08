@@ -1,0 +1,542 @@
+[
+  {
+    "market": "CASA",
+    "month": "2025-09",
+    "stakePerSession": 167.19,
+    "spinsPerSession": 337,
+    "gamesPerSession": 2.39,
+    "sessionsPerPlayer": 15.32,
+    "medianSessionSec": 504
+  },
+  {
+    "market": "CASA",
+    "month": "2025-10",
+    "stakePerSession": 165.98,
+    "spinsPerSession": 315.9,
+    "gamesPerSession": 2.31,
+    "sessionsPerPlayer": 17.17,
+    "medianSessionSec": 444
+  },
+  {
+    "market": "CASA",
+    "month": "2025-11",
+    "stakePerSession": 207.17,
+    "spinsPerSession": 396.2,
+    "gamesPerSession": 2.63,
+    "sessionsPerPlayer": 13.18,
+    "medianSessionSec": 735
+  },
+  {
+    "market": "CASA",
+    "month": "2025-12",
+    "stakePerSession": 210.9,
+    "spinsPerSession": 386.7,
+    "gamesPerSession": 2.54,
+    "sessionsPerPlayer": 11.76,
+    "medianSessionSec": 687
+  },
+  {
+    "market": "CASA",
+    "month": "2026-01",
+    "stakePerSession": 219.43,
+    "spinsPerSession": 456,
+    "gamesPerSession": 2.82,
+    "sessionsPerPlayer": 10.85,
+    "medianSessionSec": 900
+  },
+  {
+    "market": "CASA",
+    "month": "2026-02",
+    "stakePerSession": 207.51,
+    "spinsPerSession": 408.7,
+    "gamesPerSession": 2.61,
+    "sessionsPerPlayer": 10.86,
+    "medianSessionSec": 732
+  },
+  {
+    "market": "CASA",
+    "month": "2026-03",
+    "stakePerSession": 202.67,
+    "spinsPerSession": 393.2,
+    "gamesPerSession": 2.51,
+    "sessionsPerPlayer": 11.54,
+    "medianSessionSec": 681
+  },
+  {
+    "market": "CASA",
+    "month": "2026-04",
+    "stakePerSession": 206.91,
+    "spinsPerSession": 394.7,
+    "gamesPerSession": 2.48,
+    "sessionsPerPlayer": 11.15,
+    "medianSessionSec": 705
+  },
+  {
+    "market": "CASA",
+    "month": "2026-05",
+    "stakePerSession": 222.79,
+    "spinsPerSession": 423,
+    "gamesPerSession": 2.6,
+    "sessionsPerPlayer": 10.41,
+    "medianSessionSec": 796
+  },
+  {
+    "market": "CASA",
+    "month": "2026-06",
+    "stakePerSession": 193.7,
+    "spinsPerSession": 348.7,
+    "gamesPerSession": 2.26,
+    "sessionsPerPlayer": 11.58,
+    "medianSessionSec": 575
+  },
+  {
+    "market": "CASA",
+    "month": "2026-07",
+    "stakePerSession": 234.91,
+    "spinsPerSession": 380.4,
+    "gamesPerSession": 2.41,
+    "sessionsPerPlayer": 10.17,
+    "medianSessionSec": 652
+  },
+  {
+    "market": "CASA",
+    "month": "2026-08",
+    "stakePerSession": 248.75,
+    "spinsPerSession": 426.5,
+    "gamesPerSession": 2.61,
+    "sessionsPerPlayer": 10.82,
+    "medianSessionSec": 782
+  },
+  {
+    "market": "CZ",
+    "month": "2025-09",
+    "stakePerSession": 255.48,
+    "spinsPerSession": 253.7,
+    "gamesPerSession": 2.52,
+    "sessionsPerPlayer": 11.19,
+    "medianSessionSec": 526
+  },
+  {
+    "market": "CZ",
+    "month": "2025-10",
+    "stakePerSession": 297.36,
+    "spinsPerSession": 284.9,
+    "gamesPerSession": 2.9,
+    "sessionsPerPlayer": 13.82,
+    "medianSessionSec": 682
+  },
+  {
+    "market": "CZ",
+    "month": "2025-11",
+    "stakePerSession": 257.39,
+    "spinsPerSession": 247.7,
+    "gamesPerSession": 2.6,
+    "sessionsPerPlayer": 12.64,
+    "medianSessionSec": 497
+  },
+  {
+    "market": "CZ",
+    "month": "2025-12",
+    "stakePerSession": 251.57,
+    "spinsPerSession": 235.7,
+    "gamesPerSession": 2.53,
+    "sessionsPerPlayer": 12.42,
+    "medianSessionSec": 443
+  },
+  {
+    "market": "CZ",
+    "month": "2026-01",
+    "stakePerSession": 301.57,
+    "spinsPerSession": 294,
+    "gamesPerSession": 3.01,
+    "sessionsPerPlayer": 11.85,
+    "medianSessionSec": 692
+  },
+  {
+    "market": "CZ",
+    "month": "2026-02",
+    "stakePerSession": 270.15,
+    "spinsPerSession": 259.5,
+    "gamesPerSession": 2.62,
+    "sessionsPerPlayer": 11.63,
+    "medianSessionSec": 548
+  },
+  {
+    "market": "CZ",
+    "month": "2026-03",
+    "stakePerSession": 318.65,
+    "spinsPerSession": 306,
+    "gamesPerSession": 3.08,
+    "sessionsPerPlayer": 13.5,
+    "medianSessionSec": 754
+  },
+  {
+    "market": "CZ",
+    "month": "2026-04",
+    "stakePerSession": 231.37,
+    "spinsPerSession": 235.4,
+    "gamesPerSession": 2.51,
+    "sessionsPerPlayer": 12.43,
+    "medianSessionSec": 428
+  },
+  {
+    "market": "CZ",
+    "month": "2026-05",
+    "stakePerSession": 250.56,
+    "spinsPerSession": 254.2,
+    "gamesPerSession": 2.58,
+    "sessionsPerPlayer": 12.45,
+    "medianSessionSec": 527
+  },
+  {
+    "market": "CZ",
+    "month": "2026-06",
+    "stakePerSession": 290.18,
+    "spinsPerSession": 278.8,
+    "gamesPerSession": 2.84,
+    "sessionsPerPlayer": 13.61,
+    "medianSessionSec": 681
+  },
+  {
+    "market": "CZ",
+    "month": "2026-07",
+    "stakePerSession": 321.45,
+    "spinsPerSession": 302.6,
+    "gamesPerSession": 3.08,
+    "sessionsPerPlayer": 13.52,
+    "medianSessionSec": 740
+  },
+  {
+    "market": "CZ",
+    "month": "2026-08",
+    "stakePerSession": 332.36,
+    "spinsPerSession": 303.5,
+    "gamesPerSession": 3.09,
+    "sessionsPerPlayer": 13.33,
+    "medianSessionSec": 735
+  },
+  {
+    "market": "PSK",
+    "month": "2025-09",
+    "stakePerSession": 320.53,
+    "spinsPerSession": 384,
+    "gamesPerSession": 2.62,
+    "sessionsPerPlayer": 16.24,
+    "medianSessionSec": 807
+  },
+  {
+    "market": "PSK",
+    "month": "2025-10",
+    "stakePerSession": 279.83,
+    "spinsPerSession": 354.3,
+    "gamesPerSession": 2.45,
+    "sessionsPerPlayer": 16.37,
+    "medianSessionSec": 686
+  },
+  {
+    "market": "PSK",
+    "month": "2025-11",
+    "stakePerSession": 253.04,
+    "spinsPerSession": 327.4,
+    "gamesPerSession": 2.3,
+    "sessionsPerPlayer": 16.86,
+    "medianSessionSec": 564
+  },
+  {
+    "market": "PSK",
+    "month": "2025-12",
+    "stakePerSession": 230.88,
+    "spinsPerSession": 314.2,
+    "gamesPerSession": 2.24,
+    "sessionsPerPlayer": 17.85,
+    "medianSessionSec": 525
+  },
+  {
+    "market": "PSK",
+    "month": "2026-01",
+    "stakePerSession": 253.22,
+    "spinsPerSession": 349.4,
+    "gamesPerSession": 2.45,
+    "sessionsPerPlayer": 14.69,
+    "medianSessionSec": 630
+  },
+  {
+    "market": "PSK",
+    "month": "2026-02",
+    "stakePerSession": 287.74,
+    "spinsPerSession": 375.3,
+    "gamesPerSession": 2.63,
+    "sessionsPerPlayer": 14.86,
+    "medianSessionSec": 753
+  },
+  {
+    "market": "PSK",
+    "month": "2026-03",
+    "stakePerSession": 306.6,
+    "spinsPerSession": 369.1,
+    "gamesPerSession": 2.63,
+    "sessionsPerPlayer": 16.5,
+    "medianSessionSec": 750
+  },
+  {
+    "market": "PSK",
+    "month": "2026-04",
+    "stakePerSession": 279.96,
+    "spinsPerSession": 344,
+    "gamesPerSession": 2.36,
+    "sessionsPerPlayer": 15.99,
+    "medianSessionSec": 616
+  },
+  {
+    "market": "PSK",
+    "month": "2026-05",
+    "stakePerSession": 269.64,
+    "spinsPerSession": 331.6,
+    "gamesPerSession": 2.25,
+    "sessionsPerPlayer": 18.15,
+    "medianSessionSec": 575
+  },
+  {
+    "market": "PSK",
+    "month": "2026-06",
+    "stakePerSession": 291.27,
+    "spinsPerSession": 331.7,
+    "gamesPerSession": 2.28,
+    "sessionsPerPlayer": 16.07,
+    "medianSessionSec": 605
+  },
+  {
+    "market": "PSK",
+    "month": "2026-07",
+    "stakePerSession": 327.75,
+    "spinsPerSession": 372.5,
+    "gamesPerSession": 2.49,
+    "sessionsPerPlayer": 15.09,
+    "medianSessionSec": 717
+  },
+  {
+    "market": "PSK",
+    "month": "2026-08",
+    "stakePerSession": 343.4,
+    "spinsPerSession": 378.6,
+    "gamesPerSession": 2.49,
+    "sessionsPerPlayer": 15.08,
+    "medianSessionSec": 722
+  },
+  {
+    "market": "RO",
+    "month": "2025-09",
+    "stakePerSession": 167.01,
+    "spinsPerSession": 326.1,
+    "gamesPerSession": 2.26,
+    "sessionsPerPlayer": 13.01,
+    "medianSessionSec": 500
+  },
+  {
+    "market": "RO",
+    "month": "2025-10",
+    "stakePerSession": 164.64,
+    "spinsPerSession": 320,
+    "gamesPerSession": 2.29,
+    "sessionsPerPlayer": 14.62,
+    "medianSessionSec": 429
+  },
+  {
+    "market": "RO",
+    "month": "2025-11",
+    "stakePerSession": 245.03,
+    "spinsPerSession": 453.4,
+    "gamesPerSession": 2.77,
+    "sessionsPerPlayer": 11.05,
+    "medianSessionSec": 894
+  },
+  {
+    "market": "RO",
+    "month": "2025-12",
+    "stakePerSession": 232.95,
+    "spinsPerSession": 426.6,
+    "gamesPerSession": 2.64,
+    "sessionsPerPlayer": 10.02,
+    "medianSessionSec": 802
+  },
+  {
+    "market": "RO",
+    "month": "2026-01",
+    "stakePerSession": 223.44,
+    "spinsPerSession": 461.6,
+    "gamesPerSession": 2.79,
+    "sessionsPerPlayer": 10.08,
+    "medianSessionSec": 892
+  },
+  {
+    "market": "RO",
+    "month": "2026-02",
+    "stakePerSession": 211.51,
+    "spinsPerSession": 420,
+    "gamesPerSession": 2.63,
+    "sessionsPerPlayer": 8.61,
+    "medianSessionSec": 744
+  },
+  {
+    "market": "RO",
+    "month": "2026-03",
+    "stakePerSession": 220.78,
+    "spinsPerSession": 427,
+    "gamesPerSession": 2.63,
+    "sessionsPerPlayer": 10.39,
+    "medianSessionSec": 780
+  },
+  {
+    "market": "RO",
+    "month": "2026-04",
+    "stakePerSession": 217.73,
+    "spinsPerSession": 411.5,
+    "gamesPerSession": 2.49,
+    "sessionsPerPlayer": 8.71,
+    "medianSessionSec": 741
+  },
+  {
+    "market": "RO",
+    "month": "2026-05",
+    "stakePerSession": 227.88,
+    "spinsPerSession": 408.8,
+    "gamesPerSession": 2.47,
+    "sessionsPerPlayer": 9.87,
+    "medianSessionSec": 752
+  },
+  {
+    "market": "RO",
+    "month": "2026-06",
+    "stakePerSession": 194.78,
+    "spinsPerSession": 346.9,
+    "gamesPerSession": 2.24,
+    "sessionsPerPlayer": 10.51,
+    "medianSessionSec": 569
+  },
+  {
+    "market": "RO",
+    "month": "2026-07",
+    "stakePerSession": 221.81,
+    "spinsPerSession": 373.5,
+    "gamesPerSession": 2.35,
+    "sessionsPerPlayer": 9.07,
+    "medianSessionSec": 638
+  },
+  {
+    "market": "RO",
+    "month": "2026-08",
+    "stakePerSession": 230.99,
+    "spinsPerSession": 399.8,
+    "gamesPerSession": 2.52,
+    "sessionsPerPlayer": 9.47,
+    "medianSessionSec": 719
+  },
+  {
+    "market": "SK",
+    "month": "2025-09",
+    "stakePerSession": 248.51,
+    "spinsPerSession": 335.8,
+    "gamesPerSession": 2.75,
+    "sessionsPerPlayer": 12.59,
+    "medianSessionSec": 593
+  },
+  {
+    "market": "SK",
+    "month": "2025-10",
+    "stakePerSession": 276.64,
+    "spinsPerSession": 366.6,
+    "gamesPerSession": 2.89,
+    "sessionsPerPlayer": 13.53,
+    "medianSessionSec": 690
+  },
+  {
+    "market": "SK",
+    "month": "2025-11",
+    "stakePerSession": 308.72,
+    "spinsPerSession": 400.7,
+    "gamesPerSession": 3.07,
+    "sessionsPerPlayer": 15.6,
+    "medianSessionSec": 790
+  },
+  {
+    "market": "SK",
+    "month": "2025-12",
+    "stakePerSession": 301.14,
+    "spinsPerSession": 383.4,
+    "gamesPerSession": 3.18,
+    "sessionsPerPlayer": 17.35,
+    "medianSessionSec": 770
+  },
+  {
+    "market": "SK",
+    "month": "2026-01",
+    "stakePerSession": 271.07,
+    "spinsPerSession": 362,
+    "gamesPerSession": 2.98,
+    "sessionsPerPlayer": 13.39,
+    "medianSessionSec": 659
+  },
+  {
+    "market": "SK",
+    "month": "2026-02",
+    "stakePerSession": 261.35,
+    "spinsPerSession": 341.1,
+    "gamesPerSession": 2.9,
+    "sessionsPerPlayer": 12.23,
+    "medianSessionSec": 601
+  },
+  {
+    "market": "SK",
+    "month": "2026-03",
+    "stakePerSession": 270.4,
+    "spinsPerSession": 368.7,
+    "gamesPerSession": 3.02,
+    "sessionsPerPlayer": 14.35,
+    "medianSessionSec": 706
+  },
+  {
+    "market": "SK",
+    "month": "2026-04",
+    "stakePerSession": 299.11,
+    "spinsPerSession": 387,
+    "gamesPerSession": 3.09,
+    "sessionsPerPlayer": 15.55,
+    "medianSessionSec": 780
+  },
+  {
+    "market": "SK",
+    "month": "2026-05",
+    "stakePerSession": 257.97,
+    "spinsPerSession": 342,
+    "gamesPerSession": 2.86,
+    "sessionsPerPlayer": 13.74,
+    "medianSessionSec": 614
+  },
+  {
+    "market": "SK",
+    "month": "2026-06",
+    "stakePerSession": 307.88,
+    "spinsPerSession": 371.6,
+    "gamesPerSession": 3,
+    "sessionsPerPlayer": 14.9,
+    "medianSessionSec": 748
+  },
+  {
+    "market": "SK",
+    "month": "2026-07",
+    "stakePerSession": 333.49,
+    "spinsPerSession": 383.4,
+    "gamesPerSession": 3.11,
+    "sessionsPerPlayer": 14.79,
+    "medianSessionSec": 770
+  },
+  {
+    "market": "SK",
+    "month": "2026-08",
+    "stakePerSession": 313.02,
+    "spinsPerSession": 370.7,
+    "gamesPerSession": 3.19,
+    "sessionsPerPlayer": 15.59,
+    "medianSessionSec": 749
+  }
+]

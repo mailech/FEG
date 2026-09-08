@@ -14,6 +14,7 @@ import { MARKERS } from '../lantern/risk';
 import { shouldSend, TRIGGER_CLASSES, MARKETS } from '../lantern/policy';
 import { c, sp, type } from '../theme';
 import metrics from '../data/metrics.json';
+import benchmarks from '../data/benchmarks.json';
 
 const AGE_BANDS = ['18-24', '25-34', '35-44', '45-54', '55+'];
 
@@ -226,6 +227,33 @@ export default function MonitorScreen() {
           </Text>
         </Card>
 
+        {/* ---- group benchmarks: the divergence that makes the case ---- */}
+        <Card style={{ marginTop: sp(3) }}>
+          <Label>FEG group benchmarks · Sep 2025 → Aug 2026</Label>
+          <Text style={[type.soft, { marginTop: sp(1.5) }]}>
+            From hackathon_casino_trends.xlsx. Two markets grew value per session by taking
+            more from fewer returning players. Two grew both.
+          </Text>
+
+          <View style={{ marginTop: sp(3), gap: sp(1.5) }}>
+            {MARKET_TREND.map((m) => (
+              <View key={m.market} style={s.trend}>
+                <Text style={s.trendName}>{m.market}</Text>
+                <View style={s.trendBars}>
+                  <Delta label="stake/session" pct={m.stake} good />
+                  <Delta label="sessions/player" pct={m.sessions} />
+                </View>
+              </View>
+            ))}
+          </View>
+
+          <Note tone="risk">
+            "Value per Session" is a listed metric. Optimise it alone and you get the CASA and
+            RO shape — revenue concentrating into fewer, heavier sessions. The brief scores on
+            D30/D90 survival, which is the other column.
+          </Note>
+        </Card>
+
         <Btn title="Reset session" tone="quiet" onPress={() => dispatch({ type: 'reset' })} style={{ marginTop: sp(4) }} />
 
         <Text style={[type.tiny, { marginTop: sp(4), lineHeight: 16 }]}>
@@ -236,6 +264,33 @@ export default function MonitorScreen() {
         </Text>
       </View>
     </ScrollView>
+  );
+}
+
+/** First and last month per market, as percentage change. */
+const MARKET_TREND = (() => {
+  const by = {};
+  for (const r of benchmarks) (by[r.market] = by[r.market] || []).push(r);
+  return Object.entries(by).map(([market, rs]) => {
+    const a = rs[0], z = rs[rs.length - 1];
+    const pc = (x, y) => Math.round(((y - x) / x) * 100);
+    return {
+      market,
+      stake: pc(a.stakePerSession, z.stakePerSession),
+      sessions: pc(a.sessionsPerPlayer, z.sessionsPerPlayer),
+    };
+  }).sort((x, y) => x.sessions - y.sessions);
+})();
+
+function Delta({ label, pct }) {
+  const up = pct >= 0;
+  return (
+    <View style={{ flex: 1 }}>
+      <Text style={[s.deltaV, { color: up ? c.calm : c.concern }]}>
+        {up ? '+' : ''}{pct}%
+      </Text>
+      <Text style={s.deltaK}>{label}</Text>
+    </View>
   );
 }
 
@@ -290,4 +345,12 @@ const s = StyleSheet.create({
     marginTop: sp(2.5), borderWidth: 1, borderRadius: 4,
     paddingVertical: sp(2), paddingHorizontal: sp(3), alignItems: 'center',
   },
+  trend: {
+    flexDirection: 'row', alignItems: 'center', gap: sp(3),
+    backgroundColor: c.inset, borderRadius: 6, padding: sp(2.5),
+  },
+  trendName: { width: 52, fontSize: 12, fontWeight: '900', color: c.ink },
+  trendBars: { flex: 1, flexDirection: 'row', gap: sp(3) },
+  deltaV: { fontSize: 15, fontWeight: '900', fontVariant: ['tabular-nums'] },
+  deltaK: { fontSize: 9.5, color: c.inkFaint, marginTop: 1 },
 });
