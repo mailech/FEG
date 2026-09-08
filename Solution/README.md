@@ -13,7 +13,15 @@ Architecture: [../LANTERN-ARCHITECTURE.md](../LANTERN-ARCHITECTURE.md)
 cd Solution/app
 npm install
 npm run web        # browser — easiest for a projector
-npm run android    # or ios, via Expo Go
+npm start          # QR code for Expo Go on a phone
+```
+
+If Metro reports it cannot resolve a package that is plainly present in
+`node_modules` — it caches resolution failures from mid-install — clear its
+cache once:
+
+```bash
+npm run web:clean      # or: npm run start:clean
 ```
 
 Regenerate the dataset from the raw logs (only needed if the CSV changes):
