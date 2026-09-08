@@ -35,9 +35,12 @@ export const EMPIRE = {
 
 /**
  * Note the permissions. The bundle calls requestFullscreen() on launch, and
- * granting it hides the Lantern chrome — which is the one thing this screen
- * exists to show. With `fullscreen` absent from `allow`, the call fails
- * harmlessly and the game stays inside its frame.
+ * granting it hides the Lantern chrome — the one thing this screen exists to
+ * show.
+ *
+ * Omitting `fullscreen` from `allow` is NOT enough: its default allowlist is
+ * `self`, and the game is served from our own origin, so a same-origin frame
+ * keeps the permission by default. It has to be denied explicitly.
  */
 function Frame({ onLoad }) {
   if (Platform.OS === 'web') {
@@ -46,7 +49,7 @@ function Frame({ onLoad }) {
         src={GAME_URL}
         onLoad={onLoad}
         title="Empire of Gold"
-        allow="autoplay"
+        allow="autoplay; fullscreen 'none'"
         allowFullScreen={false}
         style={{ width: '100%', height: '100%', border: 'none', display: 'block', background: '#000' }}
       />
