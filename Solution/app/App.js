@@ -9,7 +9,7 @@
  * between a judge and a running demo.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
@@ -33,10 +33,15 @@ function Shell() {
   const [tab, setTab] = useState('home');
   const [game, setGame] = useState(null);   // stand-in slot
   const [real, setReal] = useState(false);  // Empire of Gold
-  const { risk, slip } = useLantern();
+  const { risk, slip, dispatch } = useLantern();
 
   const goTab = (k) => { setGame(null); setReal(false); setTab(k); };
   const overlay = real || game;
+
+  // The route rides along on every logged row, so a training job knows which
+  // surface the player was on when each event fired.
+  const route = real ? 'game:empire-of-gold' : game ? 'game:' + game.id : tab;
+  useEffect(() => { dispatch({ type: 'setRoute', route }); }, [route, dispatch]);
 
   return (
     <SafeAreaView style={s.safe}>

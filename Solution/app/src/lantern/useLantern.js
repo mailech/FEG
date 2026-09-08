@@ -8,12 +8,15 @@
  */
 
 import React, { createContext, useContext, useMemo, useReducer, useCallback } from 'react';
-import { createSCO, apply, emptyPrior, sessionMinutes } from './sco';
+import { createSCO, apply, emptyPrior, sessionMinutes, archetype as archetypeOf } from './sco';
 import { evaluate, withHysteresis } from './risk';
 import { recommend, baseline, BY_ID } from './relevance';
 import { decide } from './policy';
+import { toRow, pseudoId } from './logger';
 
 const Ctx = createContext(null);
+
+const PLAYER_ID = pseudoId('lantern-demo-player');
 
 const initial = () => ({
   sco: createSCO({
@@ -39,10 +42,21 @@ function reducer(st, action) {
       const risk = evaluate(sco);
       const state = withHysteresis(st.state, risk.state, risk.score);
       const log = [...st.log, { ...action.ev, at: action.ev.at ?? Date.now() }].slice(-200);
+
+      // Same event, written in FEG's schema so the export concatenates onto
+      // their real file without a mapping step.
+      const row = toRow(action.ev, {
+        sessionId: sco.sessionId,
+        playerId: PLAYER_ID,
+        route: st.route,
+        riskState: state,
+        archetype: archetypeOf(sco),
+      });
+      const rows = [...st.rows, row].slice(-20000);
       let balanceCents = st.balanceCents;
       if (action.ev.t === 'spin') balanceCents += (action.ev.payout || 0) - action.ev.stake;
       if (action.ev.t === 'deposit' && !action.ev.declined) balanceCents += action.ev.amount;
-      return { ...st, sco, state, log, balanceCents };
+      return { ...st, sco, state, log, rows, balanceCents };
     }
     case 'slipAdd':
       return { ...st, slip: [...st.slip, action.sel] };
@@ -56,8 +70,14 @@ function reducer(st, action) {
       return { ...st, market: action.market };
     case 'setAge':
       return { ...st, sco: { ...st.sco, prior: { ...st.sco.prior, ageBand: action.band } } };
+    case 'setRoute':
+      return st.route === action.route ? st : { ...st, route: action.route };
+    case 'addRows':
+      return { ...st, rows: [...st.rows, ...action.rows].slice(-60000) };
+    case 'clearRows':
+      return { ...st, rows: [] };
     case 'reset':
-      return initial();
+      return { ...initial(), rows: st.rows };   // keep the captured log across resets
     default:
       return st;
   }

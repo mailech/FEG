@@ -15,6 +15,8 @@ import { shouldSend, TRIGGER_CLASSES, MARKETS } from '../lantern/policy';
 import { c, sp, type } from '../theme';
 import metrics from '../data/metrics.json';
 import benchmarks from '../data/benchmarks.json';
+import { download, COLUMNS } from '../lantern/logger';
+import { generate, ARCHETYPES } from '../lantern/synth';
 
 const AGE_BANDS = ['18-24', '25-34', '35-44', '45-54', '55+'];
 
@@ -28,8 +30,10 @@ const CANDIDATES = [
 ];
 
 export default function MonitorScreen() {
-  const { risk, policy, sco, minutes, dispatch, market, shelf, log } = useLantern();
+  const { risk, policy, sco, minutes, dispatch, market, shelf, log, rows } = useLantern();
   const [pick, setPick] = useState('regret');
+  const [synthN, setSynthN] = useState(200);
+  const [lastGen, setLastGen] = useState(null);
 
   const firedIds = new Set(risk.fired.map((m) => m.id));
   const candidate = CANDIDATES.find((x) => x.kind === pick);
@@ -227,6 +231,103 @@ export default function MonitorScreen() {
           </Text>
         </Card>
 
+        {/* ---- training log capture ---- */}
+        <Card style={{ marginTop: sp(3) }}>
+          <Row>
+            <Label>Training log</Label>
+            <Text style={[type.tiny, type.num, { color: c.relevance, fontWeight: '800' }]}>
+              {rows.length.toLocaleString()} rows
+            </Text>
+          </Row>
+          <Text style={[type.soft, { marginTop: sp(1.5) }]}>
+            Every interaction is written in FEG's own 24-column schema — same names, same
+            order, same null convention as top_casino_users_event_logs.csv. Rows exported here
+            concatenate onto that file with no mapping step.
+          </Text>
+
+          <View style={s.schema}>
+            {COLUMNS.slice(0, 8).map((k) => (
+              <Text key={k} style={s.col}>{k}</Text>
+            ))}
+            <Text style={[s.col, { color: c.inkFaint }]}>+{COLUMNS.length - 8} more</Text>
+          </View>
+
+          {rows.length > 0 && (
+            <View style={s.preview}>
+              <Text style={s.previewHead}>most recent</Text>
+              {rows.slice(-3).reverse().map((r, i) => (
+                <Text key={i} style={s.previewRow} numberOfLines={1}>
+                  {r.event_name} · {r.timestamp.slice(11, 19)} · {r.from_origin}/{r.from_route}
+                  {r.game_name !== 'null' ? ' · ' + r.game_name : ''}
+                </Text>
+              ))}
+            </View>
+          )}
+
+          <Row style={{ marginTop: sp(3), gap: sp(2) }}>
+            <Btn
+              title="Export CSV"
+              icon="download-outline"
+              tone="accent"
+              disabled={rows.length === 0}
+              onPress={() => download(rows, `lantern_logs_${Date.now()}.csv`)}
+              style={{ flex: 1 }}
+            />
+            <Btn title="Clear" tone="quiet" onPress={() => dispatch({ type: 'clearRows' })} style={{ flex: 1 }} />
+          </Row>
+
+          <View style={{ marginTop: sp(4), borderTopWidth: 1, borderTopColor: c.ruleSoft, paddingTop: sp(3) }}>
+            <Label>Top up with synthetic sessions</Label>
+            <Text style={[type.soft, { marginTop: sp(1.5) }]}>
+              A demo produces a few hundred rows; training wants tens of thousands. These come
+              from four planted archetypes, so "the model recovers the planted structure" is a
+              claim that can actually be checked.
+            </Text>
+
+            <View style={{ marginTop: sp(2.5), gap: sp(1.5) }}>
+              {Object.entries(ARCHETYPES).map(([k, a]) => (
+                <Text key={k} style={s.arch}>
+                  <Text style={{ fontWeight: '800', color: c.ink }}>{a.label}</Text>  {a.note}
+                </Text>
+              ))}
+            </View>
+
+            <View style={s.ages}>
+              {[200, 1000, 5000].map((n) => (
+                <Pressable key={n} onPress={() => setSynthN(n)} style={[s.age, synthN === n && s.ageOn]}>
+                  <Text style={[s.ageText, synthN === n && { color: c.relevance }]}>
+                    {n.toLocaleString()} sessions
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+
+            <Btn
+              title={`Generate ${synthN.toLocaleString()} sessions`}
+              icon="construct-outline"
+              onPress={() => {
+                const out = generate({ sessions: synthN, seed: Date.now() >>> 0 });
+                dispatch({ type: 'addRows', rows: out.rows });
+                setLastGen({ ...out.summary, rows: out.rows.length });
+              }}
+              style={{ marginTop: sp(3) }}
+            />
+
+            {lastGen && (
+              <Text style={[type.tiny, { marginTop: sp(2) }]}>
+                +{lastGen.rows.toLocaleString()} rows · browser {lastGen.browser} · returner{' '}
+                {lastGen.returner} · specialist {lastGen.specialist} · chaser {lastGen.chaser}.
+                Abandon rate is planted at the measured 21.6%.
+              </Text>
+            )}
+          </View>
+
+          <Note>
+            Nothing leaves the device on its own. The CSV is produced only when Export is
+            pressed, so the on-device promise holds even though the file is for training.
+          </Note>
+        </Card>
+
         {/* ---- group benchmarks: the divergence that makes the case ---- */}
         <Card style={{ marginTop: sp(3) }}>
           <Label>FEG group benchmarks · Sep 2025 → Aug 2026</Label>
@@ -353,4 +454,13 @@ const s = StyleSheet.create({
   trendBars: { flex: 1, flexDirection: 'row', gap: sp(3) },
   deltaV: { fontSize: 15, fontWeight: '900', fontVariant: ['tabular-nums'] },
   deltaK: { fontSize: 9.5, color: c.inkFaint, marginTop: 1 },
+  schema: { flexDirection: 'row', flexWrap: 'wrap', gap: sp(1.5), marginTop: sp(2.5) },
+  col: {
+    fontSize: 9.5, color: c.inkSoft, backgroundColor: c.inset,
+    paddingHorizontal: sp(1.5), paddingVertical: 2, borderRadius: 3,
+  },
+  preview: { marginTop: sp(2.5), backgroundColor: c.inset, borderRadius: 6, padding: sp(2.5) },
+  previewHead: { ...type.label, fontSize: 9, marginBottom: sp(1) },
+  previewRow: { fontSize: 10, color: c.inkSoft, lineHeight: 15 },
+  arch: { fontSize: 11.5, color: c.inkSoft, lineHeight: 16 },
 });
