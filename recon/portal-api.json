@@ -1,0 +1,220 @@
+{
+  "urls": [
+    "https://api.psk.hr/cms-client/configuration/web_global",
+    "https://api.psk.hr/cms-client/configuration/web_global",
+    "https://feg-casino-portal-api.psk.hr/api/Jackpots?locale=hr-HR&status=Published",
+    "https://api.psk.hr/pal/webapi/getRecentWinners",
+    "https://api.psk.hr/cms-client/configuration/web_global",
+    "https://api.psk.hr/cms-client/translations?prefix=common.playermanager",
+    "https://api.psk.hr/cms-client/translations?prefix=common.core",
+    "https://api.psk.hr/cms-client/translations?prefix=mobile.gm",
+    "https://api.psk.hr/cms-client/configuration/web_global",
+    "https://api.psk.hr/wmp/webmessages?target=GAMING_PORTAL",
+    "https://api.psk.hr/cms-client/translations?prefix=common.core",
+    "https://api.psk.hr/cms-client/translations?prefix=mobile.login",
+    "https://api.psk.hr/cms-client/translations?prefix=common.logindialog",
+    "https://api.psk.hr/cms-client/configuration/web_global",
+    "https://api.psk.hr/cms-client/configuration/REGISTRATION"
+  ],
+  "sample": [
+    {
+      "name": "Play'n'Go Jackpot",
+      "id": "6967af03-09e0-431a-ba01-2a4e8a8b6846",
+      "slug": "play-n-go-jp",
+      "oldCmsProviderId": "612ca7eb96caa50a6ac988a2",
+      "title": "Play'n Go",
+      "provider": "739aa615-2288-4c52-a437-ac0d3c47423e",
+      "gameCodes": "pop_f81094f2_pngfeg,pop_2c7f5e19_pngfeg,pop_6078a387_pngfeg,pop_f8f13d"
+    },
+    {
+      "name": "Pateplay Jackpot",
+      "id": "89dc81c2-0bc4-434f-88ac-1272afbbd36b",
+      "slug": "pateplay-regal-jackpot",
+      "oldCmsProviderId": "null",
+      "title": "Regal Jackpot",
+      "provider": "3458d9d9-3af0-4f7a-a6c7-b86588e91cbd",
+      "gameCodes": "pop_29e17f75_ptpfeg,pop_d86a1401_ptpfeg,pop_5209471c_ptpfeg,pop_a52436"
+    },
+    {
+      "name": "Bell Link",
+      "id": "26dc7ef9-ae4c-463a-9df6-add67ec454f2",
+      "slug": "bell-link-jp",
+      "oldCmsProviderId": "647da809587d97532394c100",
+      "title": "EGT Digital Bell Link",
+      "provider": "7a4cebcc-94b9-44c2-8e45-489f39f512de",
+      "gameCodes": "pop_3c842760_edgfeg,pop_7c837ca0_edgfeg,pop_6a1e2963_edgfeg,pop_7bd8a7"
+    },
+    {
+      "name": "Clover Chance",
+      "id": "d57b5ed3-5084-42bd-bd52-a48a8f4c1f78",
+      "slug": "egt-digital-clover-chance-jackpot",
+      "oldCmsProviderId": "647da809587d97532394c100",
+      "title": "EGT Digital Clover Chance",
+      "provider": "7a4cebcc-94b9-44c2-8e45-489f39f512de",
+      "gameCodes": "pop_4e42688a_edgfeg,pop_5f1369d8_edgfeg,pop_ad9dd8f9_edgfeg,pop_355264"
+    },
+    {
+      "name": "Novomatic_21107_21108_21109_21110",
+      "id": "2776fe78-11f5-481d-9667-f6769b6a1410",
+      "slug": "greentube-jackpot",
+      "oldCmsProviderId": "null",
+      "title": "Greentube Diamond Mystery",
+      "provider": "6f361cfc-ad92-4459-bfae-a39e97adb6d4",
+      "gameCodes": "pop_042c8544_grtfeg,pop_a72a3fe2_grtfeg,pop_612da35d_grtfeg,pop_00e92a"
+    },
+    {
+      "name": "Amusnet Jackpot",
+      "id": "05a50049-b025-46fa-b149-5806aff0b659",
+      "slug": "amusnet-jp",
+      "oldCmsProviderId": "603ce8457e124c17583dcca2",
+      "title": "Amusnet",
+      "provider": "3c6a9ac7-4a05-497a-99e0-dfb9f2347d09",
+      "gameCodes": "pop_7a1ff951_egtfeg,pop_81af3120_egtfeg,pop_0852d35f_egtfeg,pop_d17829"
+    },
+    {
+      "name": "Fazi Jackpot",
+      "id": "c9d06838-65fb-487a-924f-e4fa2f71fd98",
+      "slug": "fazi-jp",
+      "oldCmsProviderId": "6050b790888f322eccabae31",
+      "title": "Fazi",
+      "provider": "58e4b011-90be-496c-992b-13bc08b4a8af",
+      "gameCodes": "pop_b52bdfa0_fazfeg,pop_1567de3d_fazfeg,pop_72e517c4_fazfeg,pop_d19093"
+    },
+    {
+      "name": "Novomatic_21353_21354",
+      "id": "f06ee16e-049d-4050-9c17-aa79d5cdb60f",
+      "slug": "greentube-diamond-link-jp",
+      "oldCmsProviderId": "null",
+      "title": "Greentube Diamond Link",
+      "provider": "6f361cfc-ad92-4459-bfae-a39e97adb6d4",
+      "gameCodes": "pop_f7bdec5a_grtfeg,pop_134db8a2_grtfeg,pop_491a7cf9_grtfeg,pop_694350"
+    },
+    {
+      "name": "Novomatic_20572_20573",
+      "id": "fb8335bf-4bec-4e43-8277-78e1d665c4c5",
+      "slug": "greentube-cash-connection-jp",
+      "oldCmsProviderId": "null",
+      "title": "Greentube Cash Connection",
+      "provider": "6f361cfc-ad92-4459-bfae-a39e97adb6d4",
+      "gameCodes": "pop_9e970767_grtfeg,pop_abf239fa_grtfeg,pop_79a0fe6c_grtfeg,pop_d4db93"
+    },
+    {
+      "name": "Amusnet Golden Coins Jackpot",
+      "id": "df9c5233-c080-4d2e-8975-16c6465abc8c",
+      "slug": "amusnet-golden-coins-link",
+      "oldCmsProviderId": "603ce8457e124c17583dcca2",
+      "title": "Amusnet Golden Coins Link",
+      "provider": "3c6a9ac7-4a05-497a-99e0-dfb9f2347d09",
+      "gameCodes": "pop_a1debbef_egtfeg,pop_b3361337_egtfeg,pop_61343003_egtfeg,pop_086a41"
+    },
+    {
+      "name": "Tech4Bet Jackpot",
+      "id": "e9d70eef-5f75-44c9-b2c5-0bde9ed51070",
+      "slug": "tech4bet-jp",
+      "oldCmsProviderId": "6256ac9d1925464a85a1345d",
+      "title": "Tech4Bet",
+      "provider": "17026688-4a05-49bc-8ca3-04bc7dfc671c",
+      "gameCodes": "pop_7ecd5e21_t4bfeg,pop_6d2a0e97_t4bfeg,pop_ddaa3f5c_t4bfeg,pop_0b8c50"
+    },
+    {
+      "name": "Playtech - mrj",
+      "id": "1d64c546-de98-44f1-bdf1-e40baa53cdad",
+      "slug": "age-of-the-gods-jp",
+      "oldCmsProviderId": "6011343199630f3c46a17402",
+      "title": "Playtech Age of the Gods",
+      "provider": "bcd062bf-6cdb-4e0b-ae5e-d5ef6414ca65",
+      "gameCodes": "gpas_gstorm2_pop,gpas_hrulesa1_pop,wop,gpas_aogww_pop,gpas_mkeeper_pop"
+    },
+    {
+      "name": "BF Jackpot mysteryjackpot",
+      "id": "625181fb-056a-4adf-8f7f-78df31dcdbee",
+      "slug": "bf-games-jp",
+      "oldCmsProviderId": "null",
+      "title": "BF Games",
+      "provider": "a1117f6c-470c-4537-abab-af4db6237bcd",
+      "gameCodes": "pop_ea0b27a0_bfgfeg,pop_16bcafcf_bfefeg,pop_fa44f788_bfgfeg,pop_469eac"
+    },
+    {
+      "name": "FORTUNA_JackpotPlay_Test",
+      "id": "c7bc15f5-9218-4ae6-a92b-ca04a81e4abe",
+      "slug": "pragmatic-jp",
+      "oldCmsProviderId": "6278187c1819c64d58232f66",
+      "title": "Pragmatic",
+      "provider": "39dc7f48-faf7-45c5-aa7e-649d118d98b0",
+      "gameCodes": "pop_118ad707_prgfeg,pop_ee81562c_prgfeg,pop_3f554b55_prgfeg,pop_928c34"
+    },
+    {
+      "name": "Playtech - dcjp",
+      "id": "417568ca-bd13-4c8a-a4f1-1035ccd00062",
+      "slug": "playtech-dc-jp",
+      "oldCmsProviderId": "6011343199630f3c46a17402",
+      "title": "Playtech Empire Treasures",
+      "provider": "bcd062bf-6cdb-4e0b-ae5e-d5ef6414ca65",
+      "gameCodes": "gpas_vemptr_pop,gpas_etpop_pop,gpas_tqcempt_pop,gpas_wcrusade_pop"
+    },
+    {
+      "name": "fortuna_psk_eur - 164",
+      "id": "2a22c331-6862-495f-a72d-397d3ac37d2a",
+      "slug": "ctinteractive-jp",
+      "oldCmsProviderId": "620dee76e0031f4a4ccd6932",
+      "title": "CT Interactive",
+      "provider": "81fb9fdf-e348-40be-bd88-0887bc6f0aba",
+      "gameCodes": "pop_6a7ae19d_ctifeg,pop_ac740964_ctifeg,pop_13d8fd33_ctifeg,pop_2dd0a0"
+    },
+    {
+      "name": "Synot Jackpot",
+      "id": "e1d38fc0-497c-4a48-aae7-aff7f65bf9e7",
+      "slug": "synot-jp",
+      "oldCmsProviderId": "6048af58385fcc13bf89a107",
+      "title": "Synot",
+      "provider": "5a8507df-b23f-4aaa-b4ca-79a49eb5753b",
+      "gameCodes": "pop_557d55e1_sntfeg,pop_4888f2ec_sntfeg,pop_517a596a_sntfeg,pop_be5e8a"
+    },
+    {
+      "name": "Playtech - glrjj",
+      "id": "88afa4f7-875d-4704-ae0d-4d1a4b158726",
+      "slug": "gladiator-jp",
+      "oldCmsProviderId": "6011343199630f3c46a17402",
+      "title": "Playtech Gladiator",
+      "provider": "bcd062bf-6cdb-4e0b-ae5e-d5ef6414ca65",
+      "gameCodes": "gpas_gladjack_pop"
+    },
+    {
+      "name": "Playtech - jhreelsj",
+      "id": "e06d5de9-ec89-4439-b608-071ebdc7d3e7",
+      "slug": "joker-hot-reels-jackpot",
+      "oldCmsProviderId": "6011343199630f3c46a17402",
+      "title": "Joker Hot Reels",
+      "provider": "bcd062bf-6cdb-4e0b-ae5e-d5ef6414ca65",
+      "gameCodes": "gpas_fbars_pop,gpas_hcdelux_pop,gpas_jhreels_pop"
+    },
+    {
+      "code": "HR",
+      "name": "Croatia"
+    },
+    {
+      "code": "LT",
+      "name": "Revolut"
+    },
+    {
+      "code": "cic_HR",
+      "name": "Croatia"
+    },
+    {
+      "code": "cic_AT",
+      "name": "Austria"
+    },
+    {
+      "code": "cic_BA",
+      "name": "Bosnia and Herzegovina"
+    },
+    {
+      "code": "cic_DE",
+      "name": "Germany"
+    },
+    {
+      "code": "cic_RO",
+      "name": "Romania"
+    }
+  ]
+}

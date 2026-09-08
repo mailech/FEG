@@ -1,0 +1,120 @@
+[
+  {
+    "code": "pop_05e6cf7d_sprfeg",
+    "label": "Spribe Aviator",
+    "frameHost": "gamelauncher-uu-pop2.psk.hr",
+    "frameAt": 4058,
+    "sameOrigin": [
+      {
+        "host": "casino.psk.hr",
+        "kb": 787
+      },
+      {
+        "host": "gamelauncher-uu-pop2.psk.hr",
+        "kb": 254
+      },
+      {
+        "host": "gamecontainer-eu.psk.hr",
+        "kb": 90
+      },
+      {
+        "host": "smart.psk.hr",
+        "kb": 57
+      }
+    ],
+    "crossOrigin": [],
+    "totalKb": 1851
+  },
+  {
+    "code": "pop_b52bdfa0_fazfeg",
+    "label": "Fazi Wild Sunburst",
+    "frameHost": "gamelauncher-uu-pop2.psk.hr",
+    "frameAt": 2288,
+    "sameOrigin": [
+      {
+        "host": "casino.psk.hr",
+        "kb": 1002
+      },
+      {
+        "host": "gamelauncher-uu-pop2.psk.hr",
+        "kb": 261
+      },
+      {
+        "host": "gamecontainer-eu.psk.hr",
+        "kb": 90
+      },
+      {
+        "host": "smart.psk.hr",
+        "kb": 57
+      }
+    ],
+    "crossOrigin": [],
+    "totalKb": 2074
+  },
+  {
+    "code": "gpas_gstorm2_pop",
+    "label": "Playtech GPAS",
+    "frameHost": "gamelauncher-uu-pop2.psk.hr",
+    "frameAt": 2567,
+    "sameOrigin": [
+      {
+        "host": "gpas-games2.psk.hr",
+        "kb": 7815
+      },
+      {
+        "host": "casino.psk.hr",
+        "kb": 1002
+      },
+      {
+        "host": "gamelauncher-uu-pop2.psk.hr",
+        "kb": 98
+      },
+      {
+        "host": "smart.psk.hr",
+        "kb": 57
+      }
+    ],
+    "crossOrigin": [],
+    "totalKb": 9642
+  },
+  {
+    "code": "pop_f81094f2_pngfeg",
+    "label": "Play'n GO",
+    "frameHost": "gamelauncher-uu-pop2.psk.hr",
+    "frameAt": 2277,
+    "sameOrigin": [
+      {
+        "host": "casino.psk.hr",
+        "kb": 1000
+      },
+      {
+        "host": "gamelauncher-uu-pop2.psk.hr",
+        "kb": 255
+      },
+      {
+        "host": "gamecontainer-eu.psk.hr",
+        "kb": 90
+      },
+      {
+        "host": "smart.psk.hr",
+        "kb": 57
+      }
+    ],
+    "crossOrigin": [],
+    "totalKb": 2065
+  },
+  {
+    "code": "pop_7a1ff951_egtfeg",
+    "label": "Amusnet/EGT",
+    "frameHost": null,
+    "frameAt": null,
+    "sameOrigin": [
+      {
+        "host": "casino.psk.hr",
+        "kb": 611
+      }
+    ],
+    "crossOrigin": [],
+    "totalKb": 1249
+  }
+]

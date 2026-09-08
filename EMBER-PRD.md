@@ -10,13 +10,63 @@ FEG Innovation Hackathon 2026 · Challenge 03 (primary) + Challenge 02 · Lorven
 
 ## 1. What we learned from PSK
 
-Recon on psk.hr changed four things in the build plan. Read this section before the architecture.
+Recon on psk.hr changed the build plan, and overturned one claim this document previously made. Read this section before the architecture.
 
-**The casino is a separate origin.** Sport lives on `www.psk.hr`, casino on `casino.psk.hr`, APIs on `api.psk.hr`. Games from 30+ providers (Playtech, Pragmatic Play, Novomatic, EGT Digital, Amusnet, Fazi, Play'n GO) are almost certainly loaded in cross origin iframes from provider domains.
+**Measured, not assumed.** Everything in this section was verified against the
+live site — see [RECON-FINDINGS.md](RECON-FINDINGS.md) for the evidence and the
+scripts that produced it. An earlier draft of this section asserted that all
+provider games are cross-origin and that service workers therefore cannot reach
+them. **That is false**, and the correction below is load-bearing.
 
-This is the single most important technical finding, because **a Service Worker registered on a PSK origin cannot intercept requests made by a cross origin provider iframe.** Half the standard web performance playbook is unavailable to FEG by construction. It also strengthens our case: the edge browser has no such restriction, because it controls the whole page.
+**There are two launch architectures, and the technique differs per provider.**
 
-Consequence for the build: working set loading and chunk dedup only apply to assets we can proxy through a PSK origin. The edge path is the only one that works on an unmodified cross origin bundle. Say this out loud to judges. It is the reason a straightforward caching answer cannot win this challenge.
+Pattern A, Playtech GPAS: the launcher redirects and the provider's client
+becomes the top-level document at `gpas-games2.psk.hr` — **7815 KB served from a
+PSK origin**. A service worker on that origin can intercept it. This is the
+heaviest bundle we measured.
+
+Pattern B, Fazi and Spribe: three nested frames,
+`gamelauncher-uu-pop2.psk.hr` → `gamecontainer-eu.psk.hr/GameView/<Provider>` →
+the provider's own domain (`pskfegpskhr2eur.fazi.rs`,
+`aviator-demo.spribegaming.com`). The innermost frame is genuinely cross-origin
+and no bundle-level technique can touch it.
+
+So the edge path is not justified by "nothing else is possible." It is
+justified precisely: **for Pattern B it is the only thing that works, and for
+Pattern A it composes with working-set loading on the heaviest title in the
+catalogue.** Say it that way. A judge who built `gpas-games2.psk.hr` will be in
+the room, and the specific version of this argument is stronger than the sweeping
+one anyway.
+
+**The integration seam already exists and FEG owns it.**
+`gamecontainer-eu.psk.hr/GameView/<Provider>?…&real=0` is FEG's own code, on the
+same origin, present on the path of every launch, and it already knows the
+provider and the real/demo mode. That is where Ember's client half goes. No
+certified bundle is modified, no provider integration is renegotiated, no
+re-certification is triggered. This is a much smaller ask than "let us run your
+game somewhere else," and it should be the first thing we say about feasibility.
+
+**We measured their 6-8 seconds.** In demo mode on an unthrottled connection —
+so these are floor numbers — the PSK launcher frame attaches at 2.3-4.1 s and
+the provider's game frame does not attach until **7.1-8.8 s** (Play'n GO 7057 ms,
+Fazi 8392 ms, Spribe Aviator 8849 ms). We are not repeating their number back to
+them; we reproduced it.
+
+**About 2 MB per launch is PSK-owned payload that is not the game.** Lobby shell
+~1000 KB, launcher 255 KB, container 90 KB, and **638 KB of Google Tag Manager
+ahead of the game**. None of it is certified. Deferring GTM alone is a win that
+needs no edge infrastructure and no provider's permission, and it is worth
+naming on stage as the thing they can do on Monday.
+
+**The casino is a separate origin from sport** (`casino.psk.hr` vs
+`www.psk.hr`, APIs on `api.psk.hr`), which is confirmed. Game metadata comes
+from `feg-casino-portal-api.psk.hr`. Note the game codes carry an `feg` suffix
+(`pop_b52bdfa0_fazfeg`), so these are FEG-group-wide integrations rather than
+PSK-only ones — what we build has a path to the other brands.
+
+**The sport frontend is Astro; the casino is not.** An earlier draft said the
+frontend is Astro without qualification. www.psk.hr renders 7 `astro-island`
+elements; casino.psk.hr renders none.
 
 **PSK has four house games.** Vatreni Cup (Playtech), PSK BET and PSK RESPIN (Casimi), PSK HOT 40 (Fazi). These are co-branded, PSK-commissioned titles. They are the right demo target and the right pilot target, because the certification and provider-permission conversation is far easier on a game PSK helped commission than on a Pragmatic title.
 
@@ -166,7 +216,7 @@ If a workstream slips, degrade in this order and say so honestly on stage:
 
 **0:00–1:30 — The hook.** Open on their own promise. PSK's app store copy says you can start playing in two taps. Show a real phone doing exactly that, with a timer. The second tap costs seven seconds. Do not explain anything yet. Let the timer run in silence. Silence is the most underused tool in a hackathon demo.
 
-**1:30–3:00 — The constraint.** The game is a certified third party package. Not one line may change. And here is the finding: casino.psk.hr is a separate origin from the games, so the standard toolkit (service workers, cache control on the bundle) cannot even reach the code. This challenge is harder than it looks, and that is why the answer is not caching.
+**1:30–3:00 — The constraint.** The game is a certified third party package. Not one line may change. Then show the measured launch chain: their own launcher and container frames, and inside them either a provider domain we cannot touch (Fazi, Spribe) or a 7.8 MB client on their own origin (Playtech). The point to land is that there is no single answer — the technique is forced by the provider, and caching only reaches part of the estate. Show the 7.1-8.8s provider-frame timings measured on their live site while saying it.
 
 **3:00–5:00 — The idea, in one breath.** Do not start with architecture. Say: what if the game were already running before you asked, somewhere near you, and then quietly moved onto your phone while you played? Then one diagram, thirty seconds on it, move on.
 
@@ -245,6 +295,6 @@ Ask these in their Q&A window. The first one is load bearing.
 1. Does the RGS expose a session recovery call outside a genuine disconnect, and can it be invoked by the platform rather than the game client?
 2. What are the real payload sizes and provider mix for the top 50 titles by launch volume?
 3. What is the measured breakdown of the 6 to 8 seconds across network, RGS handshake, and client init?
-4. Are the games loaded cross origin from provider domains, or proxied through a PSK origin?
+4. ~~Are the games loaded cross origin from provider domains, or proxied through a PSK origin?~~ **Answered by recon: both, depending on provider.** Ask instead: which of the 30+ providers follow Pattern A vs Pattern B, and is `gpas-games2.psk.hr` a proxy or your own hosting?
 5. For the branded titles, what freedom exists to alter hosting or delivery without re-certification?
 6. What is the current launch to play conversion rate, so the business case uses their number rather than ours?

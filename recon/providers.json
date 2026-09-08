@@ -1,0 +1,44 @@
+[
+  {
+    "code": "pop_05e6cf7d_sprfeg",
+    "label": "Spribe Aviator",
+    "totalKb": 1850,
+    "reqs": 135,
+    "firstFrameMs": 8849,
+    "provKb": 0,
+    "providerHosts": [],
+    "frames": []
+  },
+  {
+    "code": "pop_b52bdfa0_fazfeg",
+    "label": "Fazi",
+    "totalKb": 2068,
+    "reqs": 149,
+    "firstFrameMs": 8392,
+    "provKb": 0,
+    "providerHosts": [],
+    "frames": [
+      "https://pskfegpskhr2eur.fazi.rs/Content/webjs/slots/WildSunburst/?APIUrl=%2Fvltapi%2FConnection%2FGetConnectToChannelA&backToLobbyEnabled=False&currency=EUR&gameId=333&gameName=WildSunburst&isIFrame=T"
+    ]
+  },
+  {
+    "code": "gpas_gstorm2_pop",
+    "label": "Playtech GPAS",
+    "totalKb": 9613,
+    "reqs": 277,
+    "firstFrameMs": null,
+    "provKb": 0,
+    "providerHosts": [],
+    "frames": []
+  },
+  {
+    "code": "pop_f81094f2_pngfeg",
+    "label": "Play'n GO",
+    "totalKb": 2078,
+    "reqs": 150,
+    "firstFrameMs": 7057,
+    "provKb": 0,
+    "providerHosts": [],
+    "frames": []
+  }
+]

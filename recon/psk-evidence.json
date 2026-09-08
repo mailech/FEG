@@ -1,0 +1,491 @@
+{
+  "capturedAt": "2026-09-08T05:09:33.358Z",
+  "pages": [
+    {
+      "name": "sport-home",
+      "url": "https://www.psk.hr/",
+      "loadMs": 11926,
+      "error": null,
+      "probe": {
+        "title": "PSK.hr - Sports & Casino | složi svoj sportski listić | igraj slot Jackpot igre online",
+        "astro": true,
+        "astroIslands": 7,
+        "nextjs": false,
+        "react": false,
+        "iframes": 1,
+        "scripts": 34,
+        "links": [
+          "https://casino.psk.hr",
+          "https://casino.psk.hr/live-casino",
+          "https://casino.psk.hr/play/pop_05e6cf7d_sprfeg/real",
+          "https://casino.psk.hr/",
+          "/oklade/tenis/atp-challenger/challenge-genova/agamenone-f-dodig-m",
+          "/oklade/tenis/atp-challenger/ufo:tour:0x-133/agamenone-f-dodig-m",
+          "https://casino.psk.hr/kategorije/table-games",
+          "https://casino.psk.hr/kategorije/popularall",
+          "https://casino.psk.hr/jackpots",
+          "https://casino.psk.hr/provideri/digital",
+          "https://casino.psk.hr/provideri/pragmatic-play",
+          "https://casino.psk.hr/provideri/novomatic",
+          "https://casino.psk.hr/o-nama",
+          "https://casino.psk.hr/api/assets/c787b0ea-cd39-4de4-882f-79fecb99490f",
+          "https://casino.psk.hr/api/assets/54351315-d15d-4d86-a98a-4b7e04290e58",
+          "https://casino.psk.hr/api/assets/554c5a80-b220-435e-a62c-af0586369c62",
+          "https://casino.psk.hr/api/assets/2ccd04a5-ae3a-478b-8f7b-8e3a261f0326",
+          "https://casino.psk.hr/api/assets/143c1415-976c-4ba8-8972-65d453b19ef1",
+          "https://casino.psk.hr/api/assets/65a2e5f9-0529-46f6-bafa-2c34d55057ea",
+          "https://casino.psk.hr/api/assets/8d8fb70b-3344-40c0-b366-724fee43e394",
+          "/oklade/tenis/atp-challenger/challenge-genova/agamenone-f-dodig-m?filter=today&tab=offer"
+        ],
+        "generator": null
+      },
+      "frames": [
+        {
+          "url": "https://www.psk.hr/",
+          "host": "www.psk.hr",
+          "name": ""
+        },
+        {
+          "url": "https://login.psk.hr/pasSetupPage.php?casino=pskeur.hr#%7B%22requestType%22%3A%22loggedInPlayerHandlerX%22%2C%22postParams%22%3Anull%2C%22url%22%3A%22https%3A%2F%2Flogin.psk.hr%2FGetLoggedInPlayer.php",
+          "host": "login.psk.hr",
+          "name": "iapidiv-loggedInPlayerHandlerX"
+        }
+      ],
+      "hosts": [
+        {
+          "host": "www.psk.hr",
+          "count": 249,
+          "kb": 1869,
+          "types": [
+            "document",
+            "stylesheet",
+            "script",
+            "font",
+            "image",
+            "fetch",
+            "other"
+          ]
+        },
+        {
+          "host": "www.googletagmanager.com",
+          "count": 6,
+          "kb": 1042,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "web.cmp.usercentrics.eu",
+          "count": 8,
+          "kb": 173,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "",
+          "count": 1,
+          "kb": 63,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "smart.psk.hr",
+          "count": 11,
+          "kb": 59,
+          "types": [
+            "script",
+            "fetch"
+          ]
+        },
+        {
+          "host": "cdn-cf.psk.hr",
+          "count": 18,
+          "kb": 18,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "bat.bing.com",
+          "count": 2,
+          "kb": 15,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "v1.api.service.cmp.usercentrics.eu",
+          "count": 2,
+          "kb": 12,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "login.psk.hr",
+          "count": 7,
+          "kb": 4,
+          "types": [
+            "script",
+            "document",
+            "fetch"
+          ]
+        },
+        {
+          "host": "cdn-offer.feg.eu",
+          "count": 3,
+          "kb": 2,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "app.usercentrics.eu",
+          "count": 1,
+          "kb": 1,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "api.psk.hr",
+          "count": 140,
+          "kb": 0,
+          "types": [
+            "fetch",
+            "image"
+          ]
+        },
+        {
+          "host": "o4505158727892992.ingest.us.sentry.io",
+          "count": 3,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "pagead2.googlesyndication.com",
+          "count": 3,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "www.google-analytics.com",
+          "count": 3,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "uct.service.usercentrics.eu",
+          "count": 2,
+          "kb": 0,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "bat.bing.net",
+          "count": 2,
+          "kb": 0,
+          "types": [
+            "ping",
+            "image"
+          ]
+        },
+        {
+          "host": "uc.psk.hr",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "consent-api.service.consent.usercentrics.eu",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "ws-offer.psk.hr",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "xhr"
+          ]
+        },
+        {
+          "host": "analytics.psk.hr",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "ade.googlesyndication.com",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "totalRequests": 466,
+      "totalKb": 3258
+    },
+    {
+      "name": "casino-lobby",
+      "url": "https://casino.psk.hr/",
+      "loadMs": 11431,
+      "error": null,
+      "probe": {
+        "title": "Najbolje Casino igre online - Osvoji velike nagrade u PSK Casinu | Casino",
+        "astro": false,
+        "astroIslands": 0,
+        "nextjs": false,
+        "react": false,
+        "iframes": 1,
+        "scripts": 29,
+        "links": [
+          "/live-casino",
+          "https://m.psk.hr/registration?clientType=casino&close_url=https%3A%2F%2Fcasino.psk.hr%2F&back_url=https%3A%2F%2Fcasino.psk.hr%2F",
+          "https://casino.psk.hr/promocije/playtech-turnir",
+          "https://applink.casino.psk.hr/kategorije/playtech-boost-pots?deeplink=ftnvegashr://categories/942748fc-7427-4f6e-98f6-011ebe56c56f",
+          "https://casino.psk.hr/promocije/amusnet-jackpot",
+          "https://applink.casino.psk.hr/provideri/octoplay?deeplink=ftnvegashr://providers/2a4a9633-a181-422b-ac19-b4cca15fa3bd",
+          "https://casino.psk.hr/stranica/psk-loyalty-klub",
+          "https://casino.psk.hr/promocije/lucky-rush",
+          "https://casino.psk.hr/promocije/festival-novih-igri",
+          "https://casino.psk.hr/promocije/pragmatic-drops-and-wins",
+          "https://casino.psk.hr/promocije/docek-za-prvake",
+          "/kategorije/game-shows",
+          "/kategorije/playson-cashblast",
+          "/kategorije/pragmatic-jackpot-play",
+          "/kategorije/instant-games",
+          "/kategorije/table-games",
+          "/sve-igre",
+          "/provideri/playson",
+          "/provideri/pateplay",
+          "/provideri/xgames",
+          "/provideri/playtech",
+          "/provideri/play-n-go",
+          "/provideri/bf-games",
+          "/provideri/pragmatic-play",
+          "/provideri/game-art",
+          "/provideri/games-global",
+          "/provideri/atomic-slot-lab",
+          "/provideri/evoplay",
+          "/provideri/octoplay",
+          "https://casino.psk.hr/api/assets/c787b0ea-cd39-4de4-882f-79fecb99490f",
+          "https://casino.psk.hr/api/assets/b4e6f0ca-1552-4c4d-a119-db0d7c6ca0c4",
+          "https://casino.psk.hr/api/assets/3afc584c-d513-40d6-97dc-a369f46eb1af",
+          "https://casino.psk.hr/api/assets/143c1415-976c-4ba8-8972-65d453b19ef1",
+          "https://casino.psk.hr/api/assets/c0c567ff-b705-4064-862e-90b6211c55a7",
+          "https://casino.psk.hr/api/assets/65a2e5f9-0529-46f6-bafa-2c34d55057ea",
+          "https://casino.psk.hr/api/assets/554c5a80-b220-435e-a62c-af0586369c62",
+          "https://casino.psk.hr/api/assets/eecb3fd2-8789-4236-a601-8e668188d208",
+          "https://casino.psk.hr/api/assets/8d8fb70b-3344-40c0-b366-724fee43e394"
+        ],
+        "generator": null
+      },
+      "frames": [
+        {
+          "url": "https://casino.psk.hr/",
+          "host": "casino.psk.hr",
+          "name": ""
+        },
+        {
+          "url": "https://login.psk.hr/pasSetupPage.php?casino=pskeur.hr#%7B%22requestType%22%3A%22loggedInPlayerHandlerX%22%2C%22postParams%22%3Anull%2C%22url%22%3A%22https%3A%2F%2Flogin.psk.hr%2FGetLoggedInPlayer.php",
+          "host": "login.psk.hr",
+          "name": "iapidiv-loggedInPlayerHandlerX"
+        }
+      ],
+      "hosts": [
+        {
+          "host": "feg-casino-portal-api.psk.hr",
+          "count": 42,
+          "kb": 2560,
+          "types": [
+            "image",
+            "fetch"
+          ]
+        },
+        {
+          "host": "casino.psk.hr",
+          "count": 208,
+          "kb": 657,
+          "types": [
+            "document",
+            "stylesheet",
+            "script",
+            "image",
+            "other",
+            "font",
+            "fetch"
+          ]
+        },
+        {
+          "host": "www.googletagmanager.com",
+          "count": 4,
+          "kb": 637,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "web.cmp.usercentrics.eu",
+          "count": 8,
+          "kb": 173,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "",
+          "count": 1,
+          "kb": 63,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "smart.psk.hr",
+          "count": 11,
+          "kb": 59,
+          "types": [
+            "script",
+            "fetch"
+          ]
+        },
+        {
+          "host": "v1.api.service.cmp.usercentrics.eu",
+          "count": 2,
+          "kb": 12,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "login.psk.hr",
+          "count": 7,
+          "kb": 4,
+          "types": [
+            "script",
+            "document",
+            "fetch"
+          ]
+        },
+        {
+          "host": "www.psk.hr",
+          "count": 2,
+          "kb": 1,
+          "types": [
+            "image",
+            "fetch"
+          ]
+        },
+        {
+          "host": "app.usercentrics.eu",
+          "count": 1,
+          "kb": 1,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "gamelauncher-uu-pop2.psk.hr",
+          "count": 19,
+          "kb": 0,
+          "types": [
+            "script",
+            "other"
+          ]
+        },
+        {
+          "host": "api.psk.hr",
+          "count": 17,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "pagead2.googlesyndication.com",
+          "count": 3,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "www.google-analytics.com",
+          "count": 3,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "uct.service.usercentrics.eu",
+          "count": 2,
+          "kb": 0,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "analytics.psk.hr",
+          "count": 2,
+          "kb": 0,
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "host": "cdn.feg.eu",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "o4505158727892992.ingest.us.sentry.io",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        },
+        {
+          "host": "uc.psk.hr",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "script"
+          ]
+        },
+        {
+          "host": "consent-api.service.consent.usercentrics.eu",
+          "count": 1,
+          "kb": 0,
+          "types": [
+            "fetch"
+          ]
+        }
+      ],
+      "totalRequests": 336,
+      "totalKb": 4167
+    }
+  ]
+}
