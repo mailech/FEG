@@ -70,17 +70,25 @@ strongest intent signal". That is the Sport tab's reason for existing.
 **2 — Discovery friction, measured.** Games are launched from **search 3,580
 times against 3,235 from category rows**. Search out-ranks every curated
 section in the lobby. People are not being helped to find things; they are
-working around the lobby. That is the Casino tab's reason for existing.
+working around the lobby. That is the Feed tab's reason for existing.
 
 Neither number is estimated. Both come from FEG's own event stream.
 
 ## The three tabs
 
-**Casino** — the adaptive lobby. The `Baseline / Lantern` switch is the A/B:
-baseline is popularity order, which is what a generic lobby does today. Lantern
-reads the session archetype from the first few interactions and reshapes,
-holding the provider mix near the session's own (Steck calibration, KL shown
-live).
+**Feed** — vertical discovery, shaped like the apps people already use. A
+stories row of the real lobby sections, then large cover cards. The
+`Generic / Lantern` switch is the A/B, and both arms are feeds so only the
+ranking and the explanations differ. Lantern reads the session archetype from
+the first few interactions and holds the provider mix near the session's own
+(Steck calibration, KL shown live).
+
+Two borrowed mechanics, handled differently. **Kept:** every card says why it is
+in front of you, generated from the same `why` object the ranker emits, so the
+sentence cannot drift from the scoring. **Dropped:** infinite scroll. The feed
+is session-length, shows how far through you are, and ends with a summary
+instead of loading more — "no natural stopping point" is the whole problem in a
+gambling product, so it is the one mechanic that cannot come across.
 
 **Sport** — the betslip and the confirm step. The "what happens if" panel
 answers the questions that plausibly cause the 21.6%: void legs, postponement,
@@ -94,10 +102,11 @@ with the blocked triggers included on purpose.
 
 ## Driving a demo
 
-Open a game from the Casino tab, then in the game screen: raise the stake after
-a losing run, flip turbo on, arm autoplay, take a declined deposit. The markers
-fire in order, the state moves `calm → elevated → concern`, and the lobby
-changes underneath you — the wheel is withheld, volatility is capped, the
+Start on **Generic**, flip to **Lantern**, and watch the order change and the
+explanations appear. Then open a game and, in the game screen: raise the stake
+after a losing run, flip turbo on, arm autoplay, take a declined deposit. The
+markers fire in order, the state moves `calm → elevated → concern`, and the feed
+contracts underneath you — the wheel is withheld, volatility is capped, the
 session summary and limit tools appear.
 
 The three buttons at the bottom of the game screen (deposit, declined deposit,
@@ -118,8 +127,10 @@ Solution/
         relevance.js           retrieve → rank → calibrate          §3.4 §3.3b
         policy.js              deterministic decide() + shouldSend()§3.6 §3.9
         useLantern.js          the one place it is wired together
-      screens/                 Lobby · Game · Slip · Monitor
-      components/ui.js         shared primitives
+      screens/                 Feed · Game · Slip · Monitor
+      components/
+        ui.js                  shared primitives
+        GameArt.js             deterministic cover art, all 887 titles
       data/                    generated — do not hand-edit
       theme.js
 ```
@@ -138,3 +149,7 @@ Solution/
   in a 48-hour build.
 - **No demographic attribute reaches the relevance head.** Age enters the risk
   head only. That is checkable: `relevance.js` never reads `prior.ageBand`.
+- **Cover art is generated, not fetched.** Real tile imagery sits behind
+  `feg-casino-portal-api` and costs the lobby 2,560 KB per load. `GameArt`
+  derives a stable cover from the title string, keyed by mechanic so a family of
+  games reads as one. Zero network bytes; nothing is passed off as FEG artwork.
