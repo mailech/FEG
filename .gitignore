@@ -4,3 +4,8 @@ node_modules/
 dist/
 .playwright/
 captures/
+**/empireofgold/**
+*.csv
+*.xlsx
+*.mp4
+*.msi

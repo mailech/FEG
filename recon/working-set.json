@@ -1,0 +1,33 @@
+{
+  "onDiskMb": 96.92878913879395,
+  "runs": [
+    {
+      "run": 1,
+      "readyMs": null,
+      "workingSetMb": 0,
+      "workingSetFiles": 0,
+      "totalMb": 44.02262592315674,
+      "totalFiles": 144,
+      "urls": []
+    },
+    {
+      "run": 2,
+      "readyMs": null,
+      "workingSetMb": 0,
+      "workingSetFiles": 0,
+      "totalMb": 44.02262592315674,
+      "totalFiles": 144,
+      "urls": []
+    },
+    {
+      "run": 3,
+      "readyMs": null,
+      "workingSetMb": 0,
+      "workingSetFiles": 0,
+      "totalMb": 44.02262592315674,
+      "totalFiles": 144,
+      "urls": []
+    }
+  ],
+  "stability": null
+}
