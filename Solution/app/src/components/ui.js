@@ -1,9 +1,10 @@
-/** Shared primitives for the Lantern demo. */
+/** Shared primitives. */
 
 import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { c, sp, type, stateColor, stateBg } from '../theme';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import GameArt from './GameArt';
+import { c, sp, type, radius, stateColor, stateBg, shadow } from '../theme';
 
 export function Label({ children, style }) {
   return <Text style={[type.label, style]}>{children}</Text>;
@@ -17,22 +18,40 @@ export function Row({ children, style }) {
   return <View style={[s.row, style]}>{children}</View>;
 }
 
-export function StateChip({ state, score }) {
+/** Section header in the shape the live lobby uses: icon, title, SEE ALL n. */
+export function SectionHeader({ icon, title, count, onSeeAll, tint = c.gold }) {
+  return (
+    <Row style={s.sectionHead}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: sp(2), flex: 1 }}>
+        {!!icon && <Ionicons name={icon} size={16} color={tint} />}
+        <Text style={type.h2} numberOfLines={1}>{title}</Text>
+      </View>
+      {count != null && (
+        <Pressable onPress={onSeeAll} hitSlop={8}>
+          <Text style={s.seeAll}>SEE ALL {count}</Text>
+        </Pressable>
+      )}
+    </Row>
+  );
+}
+
+export function StateChip({ state, score, compact }) {
   return (
     <View style={[s.chip, { backgroundColor: stateBg(state), borderColor: stateColor(state) }]}>
       <View style={[s.dot, { backgroundColor: stateColor(state) }]} />
       <Text style={[s.chipText, { color: stateColor(state) }]}>{state.toUpperCase()}</Text>
-      {score != null && (
+      {!compact && score != null && (
         <Text style={[s.chipScore, { color: stateColor(state) }]}>{score.toFixed(2)}</Text>
       )}
     </View>
   );
 }
 
-export function Btn({ title, onPress, tone = 'default', disabled, style }) {
+export function Btn({ title, icon, onPress, tone = 'default', disabled, style }) {
   const tones = {
     default: { bg: c.surfaceAlt, fg: c.ink, border: c.rule },
-    primary: { bg: c.relevance, fg: c.bg, border: c.relevance },
+    primary: { bg: c.brand, fg: '#fff', border: c.brand },
+    accent: { bg: c.relevance, fg: c.bg, border: c.relevance },
     quiet: { bg: 'transparent', fg: c.inkSoft, border: c.rule },
     warn: { bg: c.elevatedBg, fg: c.elevated, border: c.elevated },
   };
@@ -46,6 +65,7 @@ export function Btn({ title, onPress, tone = 'default', disabled, style }) {
         style,
       ]}
     >
+      {!!icon && <Ionicons name={icon} size={14} color={t.fg} />}
       <Text style={[s.btnText, { color: t.fg }]}>{title}</Text>
     </Pressable>
   );
@@ -57,11 +77,7 @@ export function Toggle({ options, value, onChange, style }) {
       {options.map((o) => {
         const on = o.value === value;
         return (
-          <Pressable
-            key={o.value}
-            onPress={() => onChange(o.value)}
-            style={[s.toggleItem, on && s.toggleItemOn]}
-          >
+          <Pressable key={o.value} onPress={() => onChange(o.value)} style={[s.toggleItem, on && s.toggleItemOn]}>
             <Text style={[s.toggleText, on && s.toggleTextOn]}>{o.label}</Text>
           </Pressable>
         );
@@ -70,16 +86,31 @@ export function Toggle({ options, value, onChange, style }) {
   );
 }
 
-/** A game tile. `rank` shows position so the A/B difference is legible. */
-export function GameTile({ game, rank, onPress, dim }) {
+/** Horizontal chip rail — the lobby's category strip. */
+export function ChipRail({ items, value, onChange, style }) {
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [s.tile, dim && { opacity: 0.45 }, pressed && { opacity: 0.7 }]}>
-      <View style={{ marginBottom: sp(1.5) }}>
-        <GameArt game={game} size="tile" />
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={[s.rail, style]}>
+      {items.map((it) => {
+        const on = it.value === value;
+        return (
+          <Pressable key={it.value} onPress={() => onChange(it.value)} style={[s.railChip, on && s.railChipOn]}>
+            {!!it.icon && <Ionicons name={it.icon} size={12} color={on ? '#fff' : c.inkSoft} />}
+            <Text style={[s.railText, on && s.railTextOn]}>{it.label}</Text>
+            {it.n != null && <Text style={[s.railN, on && { color: 'rgba(255,255,255,0.7)' }]}>{it.n}</Text>}
+          </Pressable>
+        );
+      })}
+    </ScrollView>
+  );
+}
+
+export function GameTile({ game, rank, width = 112, onPress, jackpotAmount }) {
+  return (
+    <Pressable onPress={onPress} style={({ pressed }) => [{ width, marginRight: sp(2.5) }, pressed && { opacity: 0.75 }]}>
+      <View>
+        <GameArt game={game} size="tile" jackpotAmount={jackpotAmount} />
         {rank != null && (
-          <View style={s.tileRankBox}>
-            <Text style={s.tileRank}>{rank + 1}</Text>
-          </View>
+          <View style={s.rankBox}><Text style={s.rankText}>{rank + 1}</Text></View>
         )}
       </View>
       <Text style={s.tileName} numberOfLines={2}>{game.name}</Text>
@@ -94,20 +125,13 @@ export function Meter({ label, value, max = 1, tone = c.relevance, right }) {
     <View style={{ marginBottom: sp(3) }}>
       <Row style={{ marginBottom: sp(1) }}>
         <Text style={type.tiny}>{label}</Text>
-        <Text style={[type.mono, { fontSize: 11, color: c.ink }]}>{right}</Text>
+        <Text style={[type.tiny, type.num, { color: c.ink, fontWeight: '700' }]}>{right}</Text>
       </Row>
-      <View style={s.track}>
-        <View style={[s.fill, { width: `${pct * 100}%`, backgroundColor: tone }]} />
-      </View>
+      <View style={s.track}><View style={[s.fill, { width: `${pct * 100}%`, backgroundColor: tone }]} /></View>
     </View>
   );
 }
 
-export function Divider({ style }) {
-  return <View style={[s.divider, style]} />;
-}
-
-/** A short explanatory note — used where the demo needs to state a limit. */
 export function Note({ children, tone = 'quiet' }) {
   const border = tone === 'risk' ? c.risk : tone === 'good' ? c.calm : c.relevance;
   return (
@@ -117,51 +141,74 @@ export function Note({ children, tone = 'quiet' }) {
   );
 }
 
+export function Empty({ icon, title, body }) {
+  return (
+    <View style={s.empty}>
+      <Ionicons name={icon} size={26} color={c.inkFaint} />
+      <Text style={[type.h3, { marginTop: sp(2) }]}>{title}</Text>
+      <Text style={[type.soft, { textAlign: 'center', marginTop: sp(1), maxWidth: 300 }]}>{body}</Text>
+    </View>
+  );
+}
+
 const s = StyleSheet.create({
   card: {
-    backgroundColor: c.surface,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: c.rule,
-    padding: sp(3),
+    backgroundColor: c.surface, borderRadius: radius.md,
+    borderWidth: 1, borderColor: c.rule, padding: sp(3.5),
   },
   row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  sectionHead: { paddingHorizontal: sp(4), marginBottom: sp(2.5), gap: sp(3) },
+  seeAll: { fontSize: 10, fontWeight: '800', color: c.inkSoft, letterSpacing: 0.8 },
+
   chip: {
     flexDirection: 'row', alignItems: 'center', gap: sp(1.5),
     borderWidth: 1, borderRadius: 4, paddingHorizontal: sp(2), paddingVertical: sp(1),
     alignSelf: 'flex-start',
   },
-  dot: { width: 7, height: 7, borderRadius: 4 },
-  chipText: { fontSize: 11, fontWeight: '700', letterSpacing: 1 },
-  chipScore: { fontSize: 11, fontWeight: '600', fontVariant: ['tabular-nums'], opacity: 0.8 },
+  dot: { width: 6, height: 6, borderRadius: 3 },
+  chipText: { fontSize: 10, fontWeight: '800', letterSpacing: 0.8 },
+  chipScore: { fontSize: 10, fontWeight: '700', fontVariant: ['tabular-nums'], opacity: 0.8 },
+
   btn: {
-    borderWidth: 1, borderRadius: 6,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: sp(1.5),
+    borderWidth: 1, borderRadius: radius.sm,
     paddingHorizontal: sp(3.5), paddingVertical: sp(2.5),
-    alignItems: 'center',
   },
-  btnText: { fontSize: 13, fontWeight: '700', letterSpacing: 0.3 },
+  btnText: { fontSize: 13, fontWeight: '800', letterSpacing: 0.2 },
+
   toggle: {
     flexDirection: 'row', backgroundColor: c.inset,
-    borderRadius: 6, padding: 3, borderWidth: 1, borderColor: c.rule,
+    borderRadius: radius.sm, padding: 3, borderWidth: 1, borderColor: c.rule,
   },
-  toggleItem: { flex: 1, paddingVertical: sp(1.75), borderRadius: 4, alignItems: 'center' },
-  toggleItemOn: { backgroundColor: c.relevance },
-  toggleText: { fontSize: 12, fontWeight: '600', color: c.inkSoft },
-  toggleTextOn: { color: c.bg },
-  tile: { width: 104, marginRight: sp(2.5) },
-  tileRankBox: {
-    position: 'absolute', top: 6, left: 6,
-    backgroundColor: 'rgba(0,0,0,0.42)', borderRadius: 3,
-    paddingHorizontal: 5, paddingVertical: 2,
+  toggleItem: { flex: 1, paddingVertical: sp(2), borderRadius: 4, alignItems: 'center' },
+  toggleItemOn: { backgroundColor: c.brand },
+  toggleText: { fontSize: 12, fontWeight: '700', color: c.inkSoft },
+  toggleTextOn: { color: '#fff' },
+
+  rail: { paddingHorizontal: sp(4), gap: sp(2), paddingVertical: sp(1) },
+  railChip: {
+    flexDirection: 'row', alignItems: 'center', gap: sp(1.5),
+    borderWidth: 1, borderColor: c.rule, borderRadius: radius.pill,
+    paddingHorizontal: sp(3), paddingVertical: sp(1.75), backgroundColor: c.surface,
   },
-  tileRank: { fontSize: 10, color: '#fff', fontWeight: '800' },
-  tileName: { fontSize: 11, color: c.ink, lineHeight: 14, fontWeight: '600' },
+  railChipOn: { backgroundColor: c.brand, borderColor: c.brand },
+  railText: { fontSize: 12, color: c.inkSoft, fontWeight: '700' },
+  railTextOn: { color: '#fff' },
+  railN: { fontSize: 10, color: c.inkFaint, fontVariant: ['tabular-nums'] },
+
+  rankBox: {
+    position: 'absolute', bottom: 6, left: 6,
+    backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 3,
+    paddingHorizontal: 5, paddingVertical: 1.5,
+  },
+  rankText: { fontSize: 10, color: '#fff', fontWeight: '900' },
+  tileName: { fontSize: 11.5, color: c.ink, lineHeight: 15, fontWeight: '700', marginTop: sp(1.5) },
   tileMeta: { fontSize: 10, color: c.inkFaint, marginTop: 1 },
+
   track: { height: 5, backgroundColor: c.inset, borderRadius: 3, overflow: 'hidden' },
   fill: { height: '100%', borderRadius: 3 },
-  divider: { height: 1, backgroundColor: c.ruleSoft, marginVertical: sp(3) },
-  note: {
-    borderLeftWidth: 3, paddingLeft: sp(2.5), paddingVertical: sp(1),
-    marginVertical: sp(2),
-  },
+  note: { borderLeftWidth: 3, paddingLeft: sp(2.5), paddingVertical: sp(1), marginVertical: sp(2) },
+  empty: { alignItems: 'center', paddingVertical: sp(9) },
 });
+
+export { shadow };

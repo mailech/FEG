@@ -1,0 +1,5522 @@
+[
+  {
+    "id": "m0",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "LaLiga",
+    "match": "Racing Santander vs. Villarreal CF",
+    "home": "Racing Santander",
+    "away": "Villarreal CF",
+    "priceUpdates": 41799,
+    "marketCount": 339,
+    "markets": [
+      {
+        "name": "5th scoring type",
+        "odds": 35,
+        "opened": 28,
+        "moved": 7,
+        "updates": 8
+      },
+      {
+        "name": "Georges Mikautadze 1+ shots on target, Over 1.5 Villarreal goals , Over 4.5 Villarreal corners",
+        "odds": 4.1,
+        "opened": 3.9,
+        "moved": 0.2,
+        "updates": 4
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 1.55,
+        "opened": 1.8,
+        "moved": -0.25,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal - By Foot (90mins)",
+        "odds": 2,
+        "opened": 1.55,
+        "moved": 0.45,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 6.5,
+        "opened": 3.1,
+        "moved": 3.4,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Inside the Box (90mins)",
+        "odds": 2.85,
+        "opened": 2.7,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "Villarreal CF corner range",
+        "odds": 2.8,
+        "opened": 2.9,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "Santander to win , Andres Martin Garcia to score anytime",
+        "odds": 5.3,
+        "opened": 5,
+        "moved": 0.3,
+        "updates": 2
+      }
+    ]
+  },
+  {
+    "id": "m1",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Trophee des Champions",
+    "match": "Racing Club De Lens vs. Paris Saint-Germain",
+    "home": "Racing Club De Lens",
+    "away": "Paris Saint-Germain",
+    "priceUpdates": 25320,
+    "marketCount": 329,
+    "markets": [
+      {
+        "name": "Racing Club De Lens exact goals",
+        "odds": 2.1,
+        "opened": 7.3,
+        "moved": -5.2,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 3.4,
+        "opened": 1.15,
+        "moved": 2.25,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Anytime (90mins)",
+        "odds": 19,
+        "opened": 150,
+        "moved": -131,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 25,
+        "opened": 18,
+        "moved": 7,
+        "updates": 8
+      },
+      {
+        "name": "Total",
+        "odds": 4.2,
+        "opened": 1.4,
+        "moved": 2.8,
+        "updates": 8
+      },
+      {
+        "name": "When will the 1st goal be scored (10 min interval)",
+        "odds": 3.5,
+        "opened": 3.55,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Team's Last (90mins)",
+        "odds": 20,
+        "opened": 90,
+        "moved": -70,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Team's Last Incl. Sub. (90mins)",
+        "odds": 3.5,
+        "opened": 3.6,
+        "moved": -0.1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m2",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "LaLiga",
+    "match": "Espanyol Barcelona vs. Levante UD",
+    "home": "Espanyol Barcelona",
+    "away": "Levante UD",
+    "priceUpdates": 23311,
+    "marketCount": 281,
+    "markets": [
+      {
+        "name": "Penalty: Total",
+        "odds": 1.22,
+        "opened": 1.11,
+        "moved": 0.11,
+        "updates": 8
+      },
+      {
+        "name": "Team Yellow Cards (90mins)",
+        "odds": 2.15,
+        "opened": 1.35,
+        "moved": 0.8,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 1.48,
+        "opened": 9,
+        "moved": -7.52,
+        "updates": 8
+      },
+      {
+        "name": "1st goal",
+        "odds": 1.76,
+        "opened": 1.77,
+        "moved": -0.01,
+        "updates": 8
+      },
+      {
+        "name": "Double chance & total",
+        "odds": 1.81,
+        "opened": 2.5,
+        "moved": -0.69,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: 1st Half Total",
+        "odds": 4,
+        "opened": 1.26,
+        "moved": 2.74,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: 1st Half Team 1 Total",
+        "odds": 1.52,
+        "opened": 1.48,
+        "moved": 0.04,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - total",
+        "odds": 3.9,
+        "opened": 1.15,
+        "moved": 2.75,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m3",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Fonseca, Joao vs. Van de Zandschulp, Botic",
+    "home": "Fonseca, Joao",
+    "away": "Van de Zandschulp, Botic",
+    "priceUpdates": 22802,
+    "marketCount": 236,
+    "markets": [
+      {
+        "name": "2nd set - Fonseca, Joao total points",
+        "odds": 1.75,
+        "opened": 1.95,
+        "moved": -0.2,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 1.14,
+        "opened": 1.38,
+        "moved": -0.24,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.14,
+        "opened": 1.58,
+        "moved": -0.44,
+        "updates": 8
+      },
+      {
+        "name": "Total breaks",
+        "odds": 2.1,
+        "opened": 1.4,
+        "moved": 0.7,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 11 - correct score",
+        "odds": 4.1,
+        "opened": 17.5,
+        "moved": -13.4,
+        "updates": 8
+      },
+      {
+        "name": "1st set - most aces",
+        "odds": 3.65,
+        "opened": 2.2,
+        "moved": 1.45,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 2.8,
+        "opened": 2.42,
+        "moved": 0.38,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total double faults",
+        "odds": 2.65,
+        "opened": 2.05,
+        "moved": 0.6,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m4",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Championship",
+    "match": "Burnley v West Ham",
+    "home": "Burnley v West Ham",
+    "away": "",
+    "priceUpdates": 21693,
+    "marketCount": 371,
+    "markets": [
+      {
+        "name": "1st half - both teams to score",
+        "odds": 1.08,
+        "opened": 3.85,
+        "moved": -2.77,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 2.45,
+        "opened": 1.65,
+        "moved": 0.8,
+        "updates": 8
+      },
+      {
+        "name": "Result After 85 Minutes",
+        "odds": 1,
+        "opened": 4,
+        "moved": -3,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 2.35,
+        "opened": 2.9,
+        "moved": -0.55,
+        "updates": 8
+      },
+      {
+        "name": "Half Time West Ham Goals Over / Under 0.50",
+        "odds": 2.12,
+        "opened": 2.12,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Burnley Goals (Bands)",
+        "odds": 10,
+        "opened": 1.2,
+        "moved": 8.8,
+        "updates": 8
+      },
+      {
+        "name": "Result After 55 Minutes",
+        "odds": 19,
+        "opened": 6,
+        "moved": 13,
+        "updates": 8
+      },
+      {
+        "name": "Player to Score or Assist (90mins)",
+        "odds": 6,
+        "opened": 3.7,
+        "moved": 2.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m5",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Fritz, Taylor vs. Michelsen, Alex",
+    "home": "Fritz, Taylor",
+    "away": "Michelsen, Alex",
+    "priceUpdates": 21394,
+    "marketCount": 224,
+    "markets": [
+      {
+        "name": "2nd set - Michelsen, Alex total points",
+        "odds": 1.75,
+        "opened": 1.7,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - Michelsen, Alex total points",
+        "odds": 1.8,
+        "opened": 1.85,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - correct score after 6 games",
+        "odds": 4.75,
+        "opened": 17.5,
+        "moved": -12.75,
+        "updates": 8
+      },
+      {
+        "name": "Michelsen, Alex total points",
+        "odds": 1.85,
+        "opened": 1.8,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total games",
+        "odds": 1.54,
+        "opened": 4.1,
+        "moved": -2.56,
+        "updates": 8
+      },
+      {
+        "name": "Total aces",
+        "odds": 2.1,
+        "opened": 2.2,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 6.5,
+        "opened": 2.58,
+        "moved": 3.92,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.95,
+        "opened": 1.01,
+        "moved": 0.94,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m6",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Rinderknech, Arthur vs. Cerundolo, Juan Manuel",
+    "home": "Rinderknech, Arthur",
+    "away": "Cerundolo, Juan Manuel",
+    "priceUpdates": 20904,
+    "marketCount": 308,
+    "markets": [
+      {
+        "name": "1st set - Rinderknech, Arthur total aces",
+        "odds": 1.4,
+        "opened": 1.32,
+        "moved": 0.08,
+        "updates": 8
+      },
+      {
+        "name": "Total aces",
+        "odds": 2.1,
+        "opened": 1.65,
+        "moved": 0.45,
+        "updates": 8
+      },
+      {
+        "name": "Cerundolo, Juan Manuel total games",
+        "odds": 9.2,
+        "opened": 2.42,
+        "moved": 6.78,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - total aces",
+        "odds": 1.85,
+        "opened": 1.5,
+        "moved": 0.35,
+        "updates": 6
+      },
+      {
+        "name": "3rd set game 2 - exact points",
+        "odds": 2.85,
+        "opened": 2.85,
+        "moved": 0,
+        "updates": 7
+      },
+      {
+        "name": "1st set game 1 - ace",
+        "odds": 1.2,
+        "opened": 1.18,
+        "moved": 0.02,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 2 - exact points",
+        "odds": 3.35,
+        "opened": 4.5,
+        "moved": -1.15,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - odd/even games",
+        "odds": 1.77,
+        "opened": 1.97,
+        "moved": -0.2,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m7",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Trungelliti, Marco vs. Medvedev, Daniil",
+    "home": "Trungelliti, Marco",
+    "away": "Medvedev, Daniil",
+    "priceUpdates": 19838,
+    "marketCount": 222,
+    "markets": [
+      {
+        "name": "1st set - race to 5 games",
+        "odds": 1.85,
+        "opened": 1.54,
+        "moved": 0.31,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 1.35,
+        "opened": 3.45,
+        "moved": -2.1,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 9 - correct score",
+        "odds": 4.15,
+        "opened": 8.5,
+        "moved": -4.35,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 8.2,
+        "opened": 1.23,
+        "moved": 6.97,
+        "updates": 8
+      },
+      {
+        "name": "Medvedev, Daniil total aces",
+        "odds": 1.84,
+        "opened": 2.51,
+        "moved": -0.67,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total breaks",
+        "odds": 1.95,
+        "opened": 1.75,
+        "moved": 0.2,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total aces",
+        "odds": 1.27,
+        "opened": 2,
+        "moved": -0.73,
+        "updates": 8
+      },
+      {
+        "name": "Total aces",
+        "odds": 1.85,
+        "opened": 1.75,
+        "moved": 0.1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m8",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Altmaier, Daniel vs. Musetti, Lorenzo",
+    "home": "Altmaier, Daniel",
+    "away": "Musetti, Lorenzo",
+    "priceUpdates": 18638,
+    "marketCount": 209,
+    "markets": [
+      {
+        "name": "Game handicap",
+        "odds": 7.4,
+        "opened": 1.1,
+        "moved": 6.3,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 14,
+        "opened": 2.19,
+        "moved": 11.81,
+        "updates": 8
+      },
+      {
+        "name": "Musetti, Lorenzo total aces",
+        "odds": 1.01,
+        "opened": 1.21,
+        "moved": -0.2,
+        "updates": 8
+      },
+      {
+        "name": "Musetti, Lorenzo total double faults",
+        "odds": 1.81,
+        "opened": 1.6,
+        "moved": 0.21,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - Altmaier, Daniel total double faults",
+        "odds": 2.5,
+        "opened": 3.6,
+        "moved": -1.1,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - to deuce",
+        "odds": 4.65,
+        "opened": 1.14,
+        "moved": 3.51,
+        "updates": 7
+      },
+      {
+        "name": "Musetti, Lorenzo total games",
+        "odds": 1.75,
+        "opened": 12.5,
+        "moved": -10.75,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.7,
+        "opened": 1.35,
+        "moved": 0.35,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m9",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Zverev, Alexander vs. Norrie, Cameron",
+    "home": "Zverev, Alexander",
+    "away": "Norrie, Cameron",
+    "priceUpdates": 18407,
+    "marketCount": 292,
+    "markets": [
+      {
+        "name": "Zverev, Alexander total games",
+        "odds": 1.44,
+        "opened": 3.45,
+        "moved": -2.01,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.2,
+        "opened": 2.19,
+        "moved": -0.99,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 3 - exact points",
+        "odds": 3.05,
+        "opened": 3.25,
+        "moved": -0.2,
+        "updates": 6
+      },
+      {
+        "name": "1st set - odd/even games",
+        "odds": 3.2,
+        "opened": 1.35,
+        "moved": 1.85,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 7 - exact points",
+        "odds": 2.65,
+        "opened": 2.85,
+        "moved": -0.2,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - exact points",
+        "odds": 3.05,
+        "opened": 3.05,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "1st set - Norrie, Cameron total breaks",
+        "odds": 1.47,
+        "opened": 1.14,
+        "moved": 0.33,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.62,
+        "opened": 16,
+        "moved": -14.38,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m10",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Tsitsipas, Stefanos vs. Auger-Aliassime, Felix",
+    "home": "Tsitsipas, Stefanos",
+    "away": "Auger-Aliassime, Felix",
+    "priceUpdates": 17532,
+    "marketCount": 248,
+    "markets": [
+      {
+        "name": "Tsitsipas, Stefanos total games",
+        "odds": 2.34,
+        "opened": 1.62,
+        "moved": 0.72,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - correct score",
+        "odds": 21,
+        "opened": 40,
+        "moved": -19,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total aces",
+        "odds": 1.8,
+        "opened": 2.5,
+        "moved": -0.7,
+        "updates": 8
+      },
+      {
+        "name": "Tsitsipas, Stefanos total double faults",
+        "odds": 1.76,
+        "opened": 1.61,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "(Boundary=2.5)",
+        "odds": 1.7,
+        "opened": 1.51,
+        "moved": 0.19,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.18,
+        "opened": 1.5,
+        "moved": -0.32,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.16,
+        "opened": 1.26,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total breaks",
+        "odds": 2.35,
+        "opened": 2.85,
+        "moved": -0.5,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m11",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Merida, Daniel vs. Bergs, Zizou",
+    "home": "Merida, Daniel",
+    "away": "Bergs, Zizou",
+    "priceUpdates": 17415,
+    "marketCount": 209,
+    "markets": [
+      {
+        "name": "2nd set - odd/even games",
+        "odds": 1.32,
+        "opened": 3.4,
+        "moved": -2.08,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 10 - correct score",
+        "odds": 3.95,
+        "opened": 4,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Merida, Daniel to win a set",
+        "odds": 3.2,
+        "opened": 1.02,
+        "moved": 2.18,
+        "updates": 8
+      },
+      {
+        "name": "1st set - correct score",
+        "odds": 7.3,
+        "opened": 33,
+        "moved": -25.7,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 7 - ace",
+        "odds": 3.45,
+        "opened": 3.5,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.44,
+        "opened": 60,
+        "moved": -58.56,
+        "updates": 8
+      },
+      {
+        "name": "1st set - most aces",
+        "odds": 1.85,
+        "opened": 1.95,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 2 - correct score",
+        "odds": 40,
+        "opened": 3.75,
+        "moved": 36.25,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m12",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Eredivisie",
+    "match": "FC Twente Enschede vs. PEC Zwolle",
+    "home": "FC Twente Enschede",
+    "away": "PEC Zwolle",
+    "priceUpdates": 17121,
+    "marketCount": 281,
+    "markets": [
+      {
+        "name": "Goalscorer - Incl. Substitute (90mins)",
+        "odds": 5.5,
+        "opened": 3.2,
+        "moved": 2.3,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 1.82,
+        "opened": 1.2,
+        "moved": 0.62,
+        "updates": 8
+      },
+      {
+        "name": "FC Twente to win , Sondre Holmlund Ørjasæter 1+ shots on target",
+        "odds": 1.65,
+        "opened": 1.62,
+        "moved": 0.03,
+        "updates": 3
+      },
+      {
+        "name": "Team Offsides (90mins)",
+        "odds": 1.17,
+        "opened": 2.35,
+        "moved": -1.18,
+        "updates": 8
+      },
+      {
+        "name": "Player Assists - Incl. Substitute (90mins)",
+        "odds": 7.5,
+        "opened": 11,
+        "moved": -3.5,
+        "updates": 8
+      },
+      {
+        "name": "4th goal",
+        "odds": 3.7,
+        "opened": 3.05,
+        "moved": 0.65,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 1x2",
+        "odds": 11.5,
+        "opened": 1.75,
+        "moved": 9.75,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Anytime (90mins)",
+        "odds": 19,
+        "opened": 40,
+        "moved": -21,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m13",
+    "sport": "Basketball",
+    "sportHr": "Košarka",
+    "tournament": "WNBA",
+    "match": "Seattle Storm vs. Chicago Sky",
+    "home": "Seattle Storm",
+    "away": "Chicago Sky",
+    "priceUpdates": 17051,
+    "marketCount": 48,
+    "markets": [
+      {
+        "name": "4th quarter - handicap",
+        "odds": 2.01,
+        "opened": 2.34,
+        "moved": -0.33,
+        "updates": 8
+      },
+      {
+        "name": "4th quarter - total",
+        "odds": 1.95,
+        "opened": 1.5,
+        "moved": 0.45,
+        "updates": 8
+      },
+      {
+        "name": "1st quarter - Seattle Storm total",
+        "odds": 1.62,
+        "opened": 1.9,
+        "moved": -0.28,
+        "updates": 8
+      },
+      {
+        "name": "Seattle Storm total (incl. overtime)",
+        "odds": 2.02,
+        "opened": 2.3,
+        "moved": -0.28,
+        "updates": 8
+      },
+      {
+        "name": "3rd quarter - handicap",
+        "odds": 1.95,
+        "opened": 1.58,
+        "moved": 0.37,
+        "updates": 8
+      },
+      {
+        "name": "1st half - handicap",
+        "odds": 2.01,
+        "opened": 1.7,
+        "moved": 0.31,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - total (incl. overtime)",
+        "odds": 1.95,
+        "opened": 1.95,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Total (incl. overtime)",
+        "odds": 1.75,
+        "opened": 2.06,
+        "moved": -0.31,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m14",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Community Shield",
+    "match": "Arsenal v Manchester City",
+    "home": "Arsenal v Manchester City",
+    "away": "",
+    "priceUpdates": 17007,
+    "marketCount": 415,
+    "markets": [
+      {
+        "name": "Total Goals Over/Under 3.50 After 75 Minutes",
+        "odds": 1.32,
+        "opened": 9.6,
+        "moved": -8.28,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: Team 1 Total",
+        "odds": 1.69,
+        "opened": 1.09,
+        "moved": 0.6,
+        "updates": 8
+      },
+      {
+        "name": "Corners: 1st Half Total",
+        "odds": 1.27,
+        "opened": 1.3,
+        "moved": -0.03,
+        "updates": 8
+      },
+      {
+        "name": "Double chance & total",
+        "odds": 2.19,
+        "opened": 2.16,
+        "moved": 0.03,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total corners",
+        "odds": 1.48,
+        "opened": 1.62,
+        "moved": -0.14,
+        "updates": 8
+      },
+      {
+        "name": "Anytime Goalscorer (Regular Time)",
+        "odds": 14,
+        "opened": 4.35,
+        "moved": 9.65,
+        "updates": 8
+      },
+      {
+        "name": "Half Time Second Team To Score",
+        "odds": 4,
+        "opened": 3.6,
+        "moved": 0.4,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 1.65,
+        "opened": 3.4,
+        "moved": -1.75,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m15",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Borges, Nuno vs. Cerundolo, Francisco",
+    "home": "Borges, Nuno",
+    "away": "Cerundolo, Francisco",
+    "priceUpdates": 16960,
+    "marketCount": 216,
+    "markets": [
+      {
+        "name": "1st set game 3 - winner",
+        "odds": 4.1,
+        "opened": 1.2,
+        "moved": 2.9,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total aces",
+        "odds": 3.1,
+        "opened": 3.05,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.16,
+        "opened": 7.4,
+        "moved": -6.24,
+        "updates": 8
+      },
+      {
+        "name": "Exact sets",
+        "odds": 2.4,
+        "opened": 1.52,
+        "moved": 0.88,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.85,
+        "opened": 1.16,
+        "moved": 0.69,
+        "updates": 8
+      },
+      {
+        "name": "1st set - winner",
+        "odds": 22,
+        "opened": 3.6,
+        "moved": 18.4,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - winner",
+        "odds": 1.1,
+        "opened": 1.26,
+        "moved": -0.16,
+        "updates": 8
+      },
+      {
+        "name": "Total aces",
+        "odds": 1.35,
+        "opened": 2.85,
+        "moved": -1.5,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m16",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Championship",
+    "match": "Watford v Southampton",
+    "home": "Watford v Southampton",
+    "away": "",
+    "priceUpdates": 16717,
+    "marketCount": 360,
+    "markets": [
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 1.65,
+        "opened": 1.27,
+        "moved": 0.38,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Watford FC total",
+        "odds": 1.04,
+        "opened": 6.9,
+        "moved": -5.86,
+        "updates": 8
+      },
+      {
+        "name": "Result After 15 Minutes",
+        "odds": 8,
+        "opened": 5.5,
+        "moved": 2.5,
+        "updates": 8
+      },
+      {
+        "name": "AAMS Half Time Correct Score",
+        "odds": 21,
+        "opened": 5,
+        "moved": 16,
+        "updates": 8
+      },
+      {
+        "name": "Half-time Southampton Total Corners Over/Under 2.50",
+        "odds": 3.7,
+        "opened": 4,
+        "moved": -0.3,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Southampton FC total corners",
+        "odds": 1.46,
+        "opened": 2.14,
+        "moved": -0.68,
+        "updates": 8
+      },
+      {
+        "name": "Watford to win , Luca Kjerrumgaard 2+ shots on target",
+        "odds": 6.5,
+        "opened": 6.5,
+        "moved": 0,
+        "updates": 3
+      },
+      {
+        "name": "Watford Goals Over / Under 1.50",
+        "odds": 1.36,
+        "opened": 2.8,
+        "moved": -1.44,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m17",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Deckers, Alec vs. Gannon, Conor",
+    "home": "Deckers, Alec",
+    "away": "Gannon, Conor",
+    "priceUpdates": 16568,
+    "marketCount": 244,
+    "markets": [
+      {
+        "name": "2nd set - total games",
+        "odds": 3.8,
+        "opened": 1.47,
+        "moved": 2.33,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.04,
+        "opened": 6.8,
+        "moved": -5.76,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 8 - exact points",
+        "odds": 2.9,
+        "opened": 3,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 3 games",
+        "odds": 1.08,
+        "opened": 3.3,
+        "moved": -2.22,
+        "updates": 8
+      },
+      {
+        "name": "Deckers, Alec total games",
+        "odds": 3.6,
+        "opened": 1.38,
+        "moved": 2.22,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - will there be a tiebreak",
+        "odds": 5.1,
+        "opened": 1.78,
+        "moved": 3.32,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 7.9,
+        "opened": 1.35,
+        "moved": 6.55,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 3 - exact points",
+        "odds": 4.3,
+        "opened": 4.35,
+        "moved": -0.05,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m18",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Jodar, Rafael vs. Shapovalov, Denis",
+    "home": "Jodar, Rafael",
+    "away": "Shapovalov, Denis",
+    "priceUpdates": 16329,
+    "marketCount": 221,
+    "markets": [
+      {
+        "name": "3rd set game 11 - winner",
+        "odds": 1.16,
+        "opened": 1.2,
+        "moved": -0.04,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 8 - odd/even points",
+        "odds": 3.2,
+        "opened": 3.2,
+        "moved": 0,
+        "updates": 5
+      },
+      {
+        "name": "2nd set game 8 - winner",
+        "odds": 3.4,
+        "opened": 2.89,
+        "moved": 0.51,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 3 - exact points",
+        "odds": 2.95,
+        "opened": 4.1,
+        "moved": -1.15,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 3.25,
+        "opened": 1.32,
+        "moved": 1.93,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 7 - to deuce",
+        "odds": 3.2,
+        "opened": 1.26,
+        "moved": 1.94,
+        "updates": 5
+      },
+      {
+        "name": "2nd set game 7 - correct score",
+        "odds": 13,
+        "opened": 5,
+        "moved": 8,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - Jodar, Rafael total points",
+        "odds": 2.05,
+        "opened": 1.37,
+        "moved": 0.68,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m19",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "1. Liga",
+    "match": "FC Banik Ostrava vs. SK Artis Brno",
+    "home": "FC Banik Ostrava",
+    "away": "SK Artis Brno",
+    "priceUpdates": 16279,
+    "marketCount": 291,
+    "markets": [
+      {
+        "name": "Corners: Team 1 Total",
+        "odds": 2.67,
+        "opened": 2.37,
+        "moved": 0.3,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 0:4",
+        "odds": 14.5,
+        "opened": 21,
+        "moved": -6.5,
+        "updates": 8
+      },
+      {
+        "name": "Baník Ostrava to win , Filip Kubala 1+ shots on target",
+        "odds": 1.8,
+        "opened": 1.75,
+        "moved": 0.05,
+        "updates": 5
+      },
+      {
+        "name": "Team Shots (90mins)",
+        "odds": 1.95,
+        "opened": 1.85,
+        "moved": 0.1,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: 1st Half Total",
+        "odds": 2.11,
+        "opened": 2.27,
+        "moved": -0.16,
+        "updates": 8
+      },
+      {
+        "name": "Penalty: Team 1 Total",
+        "odds": 1.11,
+        "opened": 1.05,
+        "moved": 0.06,
+        "updates": 8
+      },
+      {
+        "name": "1st/2nd half both teams to score",
+        "odds": 15,
+        "opened": 15,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 1st goal",
+        "odds": 1.78,
+        "opened": 1.74,
+        "moved": 0.04,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m20",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "MLS Preseason",
+    "match": "Newcastle United - Strasbourg Alsace",
+    "home": "Newcastle United - Strasbourg Alsace",
+    "away": "",
+    "priceUpdates": 16171,
+    "marketCount": 54,
+    "markets": [
+      {
+        "name": "Total & both teams to score",
+        "odds": 6.8,
+        "opened": 6.8,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "1st Half Team 2 Total Goals",
+        "odds": 2.38,
+        "opened": 2.15,
+        "moved": 0.23,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Strasbourg Alsace total",
+        "odds": 7.2,
+        "opened": 2.1,
+        "moved": 5.1,
+        "updates": 8
+      },
+      {
+        "name": "Total Goals",
+        "odds": 1.8,
+        "opened": 1.6,
+        "moved": 0.2,
+        "updates": 8
+      },
+      {
+        "name": "Newcastle United total",
+        "odds": 1.81,
+        "opened": 5.9,
+        "moved": -4.09,
+        "updates": 8
+      },
+      {
+        "name": "Team 1 Total Goals",
+        "odds": 5.3,
+        "opened": 1.12,
+        "moved": 4.18,
+        "updates": 8
+      },
+      {
+        "name": "Total",
+        "odds": 1.4,
+        "opened": 3.6,
+        "moved": -2.2,
+        "updates": 8
+      },
+      {
+        "name": "Both Teams To Score",
+        "odds": 2.8,
+        "opened": 1.65,
+        "moved": 1.15,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m21",
+    "sport": "Basketball",
+    "sportHr": "Košarka",
+    "tournament": "WNBA",
+    "match": "Atlanta Dream vs. Indiana Fever",
+    "home": "Atlanta Dream",
+    "away": "Indiana Fever",
+    "priceUpdates": 15769,
+    "marketCount": 47,
+    "markets": [
+      {
+        "name": "4th quarter - handicap",
+        "odds": 1.9,
+        "opened": 1.38,
+        "moved": 0.52,
+        "updates": 8
+      },
+      {
+        "name": "2nd quarter - handicap",
+        "odds": 1.8,
+        "opened": 1.9,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "Indiana Fever total (incl. overtime)",
+        "odds": 2.14,
+        "opened": 2.14,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "1x2 & total",
+        "odds": 3.3,
+        "opened": 3.9,
+        "moved": -0.6,
+        "updates": 8
+      },
+      {
+        "name": "Total (incl. overtime)",
+        "odds": 2.06,
+        "opened": 1.7,
+        "moved": 0.36,
+        "updates": 8
+      },
+      {
+        "name": "2nd quarter - 1x2",
+        "odds": 2.05,
+        "opened": 16,
+        "moved": -13.95,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - handicap (incl. overtime)",
+        "odds": 1.9,
+        "opened": 1.85,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "3rd quarter - Indiana Fever total",
+        "odds": 2.05,
+        "opened": 2.18,
+        "moved": -0.13,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m22",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Humbert, Ugo vs. Zheng, Michael",
+    "home": "Humbert, Ugo",
+    "away": "Zheng, Michael",
+    "priceUpdates": 15750,
+    "marketCount": 218,
+    "markets": [
+      {
+        "name": "Humbert, Ugo total breaks",
+        "odds": 2.3,
+        "opened": 2.15,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 1.1,
+        "opened": 1.12,
+        "moved": -0.02,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.16,
+        "opened": 2.26,
+        "moved": -1.1,
+        "updates": 8
+      },
+      {
+        "name": "Exact sets",
+        "odds": 2.05,
+        "opened": 1.7,
+        "moved": 0.35,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 10 - exact points",
+        "odds": 2.9,
+        "opened": 3,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "Humbert, Ugo total games",
+        "odds": 1.85,
+        "opened": 4.4,
+        "moved": -2.55,
+        "updates": 8
+      },
+      {
+        "name": "Most aces",
+        "odds": 1.8,
+        "opened": 2.45,
+        "moved": -0.65,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total double faults",
+        "odds": 1.8,
+        "opened": 2.8,
+        "moved": -1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m23",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Eredivisie",
+    "match": "Feyenoord Rotterdam vs. Go Ahead Eagles",
+    "home": "Feyenoord Rotterdam",
+    "away": "Go Ahead Eagles",
+    "priceUpdates": 15313,
+    "marketCount": 258,
+    "markets": [
+      {
+        "name": "Player Shots On Goal - Incl. Substitute (90mins)",
+        "odds": 3.8,
+        "opened": 1.11,
+        "moved": 2.69,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 2.7,
+        "opened": 1.12,
+        "moved": 1.58,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - First or Last (90mins)",
+        "odds": 5,
+        "opened": 16,
+        "moved": -11,
+        "updates": 8
+      },
+      {
+        "name": "Double chance & total",
+        "odds": 17,
+        "opened": 1.46,
+        "moved": 15.54,
+        "updates": 8
+      },
+      {
+        "name": "1st goal",
+        "odds": 17.5,
+        "opened": 1.27,
+        "moved": 16.23,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 2.01,
+        "opened": 2.19,
+        "moved": -0.18,
+        "updates": 8
+      },
+      {
+        "name": "Match Shots On Goal (90mins)",
+        "odds": 1.55,
+        "opened": 1.78,
+        "moved": -0.23,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 2.1,
+        "opened": 2.4,
+        "moved": -0.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m24",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Hamburg, Germany Men Singles (Hamburg)",
+    "match": "Kumstat, Jan vs. Moeller, Marvin",
+    "home": "Kumstat, Jan",
+    "away": "Moeller, Marvin",
+    "priceUpdates": 14885,
+    "marketCount": 205,
+    "markets": [
+      {
+        "name": "1st set - total games",
+        "odds": 1.35,
+        "opened": 1.26,
+        "moved": 0.09,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 8 - to deuce",
+        "odds": 3.7,
+        "opened": 1.23,
+        "moved": 2.47,
+        "updates": 8
+      },
+      {
+        "name": "Moeller, Marvin total games",
+        "odds": 1.41,
+        "opened": 1.12,
+        "moved": 0.29,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.9,
+        "opened": 1.35,
+        "moved": 0.55,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 2.26,
+        "opened": 3.25,
+        "moved": -0.99,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 8 - winner",
+        "odds": 3.7,
+        "opened": 4.4,
+        "moved": -0.7,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 2 - exact points",
+        "odds": 3.5,
+        "opened": 3.1,
+        "moved": 0.4,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 3 games",
+        "odds": 3.8,
+        "opened": 4.7,
+        "moved": -0.9,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m25",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Ehrenschneider, Nino vs. Papa, Christopher",
+    "home": "Ehrenschneider, Nino",
+    "away": "Papa, Christopher",
+    "priceUpdates": 14740,
+    "marketCount": 166,
+    "markets": [
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.7,
+        "opened": 100,
+        "moved": -98.3,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 5 - correct score",
+        "odds": 4.75,
+        "opened": 11.5,
+        "moved": -6.75,
+        "updates": 8
+      },
+      {
+        "name": "Ehrenschneider, Nino to win a set",
+        "odds": 1.05,
+        "opened": 6.4,
+        "moved": -5.35,
+        "updates": 8
+      },
+      {
+        "name": "Papa, Christopher total games",
+        "odds": 1.88,
+        "opened": 1.26,
+        "moved": 0.62,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 5 - correct score",
+        "odds": 3.7,
+        "opened": 3.2,
+        "moved": 0.5,
+        "updates": 8
+      },
+      {
+        "name": "Ehrenschneider, Nino total games",
+        "odds": 1.05,
+        "opened": 1.2,
+        "moved": -0.15,
+        "updates": 8
+      },
+      {
+        "name": "1st set - race to 4 games",
+        "odds": 4.7,
+        "opened": 1.18,
+        "moved": 3.52,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 2.02,
+        "opened": 2.14,
+        "moved": -0.12,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m26",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Tien, Learner vs. Baez, Sebastian",
+    "home": "Tien, Learner",
+    "away": "Baez, Sebastian",
+    "priceUpdates": 14486,
+    "marketCount": 212,
+    "markets": [
+      {
+        "name": "2nd set - Baez, Sebastian total points",
+        "odds": 1.85,
+        "opened": 1.9,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Baez, Sebastian total aces",
+        "odds": 1.52,
+        "opened": 1.13,
+        "moved": 0.39,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 4 games",
+        "odds": 1.41,
+        "opened": 2.01,
+        "moved": -0.6,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - odd/even games",
+        "odds": 2.26,
+        "opened": 1.57,
+        "moved": 0.69,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 5 - ace",
+        "odds": 1.32,
+        "opened": 1.32,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Tien, Learner total double faults",
+        "odds": 1.57,
+        "opened": 1.64,
+        "moved": -0.07,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 6 - exact points",
+        "odds": 5.3,
+        "opened": 3.2,
+        "moved": 2.1,
+        "updates": 8
+      },
+      {
+        "name": "Baez, Sebastian total games",
+        "odds": 2.06,
+        "opened": 1.41,
+        "moved": 0.65,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m27",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Rublev, Andrey vs. Carreno Busta, Pablo",
+    "home": "Rublev, Andrey",
+    "away": "Carreno Busta, Pablo",
+    "priceUpdates": 14132,
+    "marketCount": 224,
+    "markets": [
+      {
+        "name": "2nd set - race to 4 games",
+        "odds": 1.08,
+        "opened": 5.8,
+        "moved": -4.72,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - Carreno Busta, Pablo total points",
+        "odds": 1.9,
+        "opened": 1.9,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Carreno Busta, Pablo total points",
+        "odds": 1.85,
+        "opened": 1.75,
+        "moved": 0.1,
+        "updates": 8
+      },
+      {
+        "name": "Total double faults",
+        "odds": 2.05,
+        "opened": 1.75,
+        "moved": 0.3,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 2.68,
+        "opened": 2.68,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 2.58,
+        "opened": 1.29,
+        "moved": 1.29,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 3 - exact points",
+        "odds": 3.05,
+        "opened": 3.5,
+        "moved": -0.45,
+        "updates": 8
+      },
+      {
+        "name": "Carreno Busta, Pablo total breaks",
+        "odds": 1.35,
+        "opened": 9.3,
+        "moved": -7.95,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m28",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Eredivisie",
+    "match": "Ajax Amsterdam vs. SC Heerenveen",
+    "home": "Ajax Amsterdam",
+    "away": "SC Heerenveen",
+    "priceUpdates": 14042,
+    "marketCount": 265,
+    "markets": [
+      {
+        "name": "Team Fouls (90mins)",
+        "odds": 3.5,
+        "opened": 1.8,
+        "moved": 1.7,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 2.1,
+        "opened": 3,
+        "moved": -0.9,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 3.2,
+        "opened": 1.32,
+        "moved": 1.88,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - First Half (90mins)",
+        "odds": 5.5,
+        "opened": 10,
+        "moved": -4.5,
+        "updates": 8
+      },
+      {
+        "name": "Match Shots On Goal (90mins)",
+        "odds": 2.45,
+        "opened": 1.95,
+        "moved": 0.5,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 3rd goal",
+        "odds": 1.27,
+        "opened": 1.4,
+        "moved": -0.13,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 1.27,
+        "opened": 17,
+        "moved": -15.73,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 1.5,
+        "opened": 10,
+        "moved": -8.5,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m29",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Ekstraklasa",
+    "match": "LKP Motor Lublin vs. GKS Katowice",
+    "home": "LKP Motor Lublin",
+    "away": "GKS Katowice",
+    "priceUpdates": 13952,
+    "marketCount": 213,
+    "markets": [
+      {
+        "name": "Double chance (match) & 2nd half both teams score",
+        "odds": 2.24,
+        "opened": 4.2,
+        "moved": -1.96,
+        "updates": 8
+      },
+      {
+        "name": "GKS Katowice total corners",
+        "odds": 2.32,
+        "opened": 2.76,
+        "moved": -0.44,
+        "updates": 8
+      },
+      {
+        "name": "{sw} Half Goalscorer",
+        "odds": 8.3,
+        "opened": 7.6,
+        "moved": 0.7,
+        "updates": 8
+      },
+      {
+        "name": "Corners: Team 2 Total",
+        "odds": 1,
+        "opened": 2.21,
+        "moved": -1.21,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - LKP Motor Lublin total",
+        "odds": 9,
+        "opened": 9.4,
+        "moved": -0.4,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - multigoals",
+        "odds": 4.3,
+        "opened": 1.53,
+        "moved": 2.77,
+        "updates": 8
+      },
+      {
+        "name": "When will the 2nd goal be scored (10 min interval)",
+        "odds": 3,
+        "opened": 2.9,
+        "moved": 0.1,
+        "updates": 4
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 9,
+        "opened": 5.4,
+        "moved": 3.6,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m30",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Kingston, Jamaica Men Singles (Kingston)",
+    "match": "Fenty, Andrew vs. Heck, Hunter",
+    "home": "Fenty, Andrew",
+    "away": "Heck, Hunter",
+    "priceUpdates": 13865,
+    "marketCount": 178,
+    "markets": [
+      {
+        "name": "2nd set game 3 - correct score",
+        "odds": 4.75,
+        "opened": 4.6,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "Fenty, Andrew total games",
+        "odds": 1.66,
+        "opened": 1.58,
+        "moved": 0.08,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 2 - winner",
+        "odds": 1.03,
+        "opened": 5.6,
+        "moved": -4.57,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total games",
+        "odds": 1.16,
+        "opened": 1.29,
+        "moved": -0.13,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - winner",
+        "odds": 1.26,
+        "opened": 1.08,
+        "moved": 0.18,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 3 - winner",
+        "odds": 8.9,
+        "opened": 1.08,
+        "moved": 7.82,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 2.22,
+        "opened": 1.18,
+        "moved": 1.04,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 6 - correct score",
+        "odds": 4.15,
+        "opened": 3.9,
+        "moved": 0.25,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m31",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Prague, Czech Republic Men Singles (Prague)",
+    "match": "Vrbensky, Michael vs. Krutykh, Oleksii",
+    "home": "Vrbensky, Michael",
+    "away": "Krutykh, Oleksii",
+    "priceUpdates": 13812,
+    "marketCount": 165,
+    "markets": [
+      {
+        "name": "2nd set game 3 - winner",
+        "odds": 1.35,
+        "opened": 2.87,
+        "moved": -1.52,
+        "updates": 8
+      },
+      {
+        "name": "Vrbensky, Michael total games",
+        "odds": 3.2,
+        "opened": 1.12,
+        "moved": 2.08,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - correct score",
+        "odds": 11,
+        "opened": 11.5,
+        "moved": -0.5,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 2.75,
+        "opened": 1.38,
+        "moved": 1.37,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.76,
+        "opened": 1.74,
+        "moved": 0.02,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 2.45,
+        "opened": 3.6,
+        "moved": -1.15,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 3 - exact points",
+        "odds": 3.25,
+        "opened": 2.9,
+        "moved": 0.35,
+        "updates": 6
+      },
+      {
+        "name": "3rd set game 10 - winner",
+        "odds": 1.23,
+        "opened": 4.05,
+        "moved": -2.82,
+        "updates": 6
+      }
+    ]
+  },
+  {
+    "id": "m32",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Zhu, Michael vs. Cigarran, Thiago",
+    "home": "Zhu, Michael",
+    "away": "Cigarran, Thiago",
+    "priceUpdates": 13811,
+    "marketCount": 199,
+    "markets": [
+      {
+        "name": "2nd set game 10 - correct score",
+        "odds": 9,
+        "opened": 14.5,
+        "moved": -5.5,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 3,
+        "opened": 1.2,
+        "moved": 1.8,
+        "updates": 8
+      },
+      {
+        "name": "1st set - winner",
+        "odds": 1.95,
+        "opened": 1.96,
+        "moved": -0.01,
+        "updates": 8
+      },
+      {
+        "name": "Cigarran, Thiago total games",
+        "odds": 2.08,
+        "opened": 2.37,
+        "moved": -0.29,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 11 - correct score",
+        "odds": 9.8,
+        "opened": 13,
+        "moved": -3.2,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 8.9,
+        "opened": 1.44,
+        "moved": 7.46,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 10 - exact points",
+        "odds": 3.05,
+        "opened": 3.3,
+        "moved": -0.25,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 5 games",
+        "odds": 1.86,
+        "opened": 1.9,
+        "moved": -0.04,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m33",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Super Lig",
+    "match": "Istanbul Basaksehir vs. Kocaelispor",
+    "home": "Istanbul Basaksehir",
+    "away": "Kocaelispor",
+    "priceUpdates": 13800,
+    "marketCount": 275,
+    "markets": [
+      {
+        "name": "Kocaelispor to win , Rigoberto Rivas to score anytime",
+        "odds": 15,
+        "opened": 13,
+        "moved": 2,
+        "updates": 2
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 2.35,
+        "opened": 20,
+        "moved": -17.65,
+        "updates": 8
+      },
+      {
+        "name": "Total",
+        "odds": 3.3,
+        "opened": 1.12,
+        "moved": 2.18,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 2.42,
+        "opened": 4.75,
+        "moved": -2.33,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 1.52,
+        "opened": 1,
+        "moved": 0.52,
+        "updates": 8
+      },
+      {
+        "name": "Team Offsides (90mins)",
+        "odds": 2.5,
+        "opened": 1.7,
+        "moved": 0.8,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Kocaelispor total",
+        "odds": 9.4,
+        "opened": 3.8,
+        "moved": 5.6,
+        "updates": 8
+      },
+      {
+        "name": "Handicap",
+        "odds": 1.45,
+        "opened": 1.7,
+        "moved": -0.25,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m34",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Liga Portugal",
+    "match": "FC Arouca vs. Moreirense FC",
+    "home": "FC Arouca",
+    "away": "Moreirense FC",
+    "priceUpdates": 13792,
+    "marketCount": 278,
+    "markets": [
+      {
+        "name": "Moreirense FC clean sheet",
+        "odds": 3.85,
+        "opened": 3.8,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 4,
+        "opened": 2.25,
+        "moved": 1.75,
+        "updates": 8
+      },
+      {
+        "name": "Both teams to score",
+        "odds": 3.6,
+        "opened": 2.9,
+        "moved": 0.7,
+        "updates": 8
+      },
+      {
+        "name": "Team Fouls (90mins)",
+        "odds": 1.9,
+        "opened": 1.9,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 9.5,
+        "opened": 7,
+        "moved": 2.5,
+        "updates": 8
+      },
+      {
+        "name": "Match Shots On Goal (90mins)",
+        "odds": 1.75,
+        "opened": 1.8,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Moreirense FC exact goals",
+        "odds": 40,
+        "opened": 15,
+        "moved": 25,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 1.2,
+        "opened": 3.1,
+        "moved": -1.9,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m35",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Prague, Czech Republic Men Singles (Prague)",
+    "match": "Fatic, Nerman vs. Beckley, Alec",
+    "home": "Fatic, Nerman",
+    "away": "Beckley, Alec",
+    "priceUpdates": 13790,
+    "marketCount": 176,
+    "markets": [
+      {
+        "name": "Will there be a tiebreak",
+        "odds": 2.63,
+        "opened": 1.41,
+        "moved": 1.22,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 2.02,
+        "opened": 1.12,
+        "moved": 0.9,
+        "updates": 8
+      },
+      {
+        "name": "Beckley, Alec to win a set",
+        "odds": 2.63,
+        "opened": 2.45,
+        "moved": 0.18,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 5 - exact points",
+        "odds": 2.9,
+        "opened": 3.5,
+        "moved": -0.6,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.47,
+        "opened": 1.7,
+        "moved": -0.23,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 7 - correct score",
+        "odds": 7.8,
+        "opened": 14.5,
+        "moved": -6.7,
+        "updates": 8
+      },
+      {
+        "name": "Beckley, Alec total games",
+        "odds": 1.83,
+        "opened": 9.7,
+        "moved": -7.87,
+        "updates": 8
+      },
+      {
+        "name": "1st set tiebreak - correct score",
+        "odds": 9,
+        "opened": 5.9,
+        "moved": 3.1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m36",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "1. Liga",
+    "match": "FC Slovan Liberec vs. Slavia Prague",
+    "home": "FC Slovan Liberec",
+    "away": "Slavia Prague",
+    "priceUpdates": 13727,
+    "marketCount": 270,
+    "markets": [
+      {
+        "name": "9th corner",
+        "odds": 1.7,
+        "opened": 3.15,
+        "moved": -1.45,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 8th corner",
+        "odds": 4.75,
+        "opened": 1.45,
+        "moved": 3.3,
+        "updates": 8
+      },
+      {
+        "name": "FC Slovan Liberec total",
+        "odds": 2.5,
+        "opened": 18,
+        "moved": -15.5,
+        "updates": 8
+      },
+      {
+        "name": "Slavia to win , Lukáš Provod 2+ shots on target",
+        "odds": 5.3,
+        "opened": 5.3,
+        "moved": 0,
+        "updates": 1
+      },
+      {
+        "name": "Team Shots (90mins)",
+        "odds": 1.48,
+        "opened": 1.72,
+        "moved": -0.24,
+        "updates": 8
+      },
+      {
+        "name": "Slavia Prague corner range",
+        "odds": 5.7,
+        "opened": 4.3,
+        "moved": 1.4,
+        "updates": 8
+      },
+      {
+        "name": "{sw} Half Goalscorer",
+        "odds": 70,
+        "opened": 6,
+        "moved": 64,
+        "updates": 8
+      },
+      {
+        "name": "Double chance & total",
+        "odds": 3.65,
+        "opened": 2.75,
+        "moved": 0.9,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m37",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "ASC Otelul Galati vs. CS Universitatea Craiova",
+    "home": "ASC Otelul Galati",
+    "away": "CS Universitatea Craiova",
+    "priceUpdates": 13705,
+    "marketCount": 169,
+    "markets": [
+      {
+        "name": "Winning margin",
+        "odds": 5.4,
+        "opened": 3.2,
+        "moved": 2.2,
+        "updates": 5
+      },
+      {
+        "name": "ASC Otelul Galati total",
+        "odds": 2.4,
+        "opened": 1.18,
+        "moved": 1.22,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - double chance",
+        "odds": 1.47,
+        "opened": 1.22,
+        "moved": 0.25,
+        "updates": 8
+      },
+      {
+        "name": "1x2 & total",
+        "odds": 1.3,
+        "opened": 5.4,
+        "moved": -4.1,
+        "updates": 8
+      },
+      {
+        "name": "Highest scoring half",
+        "odds": 3.25,
+        "opened": 3.2,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (1st Half)",
+        "odds": 1.58,
+        "opened": 6.5,
+        "moved": -4.92,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 27,
+        "opened": 13.5,
+        "moved": 13.5,
+        "updates": 8
+      },
+      {
+        "name": "2nd goal",
+        "odds": 1.6,
+        "opened": 2.4,
+        "moved": -0.8,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m38",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Marti Pujolras, Alex vs. Neuchrist, Maximilian",
+    "home": "Marti Pujolras, Alex",
+    "away": "Neuchrist, Maximilian",
+    "priceUpdates": 13646,
+    "marketCount": 217,
+    "markets": [
+      {
+        "name": "2nd set game 7 - correct score",
+        "odds": 35,
+        "opened": 10.5,
+        "moved": 24.5,
+        "updates": 8
+      },
+      {
+        "name": "Neuchrist, Maximilian total games",
+        "odds": 7.3,
+        "opened": 1.29,
+        "moved": 6.01,
+        "updates": 8
+      },
+      {
+        "name": "Neuchrist, Maximilian to win exactly 1 set",
+        "odds": 1.2,
+        "opened": 3.7,
+        "moved": -2.5,
+        "updates": 8
+      },
+      {
+        "name": "1st set - winner",
+        "odds": 1.1,
+        "opened": 1.44,
+        "moved": -0.34,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 7 - exact points",
+        "odds": 2.9,
+        "opened": 3,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 2 - correct score",
+        "odds": 4.55,
+        "opened": 4.8,
+        "moved": -0.25,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 10 - winner",
+        "odds": 1.2,
+        "opened": 1.18,
+        "moved": 0.02,
+        "updates": 8
+      },
+      {
+        "name": "Marti Pujolras, Alex total games",
+        "odds": 1.23,
+        "opened": 2.45,
+        "moved": -1.22,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m39",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Karma, Noah vs. Wehnelt, Kai",
+    "home": "Karma, Noah",
+    "away": "Wehnelt, Kai",
+    "priceUpdates": 13632,
+    "marketCount": 202,
+    "markets": [
+      {
+        "name": "2nd set - game handicap",
+        "odds": 8.9,
+        "opened": 6.8,
+        "moved": 2.1,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 7 - correct score",
+        "odds": 12,
+        "opened": 12.5,
+        "moved": -0.5,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.32,
+        "opened": 1.01,
+        "moved": 0.31,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 4.7,
+        "opened": 4.35,
+        "moved": 0.35,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 10 - correct score",
+        "odds": 23,
+        "opened": 8,
+        "moved": 15,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 3 - exact points",
+        "odds": 4.15,
+        "opened": 2.8,
+        "moved": 1.35,
+        "updates": 8
+      },
+      {
+        "name": "1st set - correct score",
+        "odds": 300,
+        "opened": 2.55,
+        "moved": 297.45,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total games",
+        "odds": 1.26,
+        "opened": 1.2,
+        "moved": 0.06,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m40",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Albot, Radu vs. Frydrych, Viktor",
+    "home": "Albot, Radu",
+    "away": "Frydrych, Viktor",
+    "priceUpdates": 13562,
+    "marketCount": 197,
+    "markets": [
+      {
+        "name": "1st set game 11 - winner",
+        "odds": 1.14,
+        "opened": 5.1,
+        "moved": -3.96,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 2.75,
+        "opened": 1.01,
+        "moved": 1.74,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 2.37,
+        "opened": 1.5,
+        "moved": 0.87,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 6.8,
+        "opened": 1.41,
+        "moved": 5.39,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.97,
+        "opened": 4.05,
+        "moved": -2.08,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 4 - exact points",
+        "odds": 2.7,
+        "opened": 2.9,
+        "moved": -0.2,
+        "updates": 5
+      },
+      {
+        "name": "3rd set game 6 - to deuce",
+        "odds": 1.16,
+        "opened": 3.8,
+        "moved": -2.64,
+        "updates": 4
+      },
+      {
+        "name": "2nd set - race to 4 games",
+        "odds": 5.1,
+        "opened": 7.8,
+        "moved": -2.7,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m41",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Parizzia, Nicolas vs. Papamalamis, Theo",
+    "home": "Parizzia, Nicolas",
+    "away": "Papamalamis, Theo",
+    "priceUpdates": 13415,
+    "marketCount": 197,
+    "markets": [
+      {
+        "name": "Total games",
+        "odds": 1.2,
+        "opened": 3,
+        "moved": -1.8,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 7 - winner",
+        "odds": 3.8,
+        "opened": 1.92,
+        "moved": 1.88,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 2 games",
+        "odds": 1.12,
+        "opened": 2.67,
+        "moved": -1.55,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 4 - correct score",
+        "odds": 3.7,
+        "opened": 4.95,
+        "moved": -1.25,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 3.2,
+        "opened": 1.03,
+        "moved": 2.17,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 2 games",
+        "odds": 1.08,
+        "opened": 1.12,
+        "moved": -0.04,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 17,
+        "opened": 1.23,
+        "moved": 15.77,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 9 - exact points",
+        "odds": 3.5,
+        "opened": 4.2,
+        "moved": -0.7,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m42",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "Randers FC vs. FC Copenhagen",
+    "home": "Randers FC",
+    "away": "FC Copenhagen",
+    "priceUpdates": 13304,
+    "marketCount": 220,
+    "markets": [
+      {
+        "name": "Player Shots On Goal - Incl. Substitute (90mins)",
+        "odds": 2.15,
+        "opened": 4.5,
+        "moved": -2.35,
+        "updates": 8
+      },
+      {
+        "name": "Match Offsides (90mins)",
+        "odds": 2.15,
+        "opened": 2,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 2.35,
+        "opened": 1.55,
+        "moved": 0.8,
+        "updates": 8
+      },
+      {
+        "name": "Team Fouls (90mins)",
+        "odds": 1.78,
+        "opened": 1.9,
+        "moved": -0.12,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 11,
+        "opened": 3.4,
+        "moved": 7.6,
+        "updates": 8
+      },
+      {
+        "name": "3rd scoring type",
+        "odds": 6.8,
+        "opened": 6.5,
+        "moved": 0.3,
+        "updates": 8
+      },
+      {
+        "name": "Handicap",
+        "odds": 1.07,
+        "opened": 1.3,
+        "moved": -0.23,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Incl. Substitute (90mins)",
+        "odds": 20,
+        "opened": 3.8,
+        "moved": 16.2,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m43",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Ekstraklasa",
+    "match": "KS Cracovia Krakow vs. RKS Rakow Czestochowa",
+    "home": "KS Cracovia Krakow",
+    "away": "RKS Rakow Czestochowa",
+    "priceUpdates": 13246,
+    "marketCount": 216,
+    "markets": [
+      {
+        "name": "Corners: Team 2 Total",
+        "odds": 1,
+        "opened": 2.13,
+        "moved": -1.13,
+        "updates": 8
+      },
+      {
+        "name": "RKS Rakow Czestochowa total corners",
+        "odds": 1.5,
+        "opened": 3.6,
+        "moved": -2.1,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: Total",
+        "odds": 3.8,
+        "opened": 2.55,
+        "moved": 1.25,
+        "updates": 8
+      },
+      {
+        "name": "Corners: Total",
+        "odds": 2.37,
+        "opened": 2.32,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 1.79,
+        "opened": 1.16,
+        "moved": 0.63,
+        "updates": 8
+      },
+      {
+        "name": "Halftime/fulltime",
+        "odds": 4.05,
+        "opened": 5.1,
+        "moved": -1.05,
+        "updates": 8
+      },
+      {
+        "name": "Head to head Offsides (90mins)",
+        "odds": 2.5,
+        "opened": 3.6,
+        "moved": -1.1,
+        "updates": 2
+      },
+      {
+        "name": "1x2 & total",
+        "odds": 4.25,
+        "opened": 2.95,
+        "moved": 1.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m44",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Hanfmann, Yannick vs. Fils, Arthur",
+    "home": "Hanfmann, Yannick",
+    "away": "Fils, Arthur",
+    "priceUpdates": 13227,
+    "marketCount": 213,
+    "markets": [
+      {
+        "name": "1st set game 11 - winner",
+        "odds": 1.03,
+        "opened": 6.2,
+        "moved": -5.17,
+        "updates": 8
+      },
+      {
+        "name": "Fils, Arthur total points",
+        "odds": 1.8,
+        "opened": 1.85,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - 2nd break",
+        "odds": 1.27,
+        "opened": 1.7,
+        "moved": -0.43,
+        "updates": 8
+      },
+      {
+        "name": "1st set - 2nd ace",
+        "odds": 1.57,
+        "opened": 3.2,
+        "moved": -1.63,
+        "updates": 8
+      },
+      {
+        "name": "Any set to nil",
+        "odds": 1.01,
+        "opened": 26,
+        "moved": -24.99,
+        "updates": 8
+      },
+      {
+        "name": "Hanfmann, Yannick total points",
+        "odds": 1.8,
+        "opened": 1.85,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 3 - 6th point",
+        "odds": 1.47,
+        "opened": 2.42,
+        "moved": -0.95,
+        "updates": 2
+      },
+      {
+        "name": "Fils, Arthur total games",
+        "odds": 1.04,
+        "opened": 2.8,
+        "moved": -1.76,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m45",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Nakashima, Brandon vs. Kovacevic, Aleksandar",
+    "home": "Nakashima, Brandon",
+    "away": "Kovacevic, Aleksandar",
+    "priceUpdates": 12919,
+    "marketCount": 218,
+    "markets": [
+      {
+        "name": "Total double faults",
+        "odds": 2.05,
+        "opened": 2.1,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 7 - ace",
+        "odds": 1.3,
+        "opened": 1.35,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Both players to win a set",
+        "odds": 3.25,
+        "opened": 3.45,
+        "moved": -0.2,
+        "updates": 8
+      },
+      {
+        "name": "Set handicap",
+        "odds": 1.9,
+        "opened": 1.26,
+        "moved": 0.64,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 2 - correct score",
+        "odds": 3.75,
+        "opened": 3.75,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Nakashima, Brandon total points",
+        "odds": 1.8,
+        "opened": 1.85,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - Nakashima, Brandon total double faults",
+        "odds": 1.15,
+        "opened": 5.3,
+        "moved": -4.15,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - correct score after 6 games",
+        "odds": 2.5,
+        "opened": 2.1,
+        "moved": 0.4,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m46",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Liga Portugal",
+    "match": "Nacional da Madeira vs. Estoril Praia",
+    "home": "Nacional da Madeira",
+    "away": "Estoril Praia",
+    "priceUpdates": 12726,
+    "marketCount": 240,
+    "markets": [
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 9.5,
+        "opened": 1.45,
+        "moved": 8.05,
+        "updates": 8
+      },
+      {
+        "name": "Handicap",
+        "odds": 2.8,
+        "opened": 9.2,
+        "moved": -6.4,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Incl. Substitute (90mins)",
+        "odds": 3.7,
+        "opened": 10,
+        "moved": -6.3,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 16.5,
+        "opened": 27,
+        "moved": -10.5,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots On Goal - Incl. Substitute (90mins)",
+        "odds": 2.35,
+        "opened": 2.9,
+        "moved": -0.55,
+        "updates": 8
+      },
+      {
+        "name": "Estoril Praia total",
+        "odds": 1.54,
+        "opened": 1.57,
+        "moved": -0.03,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 1:0",
+        "odds": 33,
+        "opened": 4,
+        "moved": 29,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Estoril Praia total corners",
+        "odds": 1.62,
+        "opened": 1.41,
+        "moved": 0.21,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m47",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+    "match": "Berrut, Adrien vs. Raquillet, Leo",
+    "home": "Berrut, Adrien",
+    "away": "Raquillet, Leo",
+    "priceUpdates": 12662,
+    "marketCount": 180,
+    "markets": [
+      {
+        "name": "3rd set - race to 3 games",
+        "odds": 1.95,
+        "opened": 1.66,
+        "moved": 0.29,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 2 - correct score",
+        "odds": 13.5,
+        "opened": 4.35,
+        "moved": 9.15,
+        "updates": 8
+      },
+      {
+        "name": "Double result (1st set/match)",
+        "odds": 9.5,
+        "opened": 3,
+        "moved": 6.5,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 6 - exact points",
+        "odds": 2.8,
+        "opened": 4.9,
+        "moved": -2.1,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.29,
+        "opened": 1.32,
+        "moved": -0.03,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 2 games",
+        "odds": 1.7,
+        "opened": 3.5,
+        "moved": -1.8,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.2,
+        "opened": 5.6,
+        "moved": -4.4,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 8 - winner",
+        "odds": 4.05,
+        "opened": 1.16,
+        "moved": 2.89,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m48",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "WTA Cincinnati, USA Women Singles",
+    "match": "Janice Tjen v Viktorija Golubic",
+    "home": "Janice Tjen v Viktorija Golubic",
+    "away": "",
+    "priceUpdates": 12536,
+    "marketCount": 503,
+    "markets": [
+      {
+        "name": "Tjen, Janice Set Total Games Over / Under (Set 1) 3.5",
+        "odds": 2.34,
+        "opened": 2.26,
+        "moved": 0.08,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 3.6,
+        "opened": 1.8,
+        "moved": 1.8,
+        "updates": 8
+      },
+      {
+        "name": "Game Winner (Set 1, Game 8)",
+        "odds": 1.41,
+        "opened": 4.4,
+        "moved": -2.99,
+        "updates": 8
+      },
+      {
+        "name": "Game Score (Set 2, Game 5)",
+        "odds": 7.5,
+        "opened": 5,
+        "moved": 2.5,
+        "updates": 8
+      },
+      {
+        "name": "Set Game Handicap (Set 1) -2.5",
+        "odds": 1.58,
+        "opened": 1.14,
+        "moved": 0.44,
+        "updates": 8
+      },
+      {
+        "name": "Set Game Handicap (Set 1) +1.5",
+        "odds": 1.2,
+        "opened": 5.2,
+        "moved": -4,
+        "updates": 8
+      },
+      {
+        "name": "Total Games Over / Under 21.5",
+        "odds": 1,
+        "opened": 1.35,
+        "moved": -0.35,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.1,
+        "opened": 1.16,
+        "moved": -0.06,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m49",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Shelton, Ben vs. Faria, Jaime",
+    "home": "Shelton, Ben",
+    "away": "Faria, Jaime",
+    "priceUpdates": 12528,
+    "marketCount": 126,
+    "markets": [
+      {
+        "name": "Total aces",
+        "odds": 1.9,
+        "opened": 1.95,
+        "moved": -0.05,
+        "updates": 8
+      },
+      {
+        "name": "Shelton, Ben total aces",
+        "odds": 1.7,
+        "opened": 1.89,
+        "moved": -0.19,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.62,
+        "opened": 1.64,
+        "moved": -0.02,
+        "updates": 8
+      },
+      {
+        "name": "Faria, Jaime total games",
+        "odds": 2.19,
+        "opened": 1.7,
+        "moved": 0.49,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 7 - exact points",
+        "odds": 3.4,
+        "opened": 3.35,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total aces",
+        "odds": 2.7,
+        "opened": 1.55,
+        "moved": 1.15,
+        "updates": 8
+      },
+      {
+        "name": "Shelton, Ben total points",
+        "odds": 1.85,
+        "opened": 1.85,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.29,
+        "opened": 1.5,
+        "moved": -0.21,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m50",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Blaydes, Billy vs. Gautier, Alexis",
+    "home": "Blaydes, Billy",
+    "away": "Gautier, Alexis",
+    "priceUpdates": 12459,
+    "marketCount": 160,
+    "markets": [
+      {
+        "name": "2nd set - game handicap",
+        "odds": 2.14,
+        "opened": 1.08,
+        "moved": 1.06,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.41,
+        "opened": 5.1,
+        "moved": -3.69,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 5 - winner",
+        "odds": 2.87,
+        "opened": 2.87,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.41,
+        "opened": 1.47,
+        "moved": -0.06,
+        "updates": 8
+      },
+      {
+        "name": "Total sets",
+        "odds": 1.54,
+        "opened": 2.45,
+        "moved": -0.91,
+        "updates": 8
+      },
+      {
+        "name": "Blaydes, Billy total games",
+        "odds": 3,
+        "opened": 2.75,
+        "moved": 0.25,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 4 games",
+        "odds": 1.58,
+        "opened": 1.54,
+        "moved": 0.04,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 2 - winner",
+        "odds": 3,
+        "opened": 1.16,
+        "moved": 1.84,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m51",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Walters, Marcus vs. Ponchet, Matt",
+    "home": "Walters, Marcus",
+    "away": "Ponchet, Matt",
+    "priceUpdates": 12324,
+    "marketCount": 158,
+    "markets": [
+      {
+        "name": "Ponchet, Matt total games",
+        "odds": 1.41,
+        "opened": 1.47,
+        "moved": -0.06,
+        "updates": 8
+      },
+      {
+        "name": "Any set to nil",
+        "odds": 13,
+        "opened": 17,
+        "moved": -4,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - correct score",
+        "odds": 65,
+        "opened": 15,
+        "moved": 50,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 5 - correct score",
+        "odds": 4.2,
+        "opened": 16,
+        "moved": -11.8,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 2.14,
+        "opened": 2.87,
+        "moved": -0.73,
+        "updates": 8
+      },
+      {
+        "name": "Set handicap",
+        "odds": 1.5,
+        "opened": 1.23,
+        "moved": 0.27,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.12,
+        "opened": 4.35,
+        "moved": -3.23,
+        "updates": 8
+      },
+      {
+        "name": "Walters, Marcus total games",
+        "odds": 3.2,
+        "opened": 2.08,
+        "moved": 1.12,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m52",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Eredivisie",
+    "match": "ADO Den Haag vs. FC Groningen",
+    "home": "ADO Den Haag",
+    "away": "FC Groningen",
+    "priceUpdates": 12296,
+    "marketCount": 240,
+    "markets": [
+      {
+        "name": "Match Shots On Goal (90mins)",
+        "odds": 3,
+        "opened": 1.75,
+        "moved": 1.25,
+        "updates": 8
+      },
+      {
+        "name": "Player Assists - Incl. Substitute (90mins)",
+        "odds": 9.5,
+        "opened": 10,
+        "moved": -0.5,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer",
+        "odds": 14.5,
+        "opened": 27,
+        "moved": -12.5,
+        "updates": 8
+      },
+      {
+        "name": "4th scoring type",
+        "odds": 1.55,
+        "opened": 1.5,
+        "moved": 0.05,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 3:0",
+        "odds": 1.4,
+        "opened": 1.27,
+        "moved": 0.13,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 1.32,
+        "opened": 1.32,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 13,
+        "opened": 1,
+        "moved": 12,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 3.6,
+        "opened": 2.15,
+        "moved": 1.45,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m53",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Kingston, Jamaica Men Singles (Kingston)",
+    "match": "Kuhar, Matt vs. Saraiva Dos Santos, Paulo Andre",
+    "home": "Kuhar, Matt",
+    "away": "Saraiva Dos Santos, Paulo Andre",
+    "priceUpdates": 12208,
+    "marketCount": 192,
+    "markets": [
+      {
+        "name": "Total games",
+        "odds": 1.54,
+        "opened": 1.97,
+        "moved": -0.43,
+        "updates": 8
+      },
+      {
+        "name": "Kuhar, Matt to win a set",
+        "odds": 1.44,
+        "opened": 1.97,
+        "moved": -0.53,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 8.9,
+        "opened": 3,
+        "moved": 5.9,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 5 games",
+        "odds": 3.3,
+        "opened": 2.67,
+        "moved": 0.63,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 8 - winner",
+        "odds": 2.87,
+        "opened": 6.4,
+        "moved": -3.53,
+        "updates": 8
+      },
+      {
+        "name": "Saraiva Dos Santos, Paulo Andre total games",
+        "odds": 2.22,
+        "opened": 1.05,
+        "moved": 1.17,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 4 games",
+        "odds": 1.35,
+        "opened": 1.86,
+        "moved": -0.51,
+        "updates": 8
+      },
+      {
+        "name": "Odd/even games",
+        "odds": 1.86,
+        "opened": 1.86,
+        "moved": 0,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m54",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Gusic Wan, Benjamin vs. Rossi, Leonardo",
+    "home": "Gusic Wan, Benjamin",
+    "away": "Rossi, Leonardo",
+    "priceUpdates": 12163,
+    "marketCount": 193,
+    "markets": [
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.1,
+        "opened": 1.16,
+        "moved": -0.06,
+        "updates": 8
+      },
+      {
+        "name": "Gusic Wan, Benjamin total games",
+        "odds": 2.63,
+        "opened": 1.41,
+        "moved": 1.22,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 1 - 5th point",
+        "odds": 1.66,
+        "opened": 2,
+        "moved": -0.34,
+        "updates": 2
+      },
+      {
+        "name": "1st set - race to 5 games",
+        "odds": 60,
+        "opened": 1.01,
+        "moved": 58.99,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 2 games",
+        "odds": 1.41,
+        "opened": 1.47,
+        "moved": -0.06,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 4 - winner",
+        "odds": 5.6,
+        "opened": 4.35,
+        "moved": 1.25,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 4 - correct score",
+        "odds": 4.4,
+        "opened": 8,
+        "moved": -3.6,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 7 - exact points",
+        "odds": 2.95,
+        "opened": 2.9,
+        "moved": 0.05,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m55",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Astana, Kazakhstan Men Singles (Astana)",
+    "match": "Dougaz, Aziz vs. Matsuoka, Hayato",
+    "home": "Dougaz, Aziz",
+    "away": "Matsuoka, Hayato",
+    "priceUpdates": 12125,
+    "marketCount": 179,
+    "markets": [
+      {
+        "name": "1st set - correct score after 6 games",
+        "odds": 17,
+        "opened": 1.95,
+        "moved": 15.05,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 3 - exact points",
+        "odds": 4.7,
+        "opened": 2.8,
+        "moved": 1.9,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.01,
+        "opened": 1.41,
+        "moved": -0.4,
+        "updates": 8
+      },
+      {
+        "name": "Dougaz, Aziz total games",
+        "odds": 1.58,
+        "opened": 1.88,
+        "moved": -0.3,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 2.26,
+        "opened": 1.7,
+        "moved": 0.56,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.23,
+        "opened": 1.1,
+        "moved": 0.13,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 6 - 3rd point",
+        "odds": 2.26,
+        "opened": 1.54,
+        "moved": 0.72,
+        "updates": 2
+      },
+      {
+        "name": "2nd set game 2 - correct score",
+        "odds": 4.1,
+        "opened": 4,
+        "moved": 0.1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m56",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "FC Spartak Trnava vs. MFK Zemplin Michalovce",
+    "home": "FC Spartak Trnava",
+    "away": "MFK Zemplin Michalovce",
+    "priceUpdates": 12090,
+    "marketCount": 150,
+    "markets": [
+      {
+        "name": "FC Spartak Trnava total",
+        "odds": 1.4,
+        "opened": 2.85,
+        "moved": -1.45,
+        "updates": 8
+      },
+      {
+        "name": "FC Spartak Trnava or both teams to score",
+        "odds": 1.12,
+        "opened": 5.4,
+        "moved": -4.28,
+        "updates": 8
+      },
+      {
+        "name": "1st half - FC Spartak Trnava exact corners",
+        "odds": 2.8,
+        "opened": 2.8,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "MFK Zemplin Michalovce total",
+        "odds": 1.05,
+        "opened": 12,
+        "moved": -10.95,
+        "updates": 8
+      },
+      {
+        "name": "Total",
+        "odds": 2.25,
+        "opened": 1.22,
+        "moved": 1.03,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 1:0",
+        "odds": 35,
+        "opened": 1.1,
+        "moved": 33.9,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total corners",
+        "odds": 2.42,
+        "opened": 2.68,
+        "moved": -0.26,
+        "updates": 8
+      },
+      {
+        "name": "(Boundary=9.5)",
+        "odds": 2.26,
+        "opened": 1.58,
+        "moved": 0.68,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m57",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Super Lig",
+    "match": "Besiktas Istanbul vs. Eyupspor",
+    "home": "Besiktas Istanbul",
+    "away": "Eyupspor",
+    "priceUpdates": 12020,
+    "marketCount": 233,
+    "markets": [
+      {
+        "name": "Besiktas Istanbul total",
+        "odds": 2.05,
+        "opened": 26,
+        "moved": -23.95,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls - Incl. Substitute (90mins)",
+        "odds": 1.11,
+        "opened": 1.19,
+        "moved": -0.08,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 1x2",
+        "odds": 9,
+        "opened": 2.05,
+        "moved": 6.95,
+        "updates": 8
+      },
+      {
+        "name": "1x2",
+        "odds": 10.5,
+        "opened": 10,
+        "moved": 0.5,
+        "updates": 8
+      },
+      {
+        "name": "Player to Score or Assist (90mins)",
+        "odds": 2.55,
+        "opened": 10,
+        "moved": -7.45,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 1.9,
+        "opened": 2.42,
+        "moved": -0.52,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - total",
+        "odds": 1.46,
+        "opened": 1.94,
+        "moved": -0.48,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 1.62,
+        "opened": 3.6,
+        "moved": -1.98,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m58",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Liga Portugal",
+    "match": "FC Famalicao vs. Maritimo Madeira",
+    "home": "FC Famalicao",
+    "away": "Maritimo Madeira",
+    "priceUpdates": 11975,
+    "marketCount": 204,
+    "markets": [
+      {
+        "name": "Total",
+        "odds": 9.7,
+        "opened": 2,
+        "moved": 7.7,
+        "updates": 8
+      },
+      {
+        "name": "1st half - 2nd corner",
+        "odds": 2.55,
+        "opened": 2.5,
+        "moved": 0.05,
+        "updates": 7
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 1.6,
+        "opened": 7,
+        "moved": -5.4,
+        "updates": 8
+      },
+      {
+        "name": "Player to Score or Assist (90mins)",
+        "odds": 10,
+        "opened": 18,
+        "moved": -8,
+        "updates": 8
+      },
+      {
+        "name": "Maritimo Madeira total",
+        "odds": 12,
+        "opened": 14,
+        "moved": -2,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer",
+        "odds": 4.25,
+        "opened": 20,
+        "moved": -15.75,
+        "updates": 8
+      },
+      {
+        "name": "Team Shots (90mins)",
+        "odds": 1.72,
+        "opened": 1.75,
+        "moved": -0.03,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Anytime (90mins)",
+        "odds": 150,
+        "opened": 1,
+        "moved": 149,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m59",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "Odense Boldklub vs. AC Horsens",
+    "home": "Odense Boldklub",
+    "away": "AC Horsens",
+    "priceUpdates": 11950,
+    "marketCount": 214,
+    "markets": [
+      {
+        "name": "Team Shots on Goal (90mins)",
+        "odds": 1.72,
+        "opened": 1.82,
+        "moved": -0.1,
+        "updates": 8
+      },
+      {
+        "name": "1st half - Odense Boldklub total corners",
+        "odds": 1.6,
+        "opened": 2,
+        "moved": -0.4,
+        "updates": 8
+      },
+      {
+        "name": "Head to head Corners (90 mins)",
+        "odds": 2.85,
+        "opened": 1.3,
+        "moved": 1.55,
+        "updates": 8
+      },
+      {
+        "name": "2nd scoring type",
+        "odds": 1.47,
+        "opened": 6.5,
+        "moved": -5.03,
+        "updates": 8
+      },
+      {
+        "name": "Corner 1x2",
+        "odds": 1.6,
+        "opened": 1.4,
+        "moved": 0.2,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Last (90mins)",
+        "odds": 60,
+        "opened": 20,
+        "moved": 40,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 4,
+        "opened": 6.5,
+        "moved": -2.5,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Incl. Substitute (90mins)",
+        "odds": 5,
+        "opened": 12,
+        "moved": -7,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m60",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Brasileiro Serie A",
+    "match": "Chapecoense SC vs. EC Bahia BA",
+    "home": "Chapecoense SC",
+    "away": "EC Bahia BA",
+    "priceUpdates": 11905,
+    "marketCount": 190,
+    "markets": [
+      {
+        "name": "Match Corners (90 mins)",
+        "odds": 2.12,
+        "opened": 1.9,
+        "moved": 0.22,
+        "updates": 8
+      },
+      {
+        "name": "5th goal",
+        "odds": 3.25,
+        "opened": 2.45,
+        "moved": 0.8,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 1.35,
+        "opened": 3.25,
+        "moved": -1.9,
+        "updates": 8
+      },
+      {
+        "name": "Head to head Shots (90mins)",
+        "odds": 1.7,
+        "opened": 150,
+        "moved": -148.3,
+        "updates": 8
+      },
+      {
+        "name": "Total",
+        "odds": 3.1,
+        "opened": 9.2,
+        "moved": -6.1,
+        "updates": 8
+      },
+      {
+        "name": "Match Fouls (90mins)",
+        "odds": 1.72,
+        "opened": 1.72,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "5th scoring type",
+        "odds": 2.05,
+        "opened": 2.5,
+        "moved": -0.45,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 4.5,
+        "opened": 13.5,
+        "moved": -9,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m61",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Kingston, Jamaica Men Singles (Kingston)",
+    "match": "Tobon, Miguel vs. Claverie, Lorenzo",
+    "home": "Tobon, Miguel",
+    "away": "Claverie, Lorenzo",
+    "priceUpdates": 11899,
+    "marketCount": 192,
+    "markets": [
+      {
+        "name": "2nd set game 3 - winner",
+        "odds": 11.5,
+        "opened": 1.12,
+        "moved": 10.38,
+        "updates": 6
+      },
+      {
+        "name": "1st set game 6 - exact points",
+        "odds": 3.1,
+        "opened": 2.85,
+        "moved": 0.25,
+        "updates": 8
+      },
+      {
+        "name": "Tobon, Miguel total games",
+        "odds": 1.58,
+        "opened": 9.7,
+        "moved": -8.12,
+        "updates": 8
+      },
+      {
+        "name": "Claverie, Lorenzo total games",
+        "odds": 6.8,
+        "opened": 1.32,
+        "moved": 5.48,
+        "updates": 8
+      },
+      {
+        "name": "1st set - race to 5 games",
+        "odds": 1.29,
+        "opened": 1.58,
+        "moved": -0.29,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 2 - exact points",
+        "odds": 5.2,
+        "opened": 2.65,
+        "moved": 2.55,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 10 - correct score",
+        "odds": 17,
+        "opened": 23,
+        "moved": -6,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 1 - correct score",
+        "odds": 4.95,
+        "opened": 60,
+        "moved": -55.05,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m62",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "Walton, Adam vs. Buse, Ignacio",
+    "home": "Walton, Adam",
+    "away": "Buse, Ignacio",
+    "priceUpdates": 11714,
+    "marketCount": 200,
+    "markets": [
+      {
+        "name": "1st set game 4 - ace",
+        "odds": 2.35,
+        "opened": 1.5,
+        "moved": 0.85,
+        "updates": 8
+      },
+      {
+        "name": "1st set - most aces",
+        "odds": 3.05,
+        "opened": 1.22,
+        "moved": 1.83,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 1.23,
+        "opened": 1.26,
+        "moved": -0.03,
+        "updates": 8
+      },
+      {
+        "name": "Walton, Adam to win a set",
+        "odds": 4.1,
+        "opened": 1.2,
+        "moved": 2.9,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 2.3,
+        "opened": 1.29,
+        "moved": 1.01,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 4.4,
+        "opened": 2.12,
+        "moved": 2.28,
+        "updates": 8
+      },
+      {
+        "name": "Correct score",
+        "odds": 1.35,
+        "opened": 1.02,
+        "moved": 0.33,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 5 - ace",
+        "odds": 2.7,
+        "opened": 1.4,
+        "moved": 1.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m63",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Cincinnati, USA Men Singles",
+    "match": "O'Connell, Christopher vs. Ruud, Casper",
+    "home": "O'Connell, Christopher",
+    "away": "Ruud, Casper",
+    "priceUpdates": 11608,
+    "marketCount": 180,
+    "markets": [
+      {
+        "name": "Ruud, Casper total points",
+        "odds": 1.8,
+        "opened": 1.8,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Total aces",
+        "odds": 1.85,
+        "opened": 2.2,
+        "moved": -0.35,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - Ruud, Casper total breaks",
+        "odds": 2.15,
+        "opened": 1.8,
+        "moved": 0.35,
+        "updates": 8
+      },
+      {
+        "name": "Total sets",
+        "odds": 1.53,
+        "opened": 1.53,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "O'Connell, Christopher total games",
+        "odds": 2.01,
+        "opened": 1.75,
+        "moved": 0.26,
+        "updates": 8
+      },
+      {
+        "name": "1st set - O'Connell, Christopher total aces",
+        "odds": 6.8,
+        "opened": 2.45,
+        "moved": 4.35,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - total games",
+        "odds": 4.1,
+        "opened": 2.5,
+        "moved": 1.6,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.06,
+        "opened": 2.68,
+        "moved": -1.62,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m64",
+    "sport": "Basketball",
+    "sportHr": "Košarka",
+    "tournament": "WNBA",
+    "match": "Las Vegas Aces vs. Minnesota Lynx",
+    "home": "Las Vegas Aces",
+    "away": "Minnesota Lynx",
+    "priceUpdates": 11209,
+    "marketCount": 41,
+    "markets": [
+      {
+        "name": "2nd half - handicap (incl. overtime)",
+        "odds": 1.75,
+        "opened": 2.06,
+        "moved": -0.31,
+        "updates": 8
+      },
+      {
+        "name": "2nd quarter - total",
+        "odds": 2.06,
+        "opened": 1.32,
+        "moved": 0.74,
+        "updates": 8
+      },
+      {
+        "name": "1st quarter - Minnesota Lynx total",
+        "odds": 2.05,
+        "opened": 1.74,
+        "moved": 0.31,
+        "updates": 8
+      },
+      {
+        "name": "2nd quarter - Las Vegas Aces total",
+        "odds": 1.9,
+        "opened": 1.62,
+        "moved": 0.28,
+        "updates": 8
+      },
+      {
+        "name": "1x2",
+        "odds": 4.7,
+        "opened": 13,
+        "moved": -8.3,
+        "updates": 8
+      },
+      {
+        "name": "Total (incl. overtime)",
+        "odds": 1.9,
+        "opened": 1.87,
+        "moved": 0.03,
+        "updates": 8
+      },
+      {
+        "name": "1st quarter - handicap",
+        "odds": 1.8,
+        "opened": 2.42,
+        "moved": -0.62,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - total (incl. overtime)",
+        "odds": 1.9,
+        "opened": 1.9,
+        "moved": 0,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m65",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Brasileiro Serie A",
+    "match": "SC Corinthians SP vs. Cruzeiro EC MG",
+    "home": "SC Corinthians SP",
+    "away": "Cruzeiro EC MG",
+    "priceUpdates": 11156,
+    "marketCount": 193,
+    "markets": [
+      {
+        "name": "Goalscorer - First Half (90mins)",
+        "odds": 7,
+        "opened": 1,
+        "moved": 6,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 3.4,
+        "opened": 4,
+        "moved": -0.6,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total",
+        "odds": 4.35,
+        "opened": 7.2,
+        "moved": -2.85,
+        "updates": 8
+      },
+      {
+        "name": "Total & both teams to score",
+        "odds": 1.78,
+        "opened": 5.6,
+        "moved": -3.82,
+        "updates": 8
+      },
+      {
+        "name": "1st half - which team wins the rest",
+        "odds": 5.2,
+        "opened": 3.2,
+        "moved": 2,
+        "updates": 8
+      },
+      {
+        "name": "Team Yellow Cards (90mins)",
+        "odds": 2.35,
+        "opened": 1.7,
+        "moved": 0.65,
+        "updates": 8
+      },
+      {
+        "name": "Match Corners (90 mins)",
+        "odds": 1.66,
+        "opened": 2.19,
+        "moved": -0.53,
+        "updates": 8
+      },
+      {
+        "name": "Total corners",
+        "odds": 2.34,
+        "opened": 1.9,
+        "moved": 0.44,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m66",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Ekstraklasa",
+    "match": "Gornik Zabrze vs. Wisla Krakow",
+    "home": "Gornik Zabrze",
+    "away": "Wisla Krakow",
+    "priceUpdates": 11061,
+    "marketCount": 225,
+    "markets": [
+      {
+        "name": "Wisla Kraków to win, Over 2.5 goals , Jordi Sanchez to score anytime",
+        "odds": 7.5,
+        "opened": 7.5,
+        "moved": 0,
+        "updates": 1
+      },
+      {
+        "name": "2nd half - total",
+        "odds": 4.3,
+        "opened": 3,
+        "moved": 1.3,
+        "updates": 8
+      },
+      {
+        "name": "Yellow Cards: 1st Half Team 2 Total",
+        "odds": 4.25,
+        "opened": 1.2,
+        "moved": 3.05,
+        "updates": 8
+      },
+      {
+        "name": "Gornik Zabrze total corners",
+        "odds": 2.73,
+        "opened": 1.22,
+        "moved": 1.51,
+        "updates": 8
+      },
+      {
+        "name": "Corners: Team 1 Total",
+        "odds": 1.82,
+        "opened": 3.55,
+        "moved": -1.73,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total",
+        "odds": 1.12,
+        "opened": 11,
+        "moved": -9.88,
+        "updates": 8
+      },
+      {
+        "name": "Which team to score",
+        "odds": 1.5,
+        "opened": 6.4,
+        "moved": -4.9,
+        "updates": 8
+      },
+      {
+        "name": "Double chance & total",
+        "odds": 3.35,
+        "opened": 2.35,
+        "moved": 1,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m67",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "FC Nordsjaelland vs. Silkeborg IF",
+    "home": "FC Nordsjaelland",
+    "away": "Silkeborg IF",
+    "priceUpdates": 10908,
+    "marketCount": 188,
+    "markets": [
+      {
+        "name": "Player to Score or Assist (90mins)",
+        "odds": 8,
+        "opened": 3.4,
+        "moved": 4.6,
+        "updates": 8
+      },
+      {
+        "name": "Player Assists - Incl. Substitute (90mins)",
+        "odds": 12,
+        "opened": 8,
+        "moved": 4,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 18,
+        "opened": 11,
+        "moved": 7,
+        "updates": 8
+      },
+      {
+        "name": "FC Nordsjaelland total",
+        "odds": 1.54,
+        "opened": 6.2,
+        "moved": -4.66,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total",
+        "odds": 1.26,
+        "opened": 1.54,
+        "moved": -0.28,
+        "updates": 8
+      },
+      {
+        "name": "Both teams to score",
+        "odds": 2.65,
+        "opened": 7.5,
+        "moved": -4.85,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 2.6,
+        "opened": 2.3,
+        "moved": 0.3,
+        "updates": 8
+      },
+      {
+        "name": "Over 5.5 FC Nordsjælland corners",
+        "odds": 1.53,
+        "opened": 1.53,
+        "moved": 0,
+        "updates": 1
+      }
+    ]
+  },
+  {
+    "id": "m68",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "MLS Preseason",
+    "match": "FC Basel - Barcelona",
+    "home": "FC Basel - Barcelona",
+    "away": "",
+    "priceUpdates": 10866,
+    "marketCount": 62,
+    "markets": [
+      {
+        "name": "Team 2 Total Goals",
+        "odds": 1.9,
+        "opened": 1.18,
+        "moved": 0.72,
+        "updates": 8
+      },
+      {
+        "name": "{pw} Goal To Score",
+        "odds": 4.75,
+        "opened": 1.35,
+        "moved": 3.4,
+        "updates": 8
+      },
+      {
+        "name": "1st Half Total Goals",
+        "odds": 5.8,
+        "opened": 1.86,
+        "moved": 3.94,
+        "updates": 8
+      },
+      {
+        "name": "1st half - total",
+        "odds": 1.4,
+        "opened": 1.19,
+        "moved": 0.21,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - 1x2",
+        "odds": 1.55,
+        "opened": 1.4,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "2nd Half Result",
+        "odds": 9.1,
+        "opened": 9.7,
+        "moved": -0.6,
+        "updates": 8
+      },
+      {
+        "name": "Goals Handicap",
+        "odds": 1.22,
+        "opened": 6.4,
+        "moved": -5.18,
+        "updates": 8
+      },
+      {
+        "name": "Double chance",
+        "odds": 7.1,
+        "opened": 3.25,
+        "moved": 3.85,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m69",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "MLS",
+    "match": "Chicago Fire vs. Portland Timbers",
+    "home": "Chicago Fire",
+    "away": "Portland Timbers",
+    "priceUpdates": 10861,
+    "marketCount": 225,
+    "markets": [
+      {
+        "name": "Handicap 0:4",
+        "odds": 7,
+        "opened": 6.3,
+        "moved": 0.7,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 4.2,
+        "opened": 55,
+        "moved": -50.8,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 1.35,
+        "opened": 2.95,
+        "moved": -1.6,
+        "updates": 8
+      },
+      {
+        "name": "4th scoring type",
+        "odds": 28,
+        "opened": 3.7,
+        "moved": 24.3,
+        "updates": 8
+      },
+      {
+        "name": "1st half - which team wins the rest",
+        "odds": 4.2,
+        "opened": 4.2,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Chicago to win , Jonathan Bamba 2+ shots on target",
+        "odds": 3.4,
+        "opened": 3.3,
+        "moved": 0.1,
+        "updates": 2
+      },
+      {
+        "name": "Team Shots (90mins)",
+        "odds": 1.55,
+        "opened": 1.78,
+        "moved": -0.23,
+        "updates": 8
+      },
+      {
+        "name": "Match Offsides (90mins)",
+        "odds": 1.25,
+        "opened": 1.65,
+        "moved": -0.4,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m70",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Pro League",
+    "match": "Lommel SK vs. Royal Charleroi SC",
+    "home": "Lommel SK",
+    "away": "Royal Charleroi SC",
+    "priceUpdates": 10846,
+    "marketCount": 247,
+    "markets": [
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 1.85,
+        "opened": 1.38,
+        "moved": 0.47,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer & 1x2",
+        "odds": 3.95,
+        "opened": 21,
+        "moved": -17.05,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 1:0",
+        "odds": 2.15,
+        "opened": 3.35,
+        "moved": -1.2,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots On Goal - Incl. Substitute (90mins)",
+        "odds": 14,
+        "opened": 2.15,
+        "moved": 11.85,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 1.25,
+        "opened": 1.15,
+        "moved": 0.1,
+        "updates": 8
+      },
+      {
+        "name": "Halftime/fulltime",
+        "odds": 11,
+        "opened": 31,
+        "moved": -20,
+        "updates": 8
+      },
+      {
+        "name": "Royal Charleroi SC total",
+        "odds": 1.78,
+        "opened": 1.12,
+        "moved": 0.66,
+        "updates": 8
+      },
+      {
+        "name": "When will the 2nd goal be scored (10 min interval)",
+        "odds": 2.5,
+        "opened": 2.45,
+        "moved": 0.05,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m71",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "FC Corvinul Hunedoara 1921 vs. FC CFR 1907 Cluj",
+    "home": "FC Corvinul Hunedoara 1921",
+    "away": "FC CFR 1907 Cluj",
+    "priceUpdates": 10727,
+    "marketCount": 173,
+    "markets": [
+      {
+        "name": "Goalscorer - Inside the Box (90mins)",
+        "odds": 3.9,
+        "opened": 4.75,
+        "moved": -0.85,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots on Goal (90mins)",
+        "odds": 8,
+        "opened": 6,
+        "moved": 2,
+        "updates": 8
+      },
+      {
+        "name": "Player to Score or Assist (90mins)",
+        "odds": 7.5,
+        "opened": 8,
+        "moved": -0.5,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 8,
+        "opened": 8,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Handicap 1:0",
+        "odds": 10.5,
+        "opened": 1.5,
+        "moved": 9,
+        "updates": 8
+      },
+      {
+        "name": "1st half - FC Corvinul Hunedoara 1921 exact corners",
+        "odds": 2.85,
+        "opened": 3.65,
+        "moved": -0.8,
+        "updates": 8
+      },
+      {
+        "name": "2nd scoring type",
+        "odds": 4.25,
+        "opened": 2.45,
+        "moved": 1.8,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Outside the Box (90mins)",
+        "odds": 90,
+        "opened": 90,
+        "moved": 0,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m72",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "UTR PTT Arnhem Women 05 (UTR PTT Arnhem Women 05)",
+    "match": "Cassidy, Lucia vs. Raath, Marelie",
+    "home": "Cassidy, Lucia",
+    "away": "Raath, Marelie",
+    "priceUpdates": 10647,
+    "marketCount": 164,
+    "markets": [
+      {
+        "name": "1st set game 9 - winner",
+        "odds": 1.78,
+        "opened": 2.75,
+        "moved": -0.97,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 1 - winner",
+        "odds": 1.26,
+        "opened": 2.11,
+        "moved": -0.85,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 4 - 8th point",
+        "odds": 1.9,
+        "opened": 1.86,
+        "moved": 0.04,
+        "updates": 2
+      },
+      {
+        "name": "3rd set game 9 - correct score",
+        "odds": 4.85,
+        "opened": 5.6,
+        "moved": -0.75,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 2 - winner",
+        "odds": 1.56,
+        "opened": 2.11,
+        "moved": -0.55,
+        "updates": 7
+      },
+      {
+        "name": "Cassidy, Lucia total games",
+        "odds": 1.74,
+        "opened": 1.9,
+        "moved": -0.16,
+        "updates": 8
+      },
+      {
+        "name": "1st set - winner",
+        "odds": 4.4,
+        "opened": 1.38,
+        "moved": 3.02,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 8.5,
+        "opened": 4.7,
+        "moved": 3.8,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m73",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Brownsburg, USA Men Singles (Brownsburg)",
+    "match": "Ilagan, Andre vs. Harris, Lloyd",
+    "home": "Ilagan, Andre",
+    "away": "Harris, Lloyd",
+    "priceUpdates": 10598,
+    "marketCount": 136,
+    "markets": [
+      {
+        "name": "1st set game 2 - to deuce",
+        "odds": 1.23,
+        "opened": 3.7,
+        "moved": -2.47,
+        "updates": 3
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 1.66,
+        "opened": 2.19,
+        "moved": -0.53,
+        "updates": 8
+      },
+      {
+        "name": "Ilagan, Andre total games",
+        "odds": 1.62,
+        "opened": 1.35,
+        "moved": 0.27,
+        "updates": 8
+      },
+      {
+        "name": "1st set - game handicap",
+        "odds": 1.06,
+        "opened": 1.06,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.75,
+        "opened": 1.14,
+        "moved": 0.61,
+        "updates": 8
+      },
+      {
+        "name": "Both players to win a set",
+        "odds": 2.66,
+        "opened": 3.05,
+        "moved": -0.39,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - correct score after 6 games",
+        "odds": 28,
+        "opened": 26,
+        "moved": 2,
+        "updates": 8
+      },
+      {
+        "name": "Exact sets",
+        "odds": 2.65,
+        "opened": 2.35,
+        "moved": 0.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m74",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+    "match": "Makk, Peter vs. Jones, Roan",
+    "home": "Makk, Peter",
+    "away": "Jones, Roan",
+    "priceUpdates": 10560,
+    "marketCount": 148,
+    "markets": [
+      {
+        "name": "Total games",
+        "odds": 2.87,
+        "opened": 1.41,
+        "moved": 1.46,
+        "updates": 8
+      },
+      {
+        "name": "Winner",
+        "odds": 1.3,
+        "opened": 1.3,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "Jones, Roan total games",
+        "odds": 1.62,
+        "opened": 1.58,
+        "moved": 0.04,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 2 - exact points",
+        "odds": 3.8,
+        "opened": 2.95,
+        "moved": 0.85,
+        "updates": 8
+      },
+      {
+        "name": "1st set - race to 4 games",
+        "odds": 3.1,
+        "opened": 4.7,
+        "moved": -1.6,
+        "updates": 8
+      },
+      {
+        "name": "Double result (1st set/match)",
+        "odds": 3.75,
+        "opened": 10,
+        "moved": -6.25,
+        "updates": 8
+      },
+      {
+        "name": "1st set - correct score",
+        "odds": 10,
+        "opened": 11,
+        "moved": -1,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.7,
+        "opened": 1.05,
+        "moved": 0.65,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m75",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Superliga",
+    "match": "Lyngby BK vs. FC Midtjylland",
+    "home": "Lyngby BK",
+    "away": "FC Midtjylland",
+    "priceUpdates": 10509,
+    "marketCount": 231,
+    "markets": [
+      {
+        "name": "Player Shots (90mins)",
+        "odds": 7,
+        "opened": 1.7,
+        "moved": 5.3,
+        "updates": 8
+      },
+      {
+        "name": "Lyngby BK to score in both halves",
+        "odds": 1.22,
+        "opened": 1.2,
+        "moved": 0.02,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots On Goal - Incl. Substitute (90mins)",
+        "odds": 3.2,
+        "opened": 3,
+        "moved": 0.2,
+        "updates": 8
+      },
+      {
+        "name": "3rd goal",
+        "odds": 5.1,
+        "opened": 3.6,
+        "moved": 1.5,
+        "updates": 8
+      },
+      {
+        "name": "Handicap",
+        "odds": 1.25,
+        "opened": 5.2,
+        "moved": -3.95,
+        "updates": 8
+      },
+      {
+        "name": "Head to head Offsides (90mins)",
+        "odds": 10,
+        "opened": 20,
+        "moved": -10,
+        "updates": 8
+      },
+      {
+        "name": "Player Fouls (90mins)",
+        "odds": 19,
+        "opened": 6.5,
+        "moved": 12.5,
+        "updates": 8
+      },
+      {
+        "name": "Player Shots - Incl. Substitute (90mins)",
+        "odds": 2.3,
+        "opened": 2,
+        "moved": 0.3,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m76",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "HNL",
+    "match": "HNK Gorica vs. HNK Hajduk Split",
+    "home": "HNK Gorica",
+    "away": "HNK Hajduk Split",
+    "priceUpdates": 10449,
+    "marketCount": 172,
+    "markets": [
+      {
+        "name": "1st/2nd half both teams to score",
+        "odds": 16,
+        "opened": 1.48,
+        "moved": 14.52,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - 1st goal",
+        "odds": 1.87,
+        "opened": 4,
+        "moved": -2.13,
+        "updates": 8
+      },
+      {
+        "name": "When will the 2nd goal be scored (10 min interval)",
+        "odds": 5.2,
+        "opened": 8.3,
+        "moved": -3.1,
+        "updates": 8
+      },
+      {
+        "name": "HNK Hajduk Split to win either half",
+        "odds": 2.9,
+        "opened": 2.9,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "HNK Gorica highest scoring half",
+        "odds": 1.95,
+        "opened": 4,
+        "moved": -2.05,
+        "updates": 8
+      },
+      {
+        "name": "1st half - HNK Hajduk Split total",
+        "odds": 4.3,
+        "opened": 1.58,
+        "moved": 2.72,
+        "updates": 8
+      },
+      {
+        "name": "2nd half - handicap",
+        "odds": 2.75,
+        "opened": 3.4,
+        "moved": -0.65,
+        "updates": 8
+      },
+      {
+        "name": "1x2 & total",
+        "odds": 23,
+        "opened": 11,
+        "moved": 12,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m77",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Kingston, Jamaica Men Singles (Kingston)",
+    "match": "Pascual Ferra, Roger vs. Gonzalez Fernandez, Mario",
+    "home": "Pascual Ferra, Roger",
+    "away": "Gonzalez Fernandez, Mario",
+    "priceUpdates": 10398,
+    "marketCount": 137,
+    "markets": [
+      {
+        "name": "1st set - game handicap",
+        "odds": 6.4,
+        "opened": 1.14,
+        "moved": 5.26,
+        "updates": 8
+      },
+      {
+        "name": "2nd set game 10 - correct score",
+        "odds": 13.5,
+        "opened": 10.5,
+        "moved": 3,
+        "updates": 8
+      },
+      {
+        "name": "Total games",
+        "odds": 1.92,
+        "opened": 1.32,
+        "moved": 0.6,
+        "updates": 8
+      },
+      {
+        "name": "Pascual Ferra, Roger total games",
+        "odds": 1.92,
+        "opened": 1.32,
+        "moved": 0.6,
+        "updates": 8
+      },
+      {
+        "name": "Game handicap",
+        "odds": 4.05,
+        "opened": 8.9,
+        "moved": -4.85,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - game handicap",
+        "odds": 1.62,
+        "opened": 1.35,
+        "moved": 0.27,
+        "updates": 8
+      },
+      {
+        "name": "1st set game 2 - exact points",
+        "odds": 3.2,
+        "opened": 3.1,
+        "moved": 0.1,
+        "updates": 8
+      },
+      {
+        "name": "1st set - total games",
+        "odds": 4.7,
+        "opened": 2.87,
+        "moved": 1.83,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m78",
+    "sport": "Tennis",
+    "sportHr": "Tenis",
+    "tournament": "ATP Challenger Prague, Czech Republic Men Singles (Prague)",
+    "match": "Lechno-Wasiutynski, Fryderyk vs. Donald, Matthew William",
+    "home": "Lechno-Wasiutynski, Fryderyk",
+    "away": "Donald, Matthew William",
+    "priceUpdates": 10283,
+    "marketCount": 178,
+    "markets": [
+      {
+        "name": "Donald, Matthew William total games",
+        "odds": 1.01,
+        "opened": 3,
+        "moved": -1.99,
+        "updates": 8
+      },
+      {
+        "name": "3rd set game 4 - correct score",
+        "odds": 7.8,
+        "opened": 10.5,
+        "moved": -2.7,
+        "updates": 4
+      },
+      {
+        "name": "Total games",
+        "odds": 1.41,
+        "opened": 1.88,
+        "moved": -0.47,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 5 games",
+        "odds": 3.1,
+        "opened": 1.41,
+        "moved": 1.69,
+        "updates": 8
+      },
+      {
+        "name": "Set handicap",
+        "odds": 1.01,
+        "opened": 4.8,
+        "moved": -3.79,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - will there be a tiebreak",
+        "odds": 1.01,
+        "opened": 1.01,
+        "moved": 0,
+        "updates": 8
+      },
+      {
+        "name": "2nd set - race to 5 games",
+        "odds": 8.5,
+        "opened": 7.2,
+        "moved": 1.3,
+        "updates": 8
+      },
+      {
+        "name": "3rd set - race to 4 games",
+        "odds": 2.1,
+        "opened": 1.12,
+        "moved": 0.98,
+        "updates": 8
+      }
+    ]
+  },
+  {
+    "id": "m79",
+    "sport": "Soccer",
+    "sportHr": "Nogomet",
+    "tournament": "Brasileiro Serie A",
+    "match": "Sao Paulo FC SP vs. Coritiba FC PR",
+    "home": "Sao Paulo FC SP",
+    "away": "Coritiba FC PR",
+    "priceUpdates": 10226,
+    "marketCount": 96,
+    "markets": [
+      {
+        "name": "Player Assists - Incl. Substitute (90mins)",
+        "odds": 7.5,
+        "opened": 11,
+        "moved": -3.5,
+        "updates": 8
+      },
+      {
+        "name": "Goalscorer - Incl. Substitute (90mins)",
+        "odds": 2.45,
+        "opened": 19,
+        "moved": -16.55,
+        "updates": 8
+      },
+      {
+        "name": "Player Assists (90mins)",
+        "odds": 16,
+        "opened": 20,
+        "moved": -4,
+        "updates": 8
+      },
+      {
+        "name": "Anytime goalscorer",
+        "odds": 31,
+        "opened": 13,
+        "moved": 18,
+        "updates": 8
+      },
+      {
+        "name": "1st half - double chance",
+        "odds": 1.85,
+        "opened": 1.7,
+        "moved": 0.15,
+        "updates": 8
+      },
+      {
+        "name": "Team Shots (90mins)",
+        "odds": 1.95,
+        "opened": 1.65,
+        "moved": 0.3,
+        "updates": 8
+      },
+      {
+        "name": "Coritiba FC PR total",
+        "odds": 2.43,
+        "opened": 12.5,
+        "moved": -10.07,
+        "updates": 8
+      },
+      {
+        "name": "1st half - corner range",
+        "odds": 12.5,
+        "opened": 1.22,
+        "moved": 11.28,
+        "updates": 8
+      }
+    ]
+  }
+]

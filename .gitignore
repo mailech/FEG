@@ -15,3 +15,6 @@ top_casino_users_event_logs*.xlsx
 # Expo / React Native
 Solution/app/node_modules/
 Solution/app/.expo/
+
+# Empire of Gold is copied into the app for the demo; keep it out of git
+Solution/app/public/empireofgold/

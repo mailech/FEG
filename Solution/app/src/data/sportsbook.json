@@ -1,0 +1,241 @@
+{
+  "sports": [
+    {
+      "name": "Soccer",
+      "nameHr": "Nogomet",
+      "priceUpdates": 2491305,
+      "tournaments": [
+        {
+          "name": "Superliga",
+          "n": 111486
+        },
+        {
+          "name": "MLS",
+          "n": 98811
+        },
+        {
+          "name": "LaLiga",
+          "n": 82910
+        },
+        {
+          "name": "Premier League",
+          "n": 70751
+        },
+        {
+          "name": "Brasileiro Serie A",
+          "n": 70650
+        },
+        {
+          "name": "World Cup SRL",
+          "n": 65787
+        },
+        {
+          "name": "Primera Division",
+          "n": 63897
+        },
+        {
+          "name": "Eredivisie",
+          "n": 60145
+        },
+        {
+          "name": "1. Liga",
+          "n": 53999
+        },
+        {
+          "name": "MLS Preseason",
+          "n": 48936
+        },
+        {
+          "name": "Championship",
+          "n": 41968
+        },
+        {
+          "name": "Eliteserien",
+          "n": 40734
+        },
+        {
+          "name": "Coppa Italia Serie C",
+          "n": 40473
+        },
+        {
+          "name": "Ekstraklasa",
+          "n": 40160
+        }
+      ],
+      "tournamentCount": 187
+    },
+    {
+      "name": "Tennis",
+      "nameHr": "Tenis",
+      "priceUpdates": 1278273,
+      "tournaments": [
+        {
+          "name": "ATP Cincinnati, USA Men Singles",
+          "n": 306365
+        },
+        {
+          "name": "WTA Cincinnati, USA Women Singles",
+          "n": 144098
+        },
+        {
+          "name": "ATP Challenger Sion, Switzerland Men Singles (Sion)",
+          "n": 126246
+        },
+        {
+          "name": "ATP Challenger Roehampton, Great Britain Men Singles (Roehampton)",
+          "n": 119120
+        },
+        {
+          "name": "ATP Challenger Prague, Czech Republic Men Singles (Prague)",
+          "n": 87349
+        },
+        {
+          "name": "ATP Challenger Kingston, Jamaica Men Singles (Kingston)",
+          "n": 79663
+        },
+        {
+          "name": "ITF Serbia 26A, Women Singles (Kursumlijska Banja)",
+          "n": 78833
+        },
+        {
+          "name": "ITF Czech Republic 04A, Women Singles (Prague 7)",
+          "n": 48808
+        },
+        {
+          "name": "ITF Belgium F7, Men Singles (Lambermont)",
+          "n": 48531
+        },
+        {
+          "name": "WTA Cincinnati, USA Women Doubles (Cincinnati)",
+          "n": 43610
+        },
+        {
+          "name": "UTR PTT Arnhem Women 05 (UTR PTT Arnhem Women 05)",
+          "n": 33713
+        },
+        {
+          "name": "UTR PTT Saitama Men 08 (UTR PTT Saitama Men 08)",
+          "n": 20872
+        },
+        {
+          "name": "UTR PTT Arnhem Men 05 (UTR PTT Arnhem Men 05)",
+          "n": 20729
+        },
+        {
+          "name": "ATP Challenger Hamburg, Germany Men Singles (Hamburg)",
+          "n": 14885
+        }
+      ],
+      "tournamentCount": 50
+    },
+    {
+      "name": "Basketball",
+      "nameHr": "Košarka",
+      "priceUpdates": 165039,
+      "tournaments": [
+        {
+          "name": "WNBA",
+          "n": 58800
+        },
+        {
+          "name": "LNBP",
+          "n": 43964
+        },
+        {
+          "name": "William Jones Cup",
+          "n": 28031
+        },
+        {
+          "name": "International Friendly Games, Women",
+          "n": 14358
+        },
+        {
+          "name": "LNB",
+          "n": 7901
+        },
+        {
+          "name": "Paulista Divisao Especial A-1",
+          "n": 4018
+        },
+        {
+          "name": "NBL1, East",
+          "n": 2783
+        },
+        {
+          "name": "NBL1 East, Women",
+          "n": 2111
+        },
+        {
+          "name": "LFB, Women",
+          "n": 1618
+        },
+        {
+          "name": "BSN",
+          "n": 949
+        },
+        {
+          "name": "Int. Friendly Games",
+          "n": 451
+        },
+        {
+          "name": "VBA",
+          "n": 55
+        }
+      ],
+      "tournamentCount": 12
+    },
+    {
+      "name": "Ice Hockey",
+      "nameHr": "Hokej",
+      "priceUpdates": 61387,
+      "tournaments": [
+        {
+          "name": "Club Friendly Games",
+          "n": 17957
+        },
+        {
+          "name": "U20 Club Friendlies",
+          "n": 12825
+        },
+        {
+          "name": "Kazakhstan Cup",
+          "n": 12102
+        },
+        {
+          "name": "Australian Ice Hockey League",
+          "n": 9679
+        },
+        {
+          "name": "Salei Cup",
+          "n": 8824
+        }
+      ],
+      "tournamentCount": 5
+    },
+    {
+      "name": "MMA",
+      "nameHr": "Borilački sportovi",
+      "priceUpdates": 3996,
+      "tournaments": [
+        {
+          "name": "UFC 330: Makhachev vs. Machado Garry",
+          "n": 3944
+        },
+        {
+          "name": "Noche UFC: Silva vs. Delgado",
+          "n": 40
+        },
+        {
+          "name": "Dana Whites Contender Series: Season 10, Week 5",
+          "n": 11
+        },
+        {
+          "name": "UFC 331: Van vs. Pantoja 2",
+          "n": 1
+        }
+      ],
+      "tournamentCount": 4
+    }
+  ],
+  "scannedRows": 4000000
+}
