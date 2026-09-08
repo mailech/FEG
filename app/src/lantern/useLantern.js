@@ -76,10 +76,12 @@ export function LanternProvider({ children }) {
     [st.sco, riskShown, st.rg, st.market]
   );
 
-  // The A/B. Baseline is popularity order — what a generic lobby does today.
+  // The A/B. Baseline is popularity order — what a generic feed does today.
+  // Length is fixed and finite on purpose: the feed ends (see FeedScreen).
+  const FEED_LEN = 16;
   const shelf = useMemo(() => {
-    if (st.arm === 'baseline') return baseline(12);
-    return recommend(st.sco, policy.constraint, 12);
+    if (st.arm === 'baseline') return baseline(FEED_LEN);
+    return recommend(st.sco, policy.constraint, FEED_LEN);
   }, [st.sco, policy.constraint, st.arm]);
 
   const value = useMemo(

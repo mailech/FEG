@@ -3,6 +3,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { c, sp, type, stateColor, stateBg } from '../theme';
+import GameArt from './GameArt';
 
 export function Label({ children, style }) {
   return <Text style={[type.label, style]}>{children}</Text>;
@@ -73,9 +74,13 @@ export function Toggle({ options, value, onChange, style }) {
 export function GameTile({ game, rank, onPress, dim }) {
   return (
     <Pressable onPress={onPress} style={({ pressed }) => [s.tile, dim && { opacity: 0.45 }, pressed && { opacity: 0.7 }]}>
-      <View style={s.tileArt}>
-        <Text style={s.tileRank}>{rank != null ? rank + 1 : ''}</Text>
-        {game.jackpot && <Text style={s.tileJp}>JP</Text>}
+      <View style={{ marginBottom: sp(1.5) }}>
+        <GameArt game={game} size="tile" />
+        {rank != null && (
+          <View style={s.tileRankBox}>
+            <Text style={s.tileRank}>{rank + 1}</Text>
+          </View>
+        )}
       </View>
       <Text style={s.tileName} numberOfLines={2}>{game.name}</Text>
       <Text style={s.tileMeta} numberOfLines={1}>{game.provider}</Text>
@@ -144,13 +149,12 @@ const s = StyleSheet.create({
   toggleText: { fontSize: 12, fontWeight: '600', color: c.inkSoft },
   toggleTextOn: { color: c.bg },
   tile: { width: 104, marginRight: sp(2.5) },
-  tileArt: {
-    height: 104, borderRadius: 8, backgroundColor: c.surfaceAlt,
-    borderWidth: 1, borderColor: c.rule, marginBottom: sp(1.5),
-    justifyContent: 'flex-end', padding: sp(1.5),
+  tileRankBox: {
+    position: 'absolute', top: 6, left: 6,
+    backgroundColor: 'rgba(0,0,0,0.42)', borderRadius: 3,
+    paddingHorizontal: 5, paddingVertical: 2,
   },
-  tileRank: { position: 'absolute', top: 6, left: 8, fontSize: 11, color: c.inkFaint, fontWeight: '700' },
-  tileJp: { position: 'absolute', top: 6, right: 8, fontSize: 9, color: c.gold, fontWeight: '800', letterSpacing: 0.5 },
+  tileRank: { fontSize: 10, color: '#fff', fontWeight: '800' },
   tileName: { fontSize: 11, color: c.ink, lineHeight: 14, fontWeight: '600' },
   tileMeta: { fontSize: 10, color: c.inkFaint, marginTop: 1 },
   track: { height: 5, backgroundColor: c.inset, borderRadius: 3, overflow: 'hidden' },
