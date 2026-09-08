@@ -45,7 +45,7 @@ const ARCH = {
   seeking: 'Repeated search. Surfacing what was searched for.',
 };
 
-export default function HomeScreen({ onOpenGame, onOpenReal, onExplore }) {
+export default function HomeScreen({ onOpenGame, onOpenReal, onOpenCascade, onExplore }) {
   const { shelf, policy, risk, arm, dispatch, emit, sco, balanceCents, minutes } = useLantern();
   const [cat, setCat] = useState('lobby');
   const [q, setQ] = useState('');
@@ -139,6 +139,26 @@ export default function HomeScreen({ onOpenGame, onOpenReal, onExplore }) {
               </Text>
             </View>
             <Ionicons name="play-circle" size={38} color={c.gold} />
+          </LinearGradient>
+        </Pressable>
+      </View>
+
+      {/* ---------- casual, nothing wagered ---------- */}
+      <View style={[s.pad, { marginTop: sp(3) }]}>
+        <Pressable onPress={onOpenCascade} style={({ pressed }) => pressed && { opacity: 0.8 }}>
+          <LinearGradient colors={['#3C6E8A', '#22414F']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.realCard}>
+            <View style={{ flex: 1, gap: 3 }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: sp(1.5) }}>
+                <Ionicons name="happy-outline" size={13} color={c.relevance} />
+                <Text style={[s.realTag, { color: c.relevance }]}>CASUAL · NOTHING WAGERED</Text>
+              </View>
+              <Text style={s.realName}>Slatki Slap</Text>
+              <Text style={s.realSub}>
+                Match-three. No stake, no payout — the one surface that stays open at every
+                risk state.
+              </Text>
+            </View>
+            <Ionicons name="grid" size={34} color={c.relevance} />
           </LinearGradient>
         </Pressable>
       </View>

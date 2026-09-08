@@ -20,6 +20,7 @@ import SportScreen from './src/screens/SportScreen';
 import MonitorScreen from './src/screens/MonitorScreen';
 import GameScreen from './src/screens/GameScreen';
 import RealGameScreen from './src/screens/RealGameScreen';
+import CascadeScreen from './src/screens/CascadeScreen';
 import { c, sp, stateColor } from './src/theme';
 
 const TABS = [
@@ -33,14 +34,15 @@ function Shell() {
   const [tab, setTab] = useState('home');
   const [game, setGame] = useState(null);   // stand-in slot
   const [real, setReal] = useState(false);  // Empire of Gold
+  const [cascade, setCascade] = useState(false); // Slatki Slap
   const { risk, slip, dispatch } = useLantern();
 
-  const goTab = (k) => { setGame(null); setReal(false); setTab(k); };
-  const overlay = real || game;
+  const goTab = (k) => { setGame(null); setReal(false); setCascade(false); setTab(k); };
+  const overlay = real || game || cascade;
 
   // The route rides along on every logged row, so a training job knows which
   // surface the player was on when each event fired.
-  const route = real ? 'game:empire-of-gold' : game ? 'game:' + game.id : tab;
+  const route = real ? 'game:empire-of-gold' : cascade ? 'game:slatki-slap' : game ? 'game:' + game.id : tab;
   useEffect(() => { dispatch({ type: 'setRoute', route }); }, [route, dispatch]);
 
   return (
@@ -48,12 +50,15 @@ function Shell() {
       <View style={s.body}>
         {real ? (
           <RealGameScreen onBack={() => setReal(false)} />
+        ) : cascade ? (
+          <CascadeScreen onBack={() => setCascade(false)} />
         ) : game ? (
           <GameScreen game={game} onBack={() => setGame(null)} />
         ) : tab === 'home' ? (
           <HomeScreen
             onOpenGame={setGame}
             onOpenReal={() => setReal(true)}
+            onOpenCascade={() => setCascade(true)}
             onExplore={() => setTab('explore')}
           />
         ) : tab === 'explore' ? (

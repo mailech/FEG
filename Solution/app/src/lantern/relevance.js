@@ -10,7 +10,25 @@
  * away for a similarity gain.
  */
 
-import catalog from '../data/catalog.json';
+import live from '../data/live-catalog.json';
+import logged from '../data/catalog.json';
+
+/**
+ * The catalogue is the live PSK list (3,131 titles, real art, real RTP and
+ * volatility) merged with launch counts from the event logs, so popularity is
+ * measured rather than guessed. Titles absent from the logs fall back to the
+ * API's commercial tier.
+ */
+export const ASSET_BASE = live.assetBase;
+
+const launchesByName = new Map(logged.map((g) => [g.name.toLowerCase(), g.launches]));
+const maxProminence = 100;
+
+const catalog = live.games.map((g) => ({
+  ...g,
+  launches: launchesByName.get(g.name.toLowerCase())
+    ?? Math.max(1, Math.round((maxProminence - Math.min(g.prominence, maxProminence)) * 2)),
+}));
 
 /* ------------------------- content embedding ---------------------------- */
 

@@ -15,6 +15,7 @@ import { useLantern } from '../lantern/useLantern';
 import { Card, Label, Row, SectionHeader, ChipRail, Note, Empty } from '../components/ui';
 import { c, sp, type, radius } from '../theme';
 import sportsbook from '../data/sportsbook.json';
+import { VERTICALS, HORSE_CARDS, HORSE_MARKETS } from '../data/verticals';
 import offers from '../data/offers.json';
 import sections from '../data/sections.json';
 
@@ -32,6 +33,8 @@ export default function ExploreScreen({ onOpenMatch }) {
   const [tournament, setTournament] = useState(null);
 
   const active = sportsbook.sports.find((s) => s.name === sport) || sportsbook.sports[0];
+  // Only the five EPS verticals have measured competitions and matches.
+  const measuredActive = sportsbook.sports.some((s) => s.name === sport);
 
   const matches = useMemo(
     () =>
@@ -54,20 +57,38 @@ export default function ExploreScreen({ onOpenMatch }) {
         </Text>
       </LinearGradient>
 
-      {/* ---------- sports ---------- */}
-      <ChipRail
-        style={{ paddingTop: sp(3.5) }}
-        value={sport}
-        onChange={(v) => { setSport(v); setTournament(null); }}
-        items={sportsbook.sports.map((sp2) => ({
-          value: sp2.name,
-          label: sp2.nameHr,
-          icon: ICON[sp2.name],
-          n: sp2.tournamentCount,
-        }))}
-      />
+      {/* ---------- every vertical ---------- */}
+      <View style={{ marginTop: sp(4) }}>
+        <SectionHeader icon="apps" title="All sports" count={VERTICALS.length} tint={c.relevance} />
+        <View style={s.pad2}>
+          <View style={s.vgrid}>
+            {VERTICALS.map((v) => {
+              const on = sport === v.key;
+              return (
+                <Pressable
+                  key={v.key}
+                  onPress={() => { setSport(v.key); setTournament(null); }}
+                  style={[s.vcell, on && s.vcellOn]}
+                >
+                  <Ionicons name={v.icon} size={17} color={on ? '#fff' : c.relevance} />
+                  <Text style={[s.vname, on && { color: '#fff' }]} numberOfLines={1}>{v.hr}</Text>
+                  <Text style={[s.vmeta, on && { color: 'rgba(255,255,255,0.7)' }]}>
+                    {v.source === 'measured' ? `${v.competitions} comps` : 'catalogue'}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+          <Text style={[type.tiny, { marginTop: sp(2.5) }]}>
+            Five verticals carry measured competition counts from EPS_Offers.csv. The rest are
+            catalogue entries modelled on the live PSK sidebar — marked, never passed off as
+            measured.
+          </Text>
+        </View>
+      </View>
 
       {/* ---------- sport summary ---------- */}
+      {measuredActive && (
       <View style={s.pad}>
         <Card>
           <Row>
@@ -88,8 +109,76 @@ export default function ExploreScreen({ onOpenMatch }) {
           </Text>
         </Card>
       </View>
+      )}
+
+      {/* ---------- horse racing ---------- */}
+      {sport === 'Horse Racing' && (
+        <View style={{ marginTop: sp(5) }}>
+          <SectionHeader icon="trail-sign" title="Race cards" count={HORSE_CARDS.length} tint={c.gold} />
+          <View style={s.pad2}>
+            <Note>
+              One resolution per race, roughly half an hour apart. Horse racing anchors the low
+              end of the event-frequency axis, which is the dimension the recommender holds
+              constant (§3.4b). It is the sport that makes cross-category discovery
+              demonstrable: snooker and darts are its neighbours, slots are not.
+            </Note>
+
+            {HORSE_CARDS.map((race) => {
+              const open = tournament === race.id;
+              return (
+                <View key={race.id} style={s.race}>
+                  <Pressable onPress={() => setTournament(open ? null : race.id)} style={s.raceHead}>
+                    <View style={s.raceTime}><Text style={s.raceTimeText}>{race.time}</Text></View>
+                    <View style={{ flex: 1 }}>
+                      <Text style={type.h3}>{race.hrCourse}</Text>
+                      <Text style={type.tiny}>
+                        {race.grade} · {race.distance} · {race.runners} grla · teren {race.going}
+                      </Text>
+                    </View>
+                    <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={16} color={c.inkFaint} />
+                  </Pressable>
+
+                  {open && (
+                    <View style={s.field}>
+                      <View style={s.mkRail}>
+                        {HORSE_MARKETS.map((m) => (
+                          <View key={m.key} style={s.mkChip}>
+                            <Text style={s.mkChipText}>{m.label}</Text>
+                          </View>
+                        ))}
+                      </View>
+                      {race.field.map((h) => (
+                        <View key={h.no} style={s.runner}>
+                          <View style={s.saddle}><Text style={s.saddleText}>{h.no}</Text></View>
+                          <View style={{ flex: 1 }}>
+                            <Text style={s.horse} numberOfLines={1}>{h.horse}</Text>
+                            <Text style={type.tiny}>{h.jockey} · forma {h.form}</Text>
+                          </View>
+                          <View style={{ alignItems: 'flex-end' }}>
+                            <View style={s.hodds}><Text style={s.hoddsText}>{h.odds.toFixed(2)}</Text></View>
+                            {h.drift !== 0 && (
+                              <Text style={[s.drift, { color: h.drift < 0 ? c.calm : c.risk }]}>
+                                {h.drift < 0 ? '▼' : '▲'} {Math.abs(h.drift).toFixed(2)}
+                              </Text>
+                            )}
+                          </View>
+                        </View>
+                      ))}
+                      <Text style={[type.tiny, { marginTop: sp(2) }]}>
+                        Constructed card — horse racing is not in the EPS price feed. Courses and
+                        market types are real; the field is not.
+                      </Text>
+                    </View>
+                  )}
+                </View>
+              );
+            })}
+          </View>
+        </View>
+      )}
 
       {/* ---------- competitions ---------- */}
+      {measuredActive && (
       <View style={{ marginTop: sp(5) }}>
         <SectionHeader
           icon="trophy"
@@ -120,8 +209,10 @@ export default function ExploreScreen({ onOpenMatch }) {
           })}
         </ScrollView>
       </View>
+      )}
 
       {/* ---------- matches ---------- */}
+      {measuredActive && (
       <View style={{ marginTop: sp(5) }}>
         <SectionHeader
           icon="list"
@@ -168,6 +259,7 @@ export default function ExploreScreen({ onOpenMatch }) {
           )}
         </View>
       </View>
+      )}
 
       {/* ---------- casino verticals ---------- */}
       <View style={{ marginTop: sp(6) }}>
@@ -239,4 +331,44 @@ const s = StyleSheet.create({
   },
   gridName: { fontSize: 12, fontWeight: '700', color: c.ink },
   gridN: { fontSize: 10, color: c.inkFaint, fontVariant: ['tabular-nums'] },
+
+  vgrid: { flexDirection: 'row', flexWrap: 'wrap', gap: sp(2) },
+  vcell: {
+    width: '31.2%', alignItems: 'center', gap: 3, paddingVertical: sp(2.5),
+    backgroundColor: c.surface, borderWidth: 1, borderColor: c.rule, borderRadius: radius.md,
+  },
+  vcellOn: { backgroundColor: c.brand, borderColor: c.brand },
+  vname: { fontSize: 11, fontWeight: '700', color: c.ink },
+  vmeta: { fontSize: 9, color: c.inkFaint },
+
+  race: {
+    backgroundColor: c.surface, borderWidth: 1, borderColor: c.rule,
+    borderRadius: radius.md, marginBottom: sp(2), overflow: 'hidden',
+  },
+  raceHead: { flexDirection: 'row', alignItems: 'center', gap: sp(3), padding: sp(3) },
+  raceTime: {
+    backgroundColor: c.inset, borderRadius: 4,
+    paddingHorizontal: sp(2), paddingVertical: sp(1),
+  },
+  raceTimeText: { color: c.gold, fontWeight: '900', fontSize: 12, fontVariant: ['tabular-nums'] },
+  field: { borderTopWidth: 1, borderTopColor: c.ruleSoft, padding: sp(3), gap: sp(1.5) },
+  mkRail: { flexDirection: 'row', flexWrap: 'wrap', gap: sp(1.5), marginBottom: sp(2) },
+  mkChip: {
+    borderWidth: 1, borderColor: c.rule, borderRadius: radius.pill,
+    paddingHorizontal: sp(2.5), paddingVertical: sp(1),
+  },
+  mkChipText: { fontSize: 10.5, color: c.inkSoft, fontWeight: '700' },
+  runner: { flexDirection: 'row', alignItems: 'center', gap: sp(2.5) },
+  saddle: {
+    width: 24, height: 24, borderRadius: 4, backgroundColor: c.inset,
+    alignItems: 'center', justifyContent: 'center',
+  },
+  saddleText: { color: c.ink, fontSize: 11, fontWeight: '900' },
+  horse: { fontSize: 13, fontWeight: '700', color: c.ink },
+  hodds: {
+    backgroundColor: c.surfaceAlt, borderWidth: 1, borderColor: c.rule, borderRadius: 4,
+    paddingHorizontal: sp(2), paddingVertical: sp(1), minWidth: 48, alignItems: 'center',
+  },
+  hoddsText: { color: c.ink, fontWeight: '800', fontSize: 12, fontVariant: ['tabular-nums'] },
+  drift: { fontSize: 9, fontWeight: '800', marginTop: 2 },
 });

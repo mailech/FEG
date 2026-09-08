@@ -13,9 +13,10 @@
  */
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { c, radius } from '../theme';
+import { ASSET_BASE } from '../lantern/relevance';
 
 /** FNV-1a — stable across platforms and cheap. */
 function hash(str) {
@@ -72,6 +73,8 @@ export function Badge({ kind, children }) {
  */
 export default function GameArt({ game, size = 'tile', jackpotAmount, children }) {
   const a = artFor(game);
+  const [artFailed, setArtFailed] = React.useState(false);
+  const uri = game.art && !artFailed ? ASSET_BASE + game.art : null;
   const scale = size === 'hero' ? 1 : size === 'wide' ? 0.62 : 0.42;
   const box = size === 'hero' ? s.hero : size === 'wide' ? s.wide : s.tile;
 
@@ -117,7 +120,19 @@ export default function GameArt({ game, size = 'tile', jackpotAmount, children }
         ]}
       />
 
-      <Text style={[s.glyph, { fontSize: 96 * scale, color: a.glow }]}>{a.glyph}</Text>
+      {uri ? (
+        // Real cover art, referenced live from the portal API — never copied
+        // into this repo. Falls back to the procedural cover if it 404s or the
+        // machine is offline, so the demo never shows a hole.
+        <Image
+          source={{ uri }}
+          style={StyleSheet.absoluteFill}
+          resizeMode="cover"
+          onError={() => setArtFailed(true)}
+        />
+      ) : (
+        <Text style={[s.glyph, { fontSize: 96 * scale, color: a.glow }]}>{a.glyph}</Text>
+      )}
 
       <LinearGradient
         colors={['transparent', 'rgba(0,0,0,0.55)']}
@@ -126,8 +141,15 @@ export default function GameArt({ game, size = 'tile', jackpotAmount, children }
       />
 
       <View style={s.badges}>
-        {game.jackpot && <Badge kind="jackpot">JACKPOT</Badge>}
-        {!game.jackpot && game.launches > 400 && <Badge kind="exclusive">TOP</Badge>}
+        {game.label ? (
+          <View style={[s.badge, { backgroundColor: game.label.color || c.brand }]}>
+            <Text style={s.badgeText}>{game.label.text}</Text>
+          </View>
+        ) : game.jackpot ? (
+          <Badge kind="jackpot">JACKPOT</Badge>
+        ) : game.launches > 400 ? (
+          <Badge kind="exclusive">TOP</Badge>
+        ) : null}
       </View>
 
       {jackpotAmount != null && (
