@@ -4,8 +4,14 @@ node_modules/
 dist/
 .playwright/
 captures/
-**/empireofgold/**
-*.csv
-*.xlsx
+**/empireofgold/
+# Hackathon data drops — keep local, never commit (EPS_Offers alone is 1.7 GB)
+EPS_Offers.csv
+top_casino_users_event_logs*.csv
+top_casino_users_event_logs*.xlsx
 *.mp4
 *.msi
+
+# Expo / React Native
+Solution/app/node_modules/
+Solution/app/.expo/

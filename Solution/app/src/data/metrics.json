@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-09-08T10:51:24.857Z",
+  "source": "top_casino_users_event_logs.csv",
+  "totalEvents": 332119,
+  "raggedRows": 6,
+  "players": 89,
+  "sessions": 13260,
+  "eventMix": [
+    {
+      "name": "screen_view",
+      "n": 134989
+    },
+    {
+      "name": "page_view",
+      "n": 71427
+    },
+    {
+      "name": "fortuna_screen_view",
+      "n": 57105
+    },
+    {
+      "name": "betslip_add_bet",
+      "n": 29377
+    },
+    {
+      "name": "betslip_placed_bet",
+      "n": 22146
+    },
+    {
+      "name": "casino_game_launch",
+      "n": 13682
+    },
+    {
+      "name": "betslip_placed",
+      "n": 3393
+    }
+  ],
+  "platforms": [
+    {
+      "name": "SB Android",
+      "n": 117477
+    },
+    {
+      "name": "GM",
+      "n": 86767
+    },
+    {
+      "name": "SB iOS",
+      "n": 79131
+    },
+    {
+      "name": "Casino Android",
+      "n": 41259
+    },
+    {
+      "name": "web",
+      "n": 7485
+    }
+  ],
+  "finalStep": {
+    "sessionsWithAdd": 1649,
+    "sessionsWithPlaced": 1304,
+    "sessionsBoth": 1292,
+    "abandoned": 357,
+    "abandonRate": 0.2165
+  },
+  "discovery": {
+    "rows": [
+      {
+        "name": "search_results",
+        "n": 3580,
+        "share": 0.379
+      },
+      {
+        "name": "category_game_row",
+        "n": 3235,
+        "share": 0.3425
+      },
+      {
+        "name": "grid",
+        "n": 1786,
+        "share": 0.1891
+      },
+      {
+        "name": "top_10",
+        "n": 304,
+        "share": 0.0322
+      },
+      {
+        "name": "direct_landing",
+        "n": 300,
+        "share": 0.0318
+      },
+      {
+        "name": "bonus_popup",
+        "n": 143,
+        "share": 0.0151
+      },
+      {
+        "name": "pop_up",
+        "n": 30,
+        "share": 0.0032
+      },
+      {
+        "name": "winners_widget",
+        "n": 20,
+        "share": 0.0021
+      },
+      {
+        "name": "providers_widget",
+        "n": 13,
+        "share": 0.0014
+      },
+      {
+        "name": "recent_wins_overview",
+        "n": 11,
+        "share": 0.0012
+      },
+      {
+        "name": "recent_winners",
+        "n": 5,
+        "share": 0.0005
+      },
+      {
+        "name": "jackpot_widget",
+        "n": 4,
+        "share": 0.0004
+      },
+      {
+        "name": "jackpot_game_row",
+        "n": 3,
+        "share": 0.0003
+      },
+      {
+        "name": "surprise_me_widget",
+        "n": 3,
+        "share": 0.0003
+      },
+      {
+        "name": "collection_widget",
+        "n": 3,
+        "share": 0.0003
+      },
+      {
+        "name": "tournaments_page",
+        "n": 2,
+        "share": 0.0002
+      },
+      {
+        "name": "most_played",
+        "n": 2,
+        "share": 0.0002
+      },
+      {
+        "name": "because_you_like",
+        "n": 1,
+        "share": 0.0001
+      },
+      {
+        "name": "banner_row",
+        "n": 1,
+        "share": 0.0001
+      }
+    ],
+    "searchBeatsCategory": true
+  },
+  "sessionMinutes": {
+    "p50": 3.7,
+    "p90": 63.6,
+    "p99": 197
+  }
+}
