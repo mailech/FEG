@@ -15,7 +15,10 @@ import { shouldSend, TRIGGER_CLASSES, MARKETS } from '../lantern/policy';
 import { c, sp, type } from '../theme';
 import metrics from '../data/metrics.json';
 import benchmarks from '../data/benchmarks.json';
-import { download, COLUMNS } from '../lantern/logger';
+import { download, COLUMNS, canPersist } from '../lantern/logger';
+import liveCatalog from '../data/live-catalog.json';
+import offersData from '../data/offers.json';
+import sectionsData from '../data/sections.json';
 import { generate, ARCHETYPES } from '../lantern/synth';
 
 const AGE_BANDS = ['18-24', '25-34', '35-44', '45-54', '55+'];
@@ -306,7 +309,11 @@ export default function MonitorScreen() {
               title={`Generate ${synthN.toLocaleString()} sessions`}
               icon="construct-outline"
               onPress={() => {
-                const out = generate({ sessions: synthN, seed: Date.now() >>> 0 });
+                const out = generate({
+                  sessions: synthN,
+                  seed: Date.now() >>> 0,
+                  corpus: { catalog: liveCatalog.games, offers: offersData, sections: sectionsData },
+                });
                 dispatch({ type: 'addRows', rows: out.rows });
                 setLastGen({ ...out.summary, rows: out.rows.length });
               }}
@@ -323,9 +330,15 @@ export default function MonitorScreen() {
           </View>
 
           <Note>
-            Nothing leaves the device on its own. The CSV is produced only when Export is
-            pressed, so the on-device promise holds even though the file is for training.
+            {canPersist()
+              ? 'Rows persist in local storage on this machine, so they survive a reload. Nothing crosses the network — the CSV is written only when Export is pressed.'
+              : 'Storage is unavailable here, so rows live in memory for this session only. Export before reloading.'}
           </Note>
+          <Text style={[type.tiny, { marginTop: sp(1) }]}>
+            For a real training set use the generator on disk instead:{' '}
+            <Text style={{ color: c.relevance }}>node Solution/scripts/make-synthetic.mjs 50000</Text>{' '}
+            → Solution/data/synthetic_event_logs.csv
+          </Text>
         </Card>
 
         {/* ---- group benchmarks: the divergence that makes the case ---- */}

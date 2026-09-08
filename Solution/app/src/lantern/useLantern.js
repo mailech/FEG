@@ -7,12 +7,12 @@
  * mirrors the architecture: the policy engine is the only decision point.
  */
 
-import React, { createContext, useContext, useMemo, useReducer, useCallback } from 'react';
+import React, { createContext, useContext, useMemo, useReducer, useCallback, useEffect, useRef } from 'react';
 import { createSCO, apply, emptyPrior, sessionMinutes, archetype as archetypeOf } from './sco';
 import { evaluate, withHysteresis } from './risk';
 import { recommend, baseline, BY_ID } from './relevance';
 import { decide } from './policy';
-import { toRow, pseudoId } from './logger';
+import { toRow, pseudoId, PLATFORM, loadRows, saveRows, clearRows as clearStored } from './logger';
 
 const Ctx = createContext(null);
 
@@ -33,7 +33,7 @@ const initial = () => ({
   rg: { selfExcluded: false },
   slip: [],
   log: [],
-  rows: [],          // FEG-schema rows, ready to export
+  rows: loadRows(),  // FEG-schema rows, rehydrated from storage
   route: 'home',
 });
 
@@ -53,6 +53,7 @@ function reducer(st, action) {
         route: st.route,
         riskState: state,
         archetype: archetypeOf(sco),
+        platform: PLATFORM,
       });
       const rows = [...(st.rows || []), row].slice(-20000);
       let balanceCents = st.balanceCents;
@@ -77,6 +78,7 @@ function reducer(st, action) {
     case 'addRows':
       return { ...st, rows: [...(st.rows || []), ...action.rows].slice(-60000) };
     case 'clearRows':
+      clearStored();
       return { ...st, rows: [] };
     case 'reset':
       return { ...initial(), rows: st.rows };   // keep the captured log across resets
@@ -87,6 +89,15 @@ function reducer(st, action) {
 
 export function LanternProvider({ children }) {
   const [st, dispatch] = useReducer(reducer, undefined, initial);
+
+  // Persist on a debounce. Writing the whole log on every event would make the
+  // app crawl once the set is large.
+  const rowsRef = useRef(st.rows);
+  rowsRef.current = st.rows;
+  useEffect(() => {
+    const id = setTimeout(() => saveRows(rowsRef.current), 800);
+    return () => clearTimeout(id);
+  }, [st.rows]);
 
   const emit = useCallback((ev) => dispatch({ type: 'event', ev }), []);
 

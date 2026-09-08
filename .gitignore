@@ -18,3 +18,7 @@ Solution/app/.expo/
 
 # Empire of Gold is copied into the app for the demo; keep it out of git
 Solution/app/public/empireofgold/
+
+# Generated training data — reproducible from the seed in the manifest
+Solution/data/*.csv
+Solution/data/synthetic_manifest.json
