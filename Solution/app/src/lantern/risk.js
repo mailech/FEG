@@ -10,7 +10,7 @@
  * ranks a game and never sets a target.
  */
 
-import { sessionMinutes } from './sco';
+import { sessionMinutes } from './sco.js';
 
 /** Age-band multipliers on marker thresholds. Lower = fires sooner.
  *  18–24 carries the highest problem-gambling prevalence, so its gate is the

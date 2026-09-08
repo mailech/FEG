@@ -33,6 +33,8 @@ const initial = () => ({
   rg: { selfExcluded: false },
   slip: [],
   log: [],
+  rows: [],          // FEG-schema rows, ready to export
+  route: 'home',
 });
 
 function reducer(st, action) {
@@ -52,7 +54,7 @@ function reducer(st, action) {
         riskState: state,
         archetype: archetypeOf(sco),
       });
-      const rows = [...st.rows, row].slice(-20000);
+      const rows = [...(st.rows || []), row].slice(-20000);
       let balanceCents = st.balanceCents;
       if (action.ev.t === 'spin') balanceCents += (action.ev.payout || 0) - action.ev.stake;
       if (action.ev.t === 'deposit' && !action.ev.declined) balanceCents += action.ev.amount;
@@ -73,7 +75,7 @@ function reducer(st, action) {
     case 'setRoute':
       return st.route === action.route ? st : { ...st, route: action.route };
     case 'addRows':
-      return { ...st, rows: [...st.rows, ...action.rows].slice(-60000) };
+      return { ...st, rows: [...(st.rows || []), ...action.rows].slice(-60000) };
     case 'clearRows':
       return { ...st, rows: [] };
     case 'reset':
