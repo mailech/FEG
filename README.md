@@ -154,11 +154,13 @@ demo script.
 
 Say these before a judge asks.
 
-- **The game is served from our own origin.** In production the provider bundle
-  is cross-origin, which is the central finding in section 1 of the PRD — a
-  Service Worker on the operator origin cannot touch it. We serve it locally
-  because otherwise we could not instrument it at all. This is a limitation of
-  the rig, not a claim about production.
+- **The game is served from our own origin.** In production it depends on the
+  provider — see [RECON-FINDINGS.md](RECON-FINDINGS.md). Fazi and Spribe nest a
+  genuinely cross-origin frame that no service worker can reach; Playtech's
+  7.8 MB client is served from `gpas-games2.psk.hr`, a PSK origin, and is
+  reachable. We serve the stand-in locally because otherwise we could not
+  instrument it at all. That is a limitation of the rig, not a claim about
+  production.
 - **The stand-in is not a real certified title.** The ballast models payload
   weight, not real engine behaviour, shader compilation, or asset decode.
 - **Transport is MJPEG-shaped**, via CDP screencast over a WebSocket. It works
