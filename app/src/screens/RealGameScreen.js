@@ -33,6 +33,12 @@ export const EMPIRE = {
   eventFrequencySec: 3,
 };
 
+/**
+ * Note the permissions. The bundle calls requestFullscreen() on launch, and
+ * granting it hides the Lantern chrome — which is the one thing this screen
+ * exists to show. With `fullscreen` absent from `allow`, the call fails
+ * harmlessly and the game stays inside its frame.
+ */
 function Frame({ onLoad }) {
   if (Platform.OS === 'web') {
     return (
@@ -40,7 +46,8 @@ function Frame({ onLoad }) {
         src={GAME_URL}
         onLoad={onLoad}
         title="Empire of Gold"
-        allow="autoplay; fullscreen"
+        allow="autoplay"
+        allowFullScreen={false}
         style={{ width: '100%', height: '100%', border: 'none', display: 'block', background: '#000' }}
       />
     );
@@ -53,8 +60,9 @@ function Frame({ onLoad }) {
       onLoadEnd={onLoad}
       style={{ flex: 1, backgroundColor: '#000' }}
       allowsInlineMediaPlayback
+      allowsFullscreenVideo={false}
       mediaPlaybackRequiresUserAction={false}
-originWhitelist={['*']}
+      originWhitelist={['*']}
     />
   );
 }
@@ -87,6 +95,12 @@ export default function RealGameScreen({ onBack }) {
       </View>
 
       <View style={s.stage}>
+        {ready && (
+          <Pressable onPress={onBack} style={s.escape} hitSlop={8}>
+            <Ionicons name="close" size={15} color="#fff" />
+            <Text style={s.escapeText}>Exit game</Text>
+          </Pressable>
+        )}
         {!ready && (
           <View style={s.loading}>
             <ActivityIndicator color={c.relevance} />
@@ -169,6 +183,14 @@ const s = StyleSheet.create({
 
   stage: { flex: 1, backgroundColor: '#000', position: 'relative', minHeight: 260 },
   loading: { ...StyleSheet.absoluteFillObject, alignItems: 'center', justifyContent: 'center', zIndex: 2, padding: sp(6) },
+  escape: {
+    position: 'absolute', top: sp(2), right: sp(2), zIndex: 5,
+    flexDirection: 'row', alignItems: 'center', gap: sp(1.5),
+    backgroundColor: 'rgba(0,0,0,0.66)', borderRadius: radius.pill,
+    paddingHorizontal: sp(3), paddingVertical: sp(1.75),
+    borderWidth: 1, borderColor: 'rgba(255,255,255,0.22)',
+  },
+  escapeText: { color: '#fff', fontSize: 11, fontWeight: '800' },
 
   panel: {
     borderTopWidth: 1, borderTopColor: c.rule, backgroundColor: c.surface,
