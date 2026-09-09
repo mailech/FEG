@@ -117,14 +117,42 @@ export const TRIGGER_CLASSES = {
               why: 'Fires because a bet lost. This is the chasing mechanism the risk head exists to detect.' },
   streak:   { allowed: false, label: 'Urgency · streak',
               why: 'Manufactured scarcity against an artificial deadline. Marker 15 treats streaks as a harm signal, not a goal.' },
+
+  session_summary: { allowed: true, label: 'Factual · session state' },
+  relevance:       { allowed: true, label: 'Relevance · matched to session' },
+  non_wagering:    { allowed: true, label: 'Non-wagering surface' },
+
+  // Protective messages are exempt from the commercial gates on purpose. A
+  // limit warning that is suppressed because the risk head moved, or deferred
+  // because it is 23:40, is a limit warning that fires only when it is not
+  // needed. `protective` inverts the gate rather than loosening it.
+  rg_notice:       { allowed: true, protective: true, label: 'Player protection' },
+
+  // Publishing the full outcome distribution is protective, not commercial:
+  // it corrects a false belief rather than encouraging one. A class that
+  // broadcast individual wins would sit with `regret` above, refused.
+  transparency:    { allowed: true, protective: true, label: 'Transparency \u00b7 full distribution' },
 };
 
 export function shouldSend(candidate, { risk, rg = {}, sentThisWeek = 0, market = 'hr', hour = 12 }) {
   const m = MARKETS[market] || MARKETS.hr;
-  const cls = TRIGGER_CLASSES[candidate.kind];
+  const cls = TRIGGER_CLASSES[candidate.kind] || {
+    allowed: false,
+    label: 'Unknown class',
+    why: 'No trigger class registered. Unrecognised classes are refused, not waved through.',
+  };
   const gates = [];
 
   const push = (name, pass, note) => gates.push({ name, pass, note });
+
+  // Self-exclusion is checked first, not last. Under the Croatian Regulation on
+  // Measures for Socially Responsible Organisation this is a register check that
+  // precedes play, so evaluating four commercial gates before consulting it
+  // would be the wrong shape even though the answer comes out the same.
+  if (rg.selfExcluded) {
+    push('RG state', false, 'Self-excluded — no send of any class.');
+    return { send: false, gates };
+  }
 
   if (!cls.allowed) {
     push('Trigger class', false, cls.why);
@@ -134,6 +162,15 @@ export function shouldSend(candidate, { risk, rg = {}, sentThisWeek = 0, market 
     return { send: false, gates };
   }
   push('Trigger class', true, cls.label + '.');
+
+  // Player-protection messages skip the commercial gates. They exist for the
+  // states the other gates are there to protect.
+  if (cls.protective) {
+    push('Risk state', true, 'Protective class — delivered regardless of state.');
+    push('Quiet hours', true, 'Exempt.');
+    push('Frequency cap', true, 'Not counted against the commercial cap.');
+    return { send: true, gates };
+  }
 
   const riskOk = risk.state === 'calm';
   push('Risk state', riskOk, riskOk ? 'Player is calm. Send permitted.' : `Risk state is ${risk.state} — hold.`);
@@ -146,11 +183,6 @@ export function shouldSend(candidate, { risk, rg = {}, sentThisWeek = 0, market 
   const capOk = sentThisWeek < m.maxSendsPerWeek;
   push('Frequency cap', capOk, `${sentThisWeek} of ${m.maxSendsPerWeek} used this rolling week.`);
   if (!capOk) return { send: false, gates };
-
-  if (rg.selfExcluded) {
-    push('RG state', false, 'Self-excluded.');
-    return { send: false, gates };
-  }
 
   return { send: true, gates };
 }

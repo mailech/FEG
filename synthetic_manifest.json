@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-09-08T20:02:10.833Z",
+  "generator": "Solution/scripts/make-synthetic.mjs",
+  "seed": 20260908,
+  "sessions": 5000,
+  "rows": 285085,
+  "archetypes": {
+    "browser": {
+      "sessions": 2136,
+      "note": "Opens many titles, dwells on none, rarely acts."
+    },
+    "returner": {
+      "sessions": 1514,
+      "note": "Short, regular, mixed sport and casino."
+    },
+    "specialist": {
+      "sessions": 941,
+      "note": "One or two titles, steady stake, high completion."
+    },
+    "chaser": {
+      "sessions": 409,
+      "note": "Stake climbs after losses, turbo on, deposits mid-session."
+    }
+  },
+  "corpus": {
+    "catalog": 3131,
+    "offers": 80,
+    "sections": 85
+  },
+  "notes": [
+    "Schema matches top_casino_users_event_logs.csv exactly — same columns, same order.",
+    "Events prefixed lantern_ have no FEG-native equivalent; filter them out to train on FEG events only.",
+    "from_origin carries the planted archetype, from_route the risk state at that instant. Those are the labels.",
+    "Sportsbook legs abandon at 21.6%, the rate measured in the real logs.",
+    "Synthetic throughout. It demonstrates the mechanism; it is not evidence about real players."
+  ]
+}

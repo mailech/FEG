@@ -104,13 +104,30 @@ export function ChipRail({ items, value, onChange, style }) {
   );
 }
 
-export function GameTile({ game, rank, width = 112, onPress, jackpotAmount }) {
+/**
+ * `fit` is the ranker's score for this title against this session, 0-1. It is a
+ * match score, never a win score — see fitFor() in lantern/model.js for why that
+ * distinction is load-bearing rather than pedantic.
+ */
+/**
+ * `gutter` is the trailing margin a horizontal rail needs between tiles. A
+ * wrapping grid spaces its children with `gap` instead, and the two together
+ * put a phantom column of dead space on every row — pass gutter={0} there.
+ */
+export function GameTile({ game, rank, width = 112, gutter = sp(2.5), onPress, jackpotAmount, fit, estimated }) {
+  const tone = fit == null ? c.inkFaint : fit >= 0.6 ? c.calm : fit >= 0.35 ? c.relevance : c.inkFaint;
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [{ width, marginRight: sp(2.5) }, pressed && { opacity: 0.75 }]}>
+    <Pressable onPress={onPress} style={({ pressed }) => [{ width, marginRight: gutter }, pressed && { opacity: 0.75 }]}>
       <View>
         <GameArt game={game} size="tile" jackpotAmount={jackpotAmount} />
         {rank != null && (
           <View style={s.rankBox}><Text style={s.rankText}>{rank + 1}</Text></View>
+        )}
+        {fit != null && (
+          <View style={[s.fitBox, { borderColor: tone }, estimated && s.fitBoxEst]}>
+            <Text style={[s.fitText, { color: tone }]}>{Math.round(fit * 100)}</Text>
+            <Text style={s.fitUnit}>{estimated ? 'est' : 'fit'}</Text>
+          </View>
         )}
       </View>
       <Text style={s.tileName} numberOfLines={2}>{game.name}</Text>
@@ -202,7 +219,18 @@ const s = StyleSheet.create({
     paddingHorizontal: 5, paddingVertical: 1.5,
   },
   rankText: { fontSize: 10, color: '#fff', fontWeight: '900' },
-  tileName: { fontSize: 11.5, color: c.ink, lineHeight: 15, fontWeight: '700', marginTop: sp(1.5) },
+  fitBox: {
+    position: 'absolute', right: 5, bottom: 5, minWidth: 30,
+    backgroundColor: 'rgba(6,10,14,0.86)', borderWidth: 1, borderRadius: radius.sm,
+    paddingHorizontal: 4, paddingVertical: 2, alignItems: 'center',
+  },
+  fitBoxEst: { borderStyle: 'dashed', opacity: 0.82 },
+  fitText: { fontSize: 12, fontWeight: '900', fontVariant: ['tabular-nums'], lineHeight: 14 },
+  fitUnit: { fontSize: 7, color: c.inkFaint, fontWeight: '800', letterSpacing: 0.5, lineHeight: 9 },
+  tileName: {
+    fontSize: 11.5, color: c.ink, lineHeight: 15, fontWeight: '700',
+    marginTop: sp(1.5), minHeight: 30,
+  },
   tileMeta: { fontSize: 10, color: c.inkFaint, marginTop: 1 },
 
   track: { height: 5, backgroundColor: c.inset, borderRadius: 3, overflow: 'hidden' },

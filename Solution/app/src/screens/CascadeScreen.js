@@ -118,6 +118,11 @@ export default function CascadeScreen({ onBack }) {
   const [score, setScore] = useState(0);
   const [moves, setMoves] = useState(MOVES);
   const [flash, setFlash] = useState(null);
+  // Cells matched but not yet cleared, and a lock so a second tap cannot land
+  // mid-clear. Without these the board teleports from swap to settled state and
+  // the move reads as a glitch rather than a cascade.
+  const [clearing, setClearing] = useState(null);
+  const [busy, setBusy] = useState(false);
 
   useEffect(() => {
     emit({ t: 'game_open', gameId: 'slatki-slap', gameName: 'Slatki Slap', provider: 'Lantern', section: 'Casual', volatility: 1 });
@@ -126,11 +131,15 @@ export default function CascadeScreen({ onBack }) {
   }, []);
 
   const width = Math.min(Dimensions.get('window').width - sp(8), 360);
-  const cell = Math.floor((width - (COLS - 1) * 4) / COLS);
+  // Every tile carries margin: 2 on both sides, so a row needs COLS gutters of
+  // 4px — not COLS - 1. Budgeting for one fewer made the row 4px too wide and
+  // the grid wrapped at six columns instead of seven, which is why the board
+  // ended with a stray two-tile row.
+  const cell = Math.floor((width - COLS * 4) / COLS);
 
   const tap = useCallback(
     (r, cIdx) => {
-      if (moves <= 0) return;
+      if (moves <= 0 || busy) return;
       if (!sel) { setSel({ r, c: cIdx }); return; }
       if (sel.r === r && sel.c === cIdx) { setSel(null); return; }
 
@@ -148,15 +157,24 @@ export default function CascadeScreen({ onBack }) {
         return;
       }
 
-      const out = settle(next);
-      setGrid(out.grid);
-      setScore((s) => s + out.gained);
-      setMoves((m) => m - 1);
+      // Show the swap, let the matched gems read as matched, then settle.
+      const hits = findMatches(next);
+      setGrid(next);
+      setClearing(hits);
       setSel(null);
-      setFlash(out.chain > 1 ? `${out.chain}x cascade  +${out.gained}` : `+${out.gained}`);
-      setTimeout(() => setFlash(null), 1100);
+      setBusy(true);
 
-      emit({ t: 'cascade_move', gameId: 'slatki-slap', chain: out.chain, gained: out.gained });
+      setTimeout(() => {
+        const out = settle(next);
+        setGrid(out.grid);
+        setClearing(null);
+        setBusy(false);
+        setScore((sc) => sc + out.gained);
+        setMoves((m) => m - 1);
+        setFlash(out.chain > 1 ? `${out.chain}x cascade  +${out.gained}` : `+${out.gained}`);
+        setTimeout(() => setFlash(null), 1100);
+        emit({ t: 'cascade_move', gameId: 'slatki-slap', chain: out.chain, gained: out.gained });
+      }, 210);
     },
     [grid, sel, moves, emit]
   );
@@ -206,6 +224,7 @@ export default function CascadeScreen({ onBack }) {
             row.map((v, cIdx) => {
               const g = GEMS[v] || GEMS[0];
               const on = sel && sel.r === r && sel.c === cIdx;
+              const popping = clearing?.has(key(r, cIdx));
               return (
                 <Pressable
                   key={key(r, cIdx)}
@@ -214,7 +233,12 @@ export default function CascadeScreen({ onBack }) {
                 >
                   <LinearGradient
                     colors={[g.from, g.to]}
-                    style={[s.gem, on && s.gemOn, { width: cell, height: cell }]}
+                    style={[
+                      s.gem,
+                      on && s.gemOn,
+                      popping && s.gemPop,
+                      { width: cell, height: cell },
+                    ]}
                   >
                     <Text style={[s.gemCh, { fontSize: cell * 0.42 }]}>{g.ch}</Text>
                   </LinearGradient>
@@ -225,7 +249,7 @@ export default function CascadeScreen({ onBack }) {
         </View>
 
         {!!flash && (
-          <View style={s.flash} pointerEvents="none">
+          <View style={[s.flash, { pointerEvents: 'none' }]}>
             <Text style={s.flashText}>{flash}</Text>
           </View>
         )}
@@ -292,6 +316,14 @@ const s = StyleSheet.create({
     borderWidth: 2, borderColor: 'transparent',
   },
   gemOn: { borderColor: '#fff' },
+  // The clearing beat: matched gems brighten and lift out rather than vanishing
+  // between frames.
+  gemPop: {
+    borderColor: '#fff',
+    borderWidth: 2,
+    opacity: 0.55,
+    transform: [{ scale: 1.12 }],
+  },
   gemCh: { color: 'rgba(255,255,255,0.85)', fontWeight: '900' },
 
   flash: {

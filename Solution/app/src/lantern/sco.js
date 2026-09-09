@@ -19,10 +19,14 @@ export function createSCO(prior, now = Date.now()) {
 
     events: [],          // ring buffer, most recent last
     seq: [],             // gameId interaction sequence
+    byGame: {},          // gameId -> { spins, wins, staked, returned }
+    sports: {},          // sport name -> touches, for the cross-vertical read
     dwell: {},           // gameId -> ms
     launchedFrom: {},    // section name -> count, this session
 
     stakeTrace: [],      // cents
+    winTrace: [],        // per spin, did it pay — the trained heads need the
+    staked: 0,           // outcome sequence, not just the stake sequence
     latencyTrace: [],    // ms between consecutive actions
     spins: 0,
     lossRun: 0,          // consecutive losses, current
@@ -56,7 +60,11 @@ export function apply(sco, ev) {
   const gap = at - sco.lastAt;
 
   const s = { ...sco, lastAt: at };
-  s.events = sco.events.length >= RING ? [...sco.events.slice(1), ev] : [...sco.events, ev];
+  // Stamp the event as it goes in. Most callers emit without an `at`, and an
+  // unstamped ring buffer cannot answer "how long until the first action" —
+  // which is one of the six metrics the brief names.
+  const stamped = ev.at ? ev : { ...ev, at };
+  s.events = sco.events.length >= RING ? [...sco.events.slice(1), stamped] : [...sco.events, stamped];
 
   // Latency is only meaningful between deliberate actions, not passive views.
   if (ev.t !== 'view' && gap > 0 && gap < 5 * 60_000) {
@@ -84,6 +92,23 @@ export function apply(sco, ev) {
       s.spins = sco.spins + 1;
       s.stakeTrace = [...sco.stakeTrace, ev.stake].slice(-120);
       const won = (ev.payout || 0) > 0;
+      s.winTrace = [...sco.winTrace, won].slice(-120);
+      s.staked = sco.staked + ev.stake;
+
+      // Per-title record. The session totals cannot answer "how have I done on
+      // THIS kind of game", which is the question the game screen has to answer.
+      if (ev.gameId) {
+        const g = sco.byGame[ev.gameId] || { spins: 0, wins: 0, staked: 0, returned: 0 };
+        s.byGame = {
+          ...sco.byGame,
+          [ev.gameId]: {
+            spins: g.spins + 1,
+            wins: g.wins + (won ? 1 : 0),
+            staked: g.staked + ev.stake,
+            returned: g.returned + (ev.payout || 0),
+          },
+        };
+      }
       s.lossRun = won ? 0 : sco.lossRun + 1;
       s.maxLossRun = Math.max(sco.maxLossRun, s.lossRun);
       s.netCents = sco.netCents + (ev.payout || 0) - ev.stake;
@@ -117,6 +142,7 @@ export function apply(sco, ev) {
 
     case 'slip_add':
       s.slipAdds = sco.slipAdds + 1;
+      if (ev.sport) s.sports = { ...sco.sports, [ev.sport]: (sco.sports[ev.sport] || 0) + 1 };
       break;
 
     case 'slip_remove':

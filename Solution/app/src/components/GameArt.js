@@ -88,7 +88,7 @@ export default function GameArt({ game, size = 'tile', jackpotAmount, children }
     >
       {/* sunburst — the single most casino-looking device there is */}
       {a.rays && (
-        <View style={[s.rayWrap, { transform: [{ rotate: `${a.rot}deg` }] }]} pointerEvents="none">
+        <View style={[s.rayWrap, { transform: [{ rotate: `${a.rot}deg` }], pointerEvents: 'none' }]}>
           {[0, 30, 60, 90, 120, 150].map((deg) => (
             <View
               key={deg}
@@ -107,9 +107,9 @@ export default function GameArt({ game, size = 'tile', jackpotAmount, children }
       )}
 
       <View
-        pointerEvents="none"
         style={[
           s.disc,
+          { pointerEvents: 'none' },
           {
             backgroundColor: a.glow,
             opacity: 0.2,
@@ -131,13 +131,25 @@ export default function GameArt({ game, size = 'tile', jackpotAmount, children }
           onError={() => setArtFailed(true)}
         />
       ) : (
-        <Text style={[s.glyph, { fontSize: 96 * scale, color: a.glow }]}>{a.glyph}</Text>
+        // A glyph tinted from the same family palette all but disappears
+        // against it, which reads as a broken image rather than a cover. The
+        // title carries the tile instead, with the glyph behind it.
+        <View style={s.fallback} pointerEvents="none">
+          <Text style={[s.glyph, s.fbGlyph, { fontSize: 104 * scale, color: a.glow }]}>
+            {a.glyph}
+          </Text>
+          <Text
+            style={[s.fbName, { fontSize: Math.max(10, 26 * scale) }]}
+            numberOfLines={size === 'tile' ? 3 : 2}
+          >
+            {game.name}
+          </Text>
+        </View>
       )}
 
       <LinearGradient
         colors={['transparent', 'rgba(0,0,0,0.55)']}
-        style={StyleSheet.absoluteFill}
-        pointerEvents="none"
+        style={[StyleSheet.absoluteFill, { pointerEvents: 'none' }]}
       />
 
       <View style={s.badges}>
@@ -172,7 +184,16 @@ const s = StyleSheet.create({
   rayWrap: { ...StyleSheet.absoluteFillObject, alignItems: 'center', justifyContent: 'center' },
   ray: { position: 'absolute', opacity: 0.13 },
   disc: { position: 'absolute' },
-  glyph: { fontWeight: '900', opacity: 0.92, textShadowColor: 'rgba(0,0,0,0.35)', textShadowRadius: 8 },
+  glyph: { fontWeight: '900', opacity: 0.92, textShadow: '0px 0px 8px rgba(0,0,0,0.35)' },
+  fallback: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center', justifyContent: 'center', paddingHorizontal: '9%',
+  },
+  fbGlyph: { position: 'absolute', opacity: 0.4 },
+  fbName: {
+    color: '#FFFFFF', fontWeight: '900', textAlign: 'center', letterSpacing: 0.2,
+    textShadow: '0px 1px 6px rgba(0,0,0,0.75)',
+  },
 
   badges: { position: 'absolute', top: 7, left: 7, flexDirection: 'row', gap: 4 },
   badge: { paddingHorizontal: 5, paddingVertical: 2.5, borderRadius: 3 },

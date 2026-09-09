@@ -22,3 +22,6 @@ Solution/app/public/empireofgold/
 # Generated training data — reproducible from the seed in the manifest
 Solution/data/*.csv
 Solution/data/synthetic_manifest.json
+
+# cloudflared binary, downloaded not committed
+Solution/server/bin/
